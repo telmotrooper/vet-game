@@ -1,8 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://cqqouxh0tnhtp"]
+[gd_scene load_steps=9 format=3 uid="uid://cqqouxh0tnhtp"]
 
 [ext_resource type="Texture2D" uid="uid://bwvk2il82mqsk" path="res://square.svg" id="1_7qxg0"]
 [ext_resource type="Script" path="res://droppable_background.gd" id="1_f7l06"]
+[ext_resource type="Texture2D" uid="uid://dsca8fe4ifouc" path="res://cat_drawing_4x.png" id="2_ei4k5"]
 [ext_resource type="Script" path="res://draggable_object.gd" id="2_jfxkb"]
+[ext_resource type="Texture2D" uid="uid://cb2vmldiuibbj" path="res://cat_skeleton_drawing_4x.png" id="2_qsntf"]
 [ext_resource type="Texture2D" uid="uid://btvovgytwfq74" path="res://square_slot.svg" id="3_25sf6"]
 [ext_resource type="Script" path="res://slot.gd" id="4_cleui"]
 [ext_resource type="AudioStream" uid="uid://b4qw4h0i2rf4k" path="res://happy_whistling_ukulele_rafael_krux.mp3" id="6_tdtie"]
@@ -21,6 +23,17 @@ grow_vertical = 2
 color = Color(0.815389, 0.815389, 0.815389, 1)
 script = ExtResource("1_f7l06")
 
+[node name="CatDrawing4x" type="Sprite2D" parent="Background"]
+position = Vector2(964, 533)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_ei4k5")
+
+[node name="CatSkeletonDrawing4x" type="Sprite2D" parent="Background"]
+visible = false
+position = Vector2(964, 533)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_qsntf")
+
 [node name="Square" type="TextureRect" parent="."]
 offset_left = 189.0
 offset_top = 207.0
@@ -31,10 +44,10 @@ script = ExtResource("2_jfxkb")
 
 [node name="SquareSlot" type="TextureRect" parent="."]
 z_index = -1
-offset_left = 863.0
-offset_top = 483.0
-offset_right = 1034.0
-offset_bottom = 654.0
+offset_left = 698.0
+offset_top = 374.0
+offset_right = 869.0
+offset_bottom = 545.0
 texture = ExtResource("3_25sf6")
 script = ExtResource("4_cleui")
 
