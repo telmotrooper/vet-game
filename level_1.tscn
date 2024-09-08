@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://cqqouxh0tnhtp"]
+[gd_scene load_steps=6 format=3 uid="uid://cqqouxh0tnhtp"]
 
 [ext_resource type="Texture2D" uid="uid://bwvk2il82mqsk" path="res://square.svg" id="1_7qxg0"]
+[ext_resource type="Script" path="res://droppable_background.gd" id="1_f7l06"]
 [ext_resource type="Script" path="res://draggable_object.gd" id="2_jfxkb"]
 [ext_resource type="Texture2D" uid="uid://btvovgytwfq74" path="res://square_slot.svg" id="3_25sf6"]
 [ext_resource type="Script" path="res://slot.gd" id="4_cleui"]
@@ -17,6 +18,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.815389, 0.815389, 0.815389, 1)
+script = ExtResource("1_f7l06")
 
 [node name="Square" type="TextureRect" parent="."]
 offset_left = 189.0
