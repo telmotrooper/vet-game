@@ -16,6 +16,6 @@ func _get_drag_data(_at_position: Vector2) -> Variant:
 	
 	return self
 
-# This is called when the object is dropped.
+# This is called when the object is dropped in a different position.
 func _on_item_rect_changed() -> void:
 	self_modulate.a = 1 # Display node again.
