@@ -1,6 +1,8 @@
 class_name DraggableObject
 extends TextureRect
 
+var drag_position: Vector2
+
 func _get_drag_data(at_position: Vector2) -> Variant:
 	self_modulate.a = 0 # Hide node, but not its children.
 	
@@ -12,6 +14,7 @@ func _get_drag_data(at_position: Vector2) -> Variant:
 	
 	# Compensate mouse position.
 	child.position = Vector2(-at_position.x, -at_position.y)
+	drag_position = child.position
 	
 	set_drag_preview(drag_preview)
 	return self
