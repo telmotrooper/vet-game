@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cqqouxh0tnhtp"]
+[gd_scene load_steps=3 format=3 uid="uid://cqqouxh0tnhtp"]
 
 [ext_resource type="Texture2D" uid="uid://bwvk2il82mqsk" path="res://square.svg" id="1_7qxg0"]
+[ext_resource type="Script" path="res://draggable_object.gd" id="2_jfxkb"]
 
 [node name="Level1" type="Node2D"]
 
@@ -15,6 +16,10 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.815389, 0.815389, 0.815389, 1)
 
-[node name="Square" type="Sprite2D" parent="."]
-position = Vector2(626, 624)
+[node name="Square" type="TextureRect" parent="."]
+offset_left = 189.0
+offset_top = 207.0
+offset_right = 229.0
+offset_bottom = 247.0
 texture = ExtResource("1_7qxg0")
+script = ExtResource("2_jfxkb")
