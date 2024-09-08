@@ -8,7 +8,9 @@ func _get_drag_data(_at_position: Vector2) -> Variant:
 	return self
 
 func _can_drop_data(_at_position: Vector2, data: Variant) -> bool:
+	print("_can_drop_data")
 	return true
 
 func _drop_data(_at_position: Vector2, data: Variant) -> void:
+	print("_drop_data")
 	pass
