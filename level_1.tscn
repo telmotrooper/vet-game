@@ -36,3 +36,5 @@ offset_right = 1034.0
 offset_bottom = 654.0
 texture = ExtResource("3_25sf6")
 script = ExtResource("4_cleui")
+
+[connection signal="item_rect_changed" from="Square" to="Square" method="_on_item_rect_changed"]
