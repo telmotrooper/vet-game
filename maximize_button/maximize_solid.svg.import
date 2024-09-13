@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cb2vmldiuibbj"
-path="res://.godot/imported/cat_skeleton_drawing_4x.png-680d0912606fcd04d6e48769a7a4e379.ctex"
+uid="uid://ckvm78x1afx2s"
+path="res://.godot/imported/maximize_solid.svg-8e5d4efa94a8b2de516ac289346d811e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://cat_skeleton_drawing_4x.png"
-dest_files=["res://.godot/imported/cat_skeleton_drawing_4x.png-680d0912606fcd04d6e48769a7a4e379.ctex"]
+source_file="res://maximize_button/maximize_solid.svg"
+dest_files=["res://.godot/imported/maximize_solid.svg-8e5d4efa94a8b2de516ac289346d811e.ctex"]
 
 [params]
 
@@ -32,3 +32,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=1.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false
