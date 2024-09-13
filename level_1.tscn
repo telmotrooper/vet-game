@@ -54,5 +54,3 @@ script = ExtResource("4_cleui")
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_tdtie")
 autoplay = true
-
-[connection signal="item_rect_changed" from="Square" to="Square" method="_on_item_rect_changed"]
