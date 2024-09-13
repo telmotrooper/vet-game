@@ -1,7 +1,7 @@
 class_name DraggableObject
 extends TextureRect
 
-var drag_position: Vector2
+var drag_offset: Vector2
 
 func _get_drag_data(at_position: Vector2) -> Variant:
 	self_modulate.a = 0 # Hide node, but not its children.
@@ -14,19 +14,22 @@ func _get_drag_data(at_position: Vector2) -> Variant:
 	
 	# Compensate mouse position.
 	child.position = Vector2(-at_position.x, -at_position.y)
-	drag_position = child.position
+	drag_offset = child.position
 	
 	set_drag_preview(drag_preview)
 	return self
 
+func _can_drop_data(_at_position: Vector2, _data: Variant) -> bool:
+	# Allow dropping an object over another one (or over itself).
+	return true
+
+func _drop_data(at_position: Vector2, data: Variant) -> void:
+	data.position = position + at_position + data.drag_offset
+
 func make_visible() -> void:
 	self_modulate.a = 1
 
-# If the object position was changed (successful drag), make the object visible again.
-func _on_item_rect_changed() -> void:
-	make_visible()
-
-# If a drag fails, make the object visible again.
+# When a drag ends, make the object visible again.
 func _notification(what: int) -> void:
-	if what == NOTIFICATION_DRAG_END and not is_drag_successful():
+	if what == NOTIFICATION_DRAG_END:
 		make_visible()
