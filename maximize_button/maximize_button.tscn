@@ -7,7 +7,7 @@
 [node name="MaximizeButton" type="Button"]
 offset_right = 520.0
 offset_bottom = 520.0
-scale = Vector2(0.1, 0.1)
+scale = Vector2(0.2, 0.2)
 icon = ExtResource("1_eggf1")
 script = ExtResource("2_7und1")
 maximize_icon = ExtResource("1_eggf1")
