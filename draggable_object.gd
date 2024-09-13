@@ -19,6 +19,14 @@ func _get_drag_data(at_position: Vector2) -> Variant:
 	set_drag_preview(drag_preview)
 	return self
 
-# This is called when the object is dropped in a different position.
+func make_visible() -> void:
+	self_modulate.a = 1
+
+# If the object position was changed (successful drag), make the object visible again.
 func _on_item_rect_changed() -> void:
-	self_modulate.a = 1 # Display node again.
+	make_visible()
+
+# If a drag fails, make the object visible again.
+func _notification(what: int) -> void:
+	if what == NOTIFICATION_DRAG_END and not is_drag_successful():
+		make_visible()
