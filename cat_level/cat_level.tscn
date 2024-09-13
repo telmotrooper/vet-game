@@ -2,14 +2,14 @@
 
 [ext_resource type="Texture2D" uid="uid://bwvk2il82mqsk" path="res://square.svg" id="1_7qxg0"]
 [ext_resource type="Script" path="res://droppable_background.gd" id="1_f7l06"]
-[ext_resource type="Texture2D" uid="uid://dsca8fe4ifouc" path="res://cat_drawing_4x.png" id="2_ei4k5"]
+[ext_resource type="Texture2D" uid="uid://dsca8fe4ifouc" path="res://cat_level/cat_drawing_4x.png" id="2_ei4k5"]
 [ext_resource type="Script" path="res://draggable_object.gd" id="2_jfxkb"]
-[ext_resource type="Texture2D" uid="uid://cb2vmldiuibbj" path="res://cat_skeleton_drawing_4x.png" id="2_qsntf"]
+[ext_resource type="Texture2D" uid="uid://cb2vmldiuibbj" path="res://cat_level/cat_skeleton_drawing_4x.png" id="2_qsntf"]
 [ext_resource type="Texture2D" uid="uid://btvovgytwfq74" path="res://square_slot.svg" id="3_25sf6"]
 [ext_resource type="Script" path="res://slot.gd" id="4_cleui"]
 [ext_resource type="AudioStream" uid="uid://b4qw4h0i2rf4k" path="res://happy_whistling_ukulele_rafael_krux.mp3" id="6_tdtie"]
 
-[node name="Level1" type="Node2D"]
+[node name="CatLevel" type="Node2D"]
 
 [node name="Background" type="CanvasLayer" parent="."]
 layer = -2
