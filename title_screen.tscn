@@ -57,6 +57,7 @@ offset_right = -247.0
 offset_bottom = 416.0
 grow_horizontal = 2
 grow_vertical = 2
+disabled = true
 text = "CÃES"
 expand_icon = true
 
@@ -89,7 +90,8 @@ offset_right = 553.0
 offset_bottom = 416.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "AVES"
+disabled = true
+text = "PÁSSAROS"
 expand_icon = true
 
 [connection signal="pressed" from="DogButton" to="." method="_on_cat_button_pressed"]
