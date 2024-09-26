@@ -1,0 +1,97 @@
+[gd_scene load_steps=3 format=3 uid="uid://bwq2aip0hywte"]
+
+[ext_resource type="Script" path="res://title_screen.gd" id="1_mjlm7"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ho86y"]
+font_size = 100
+outline_size = 30
+outline_color = Color(0, 0, 0, 1)
+
+[node name="TitleScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mjlm7")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0.435294, 0.639216, 1)
+
+[node name="Logo" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -488.0
+offset_top = -340.0
+offset_right = 488.0
+offset_bottom = -25.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "SISTEMAS VITAIS DOS ANIMAIS"
+label_settings = SubResource("LabelSettings_ho86y")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="DogButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -553.0
+offset_top = 110.0
+offset_right = -247.0
+offset_bottom = 416.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "CÃES"
+expand_icon = true
+
+[node name="CatButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -153.0
+offset_top = 110.0
+offset_right = 153.0
+offset_bottom = 416.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "GATOS"
+expand_icon = true
+
+[node name="BirdButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 247.0
+offset_top = 110.0
+offset_right = 553.0
+offset_bottom = 416.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "AVES"
+expand_icon = true
+
+[connection signal="pressed" from="DogButton" to="." method="_on_cat_button_pressed"]
+[connection signal="pressed" from="CatButton" to="." method="_on_cat_button_pressed"]
+[connection signal="pressed" from="BirdButton" to="." method="_on_cat_button_pressed"]
