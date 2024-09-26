@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://chhgonrusewwv"
-path="res://.godot/imported/Fredoka-VariableFont_wdth,wght.ttf-738020177dd543c76cbf97a78c18b720.fontdata"
+path="res://.godot/imported/fredoka.ttf-f3759f12929acb3711a1f0c5d1695b8a.fontdata"
 
 [deps]
 
-source_file="res://fonts/Fredoka-VariableFont_wdth,wght.ttf"
-dest_files=["res://.godot/imported/Fredoka-VariableFont_wdth,wght.ttf-738020177dd543c76cbf97a78c18b720.fontdata"]
+source_file="res://assets/fredoka.ttf"
+dest_files=["res://.godot/imported/fredoka.ttf-f3759f12929acb3711a1f0c5d1695b8a.fontdata"]
 
 [params]
 

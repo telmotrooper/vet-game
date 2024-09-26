@@ -1,6 +1,6 @@
 [gd_resource type="Theme" load_steps=2 format=3 uid="uid://csa6agkygg3nq"]
 
-[ext_resource type="FontFile" uid="uid://chhgonrusewwv" path="res://fonts/Fredoka-VariableFont_wdth,wght.ttf" id="1_by6g7"]
+[ext_resource type="FontFile" uid="uid://chhgonrusewwv" path="res://assets/fredoka.ttf" id="1_by6g7"]
 
 [resource]
 default_font = ExtResource("1_by6g7")
