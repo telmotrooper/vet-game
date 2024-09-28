@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://cqqouxh0tnhtp"]
+[gd_scene load_steps=11 format=3 uid="uid://cqqouxh0tnhtp"]
 
 [ext_resource type="Texture2D" uid="uid://bwvk2il82mqsk" path="res://square.svg" id="1_7qxg0"]
 [ext_resource type="Script" path="res://droppable_background.gd" id="1_f7l06"]
+[ext_resource type="Script" path="res://cat_level/level.gd" id="1_kkgaa"]
 [ext_resource type="Texture2D" uid="uid://dsca8fe4ifouc" path="res://cat_level/cat_drawing_4x.png" id="2_ei4k5"]
 [ext_resource type="Script" path="res://draggable_object.gd" id="2_jfxkb"]
 [ext_resource type="Texture2D" uid="uid://cb2vmldiuibbj" path="res://cat_level/cat_skeleton_drawing_4x.png" id="2_qsntf"]
@@ -11,6 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://c4e4q5arhn8f2" path="res://ui/back_button/back_button.tscn" id="5_jgko5"]
 
 [node name="CatLevel" type="Node2D"]
+script = ExtResource("1_kkgaa")
+metadata/_edit_horizontal_guides_ = [121.0]
 
 [node name="Background" type="CanvasLayer" parent="."]
 layer = -2
@@ -47,6 +50,21 @@ pivot_offset = Vector2(500, 20)
 [node name="BackButton" parent="Background" instance=ExtResource("5_jgko5")]
 pivot_offset = Vector2(20, 20)
 
+[node name="Score" type="RichTextLabel" parent="Background"]
+unique_name_in_owner = true
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -187.5
+offset_top = 100.0
+offset_right = 187.5
+offset_bottom = 188.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+bbcode_enabled = true
+text = "[b]Acertos:[/b] 0/1"
+
 [node name="Square" type="TextureRect" parent="."]
 offset_left = 189.0
 offset_top = 207.0
@@ -63,3 +81,5 @@ offset_right = 869.0
 offset_bottom = 545.0
 texture = ExtResource("3_25sf6")
 script = ExtResource("4_cleui")
+
+[connection signal="slot_filled" from="SquareSlot" to="." method="_on_slot_filled"]
