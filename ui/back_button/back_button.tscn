@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://c4e4q5arhn8f2"]
+
+[ext_resource type="Texture2D" uid="uid://b450mpv3cp018" path="res://ui/back_button/arrow_left_solid.svg" id="1_to8cs"]
+[ext_resource type="Script" path="res://ui/back_button/back_button.gd" id="2_tw5cr"]
+
+[node name="BackButton" type="Button"]
+offset_right = 520.0
+offset_bottom = 520.0
+scale = Vector2(0.2, 0.2)
+icon = ExtResource("1_to8cs")
+icon_alignment = 1
+script = ExtResource("2_tw5cr")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

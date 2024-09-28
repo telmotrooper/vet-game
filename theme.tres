@@ -1,8 +1,13 @@
-[gd_resource type="Theme" load_steps=2 format=3 uid="uid://csa6agkygg3nq"]
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://csa6agkygg3nq"]
 
-[ext_resource type="FontFile" uid="uid://chhgonrusewwv" path="res://assets/fredoka.ttf" id="1_by6g7"]
+[ext_resource type="FontFile" uid="uid://dicevutkrjalm" path="res://assets/fredoka_regular.ttf" id="1_t7x1l"]
+[ext_resource type="FontFile" uid="uid://boh53cjm22t5d" path="res://assets/fredoka_semibold.ttf" id="2_dtnby"]
 
 [resource]
-default_font = ExtResource("1_by6g7")
+default_font = ExtResource("1_t7x1l")
 Button/font_sizes/font_size = 64
-Label/fonts/font = ExtResource("1_by6g7")
+Label/fonts/font = ExtResource("1_t7x1l")
+RichTextLabel/font_sizes/bold_font_size = 64
+RichTextLabel/font_sizes/normal_font_size = 64
+RichTextLabel/fonts/bold_font = ExtResource("2_dtnby")
+RichTextLabel/fonts/normal_font = ExtResource("1_t7x1l")

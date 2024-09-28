@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bvukjcnumrq5r"
-path="res://.godot/imported/minimize_solid.svg-78c2172d1154b6a20cb1d752fd97e6d2.ctex"
+path="res://.godot/imported/minimize_solid.svg-f3f11816b7d71df9a56cf9e3a1af9355.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://maximize_button/minimize_solid.svg"
-dest_files=["res://.godot/imported/minimize_solid.svg-78c2172d1154b6a20cb1d752fd97e6d2.ctex"]
+source_file="res://ui/maximize_button/minimize_solid.svg"
+dest_files=["res://.godot/imported/minimize_solid.svg-f3f11816b7d71df9a56cf9e3a1af9355.ctex"]
 
 [params]
 

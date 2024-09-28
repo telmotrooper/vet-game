@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bwq2aip0hywte"]
 
 [ext_resource type="Script" path="res://title_screen.gd" id="1_mjlm7"]
-[ext_resource type="PackedScene" uid="uid://gpvwrquanwhj" path="res://maximize_button/maximize_button.tscn" id="2_csjh6"]
+[ext_resource type="PackedScene" uid="uid://gpvwrquanwhj" path="res://ui/maximize_button/maximize_button.tscn" id="2_csjh6"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ho86y"]
 font_size = 100

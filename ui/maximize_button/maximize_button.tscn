@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://gpvwrquanwhj"]
 
-[ext_resource type="Texture2D" uid="uid://ckvm78x1afx2s" path="res://maximize_button/maximize_solid.svg" id="1_eggf1"]
-[ext_resource type="Script" path="res://maximize_button/maximize_button.gd" id="2_7und1"]
-[ext_resource type="Texture2D" uid="uid://bvukjcnumrq5r" path="res://maximize_button/minimize_solid.svg" id="3_gknid"]
+[ext_resource type="Texture2D" uid="uid://ckvm78x1afx2s" path="res://ui/maximize_button/maximize_solid.svg" id="1_eggf1"]
+[ext_resource type="Script" path="res://ui/maximize_button/maximize_button.gd" id="2_7und1"]
+[ext_resource type="Texture2D" uid="uid://bvukjcnumrq5r" path="res://ui/maximize_button/minimize_solid.svg" id="3_gknid"]
 
 [node name="MaximizeButton" type="Button"]
 offset_right = 520.0
