@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cqqouxh0tnhtp"]
+[gd_scene load_steps=13 format=3 uid="uid://cqqouxh0tnhtp"]
 
 [ext_resource type="Texture2D" uid="uid://bwvk2il82mqsk" path="res://square.svg" id="1_7qxg0"]
 [ext_resource type="Script" path="res://droppable_background.gd" id="1_f7l06"]
@@ -10,6 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://gpvwrquanwhj" path="res://ui/maximize_button/maximize_button.tscn" id="4_bygoh"]
 [ext_resource type="Script" path="res://slot.gd" id="4_cleui"]
 [ext_resource type="PackedScene" uid="uid://c4e4q5arhn8f2" path="res://ui/back_button/back_button.tscn" id="5_jgko5"]
+[ext_resource type="PackedScene" uid="uid://c7v1migha7ig" path="res://ui/volume_button/volume_button.tscn" id="7_wexbm"]
+[ext_resource type="Texture2D" uid="uid://6xae6ixeinrn" path="res://square_alt.svg" id="12_ygnpx"]
 
 [node name="CatLevel" type="Node2D"]
 script = ExtResource("1_kkgaa")
@@ -65,15 +67,19 @@ size_flags_vertical = 4
 bbcode_enabled = true
 text = "[b]Acertos:[/b] 0/1"
 
-[node name="Square" type="TextureRect" parent="."]
-offset_left = 189.0
-offset_top = 207.0
-offset_right = 229.0
-offset_bottom = 247.0
-texture = ExtResource("1_7qxg0")
-script = ExtResource("2_jfxkb")
+[node name="VolumeButton" parent="Background" instance=ExtResource("7_wexbm")]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -520.0
+offset_right = 0.0
+grow_horizontal = 0
+pivot_offset = Vector2(350, 20)
 
-[node name="SquareSlot" type="TextureRect" parent="."]
+[node name="Slots" type="Node" parent="."]
+unique_name_in_owner = true
+
+[node name="SquareSlot" type="TextureRect" parent="Slots"]
 z_index = -1
 offset_left = 698.0
 offset_top = 374.0
@@ -81,5 +87,37 @@ offset_right = 869.0
 offset_bottom = 545.0
 texture = ExtResource("3_25sf6")
 script = ExtResource("4_cleui")
+expected_value = "pera"
 
-[connection signal="slot_filled" from="SquareSlot" to="." method="_on_slot_filled"]
+[node name="SquareSlot2" type="TextureRect" parent="Slots"]
+z_index = -1
+offset_left = 1112.0
+offset_top = 418.0
+offset_right = 1283.0
+offset_bottom = 589.0
+texture = ExtResource("3_25sf6")
+script = ExtResource("4_cleui")
+expected_value = "abacate"
+
+[node name="Pieces" type="Node" parent="."]
+
+[node name="Square" type="TextureRect" parent="Pieces"]
+offset_left = 16.0
+offset_top = 188.0
+offset_right = 187.0
+offset_bottom = 359.0
+texture = ExtResource("1_7qxg0")
+script = ExtResource("2_jfxkb")
+value = "abacate"
+
+[node name="Square2" type="TextureRect" parent="Pieces"]
+offset_left = 1680.0
+offset_top = 207.0
+offset_right = 1851.0
+offset_bottom = 378.0
+texture = ExtResource("12_ygnpx")
+script = ExtResource("2_jfxkb")
+value = "pera"
+
+[connection signal="slot_filled" from="Slots/SquareSlot" to="." method="_on_slot_filled"]
+[connection signal="slot_filled" from="Slots/SquareSlot2" to="." method="_on_slot_filled"]

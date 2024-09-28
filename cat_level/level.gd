@@ -4,7 +4,7 @@ var slot_counter: int
 var score := 0
 
 func _ready() -> void:
-	for child in get_children():
+	for child in %Slots.get_children():
 		if child is Slot:
 			slot_counter += 1
 	
