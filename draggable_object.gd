@@ -1,6 +1,8 @@
 class_name DraggableObject
 extends TextureRect
 
+@export var value: String
+
 var drag_offset: Vector2
 
 func _get_drag_data(at_position: Vector2) -> Variant:
