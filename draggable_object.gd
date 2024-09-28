@@ -5,7 +5,15 @@ extends TextureRect
 
 var drag_offset: Vector2
 
+var frozen := false
+
+func freeze() -> void:
+	frozen = true
+
 func _get_drag_data(at_position: Vector2) -> Variant:
+	if frozen:
+		return null
+	
 	self_modulate.a = 0 # Hide node, but not its children.
 	
 	var drag_preview = Control.new()

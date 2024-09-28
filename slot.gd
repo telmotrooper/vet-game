@@ -17,6 +17,7 @@ func _drop_data(at_position: Vector2, data: Variant) -> void:
 		# Move the object to the exact position of the slot.
 		data.position = position
 		slot_filled.emit()
+		data.freeze()
 	else:
 		# Compensate the offset so that the object is placed in the position of the drag preview.
 		data.position = position + at_position + data.drag_offset
