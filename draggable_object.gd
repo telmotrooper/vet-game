@@ -15,6 +15,7 @@ func _get_drag_data(at_position: Vector2) -> Variant:
 		return null
 	
 	self_modulate.a = 0 # Hide node, but not its children.
+	set_mouse_filter(MOUSE_FILTER_IGNORE) # Pass through mouse events.
 	
 	var drag_preview = Control.new()
 	
@@ -29,15 +30,9 @@ func _get_drag_data(at_position: Vector2) -> Variant:
 	set_drag_preview(drag_preview)
 	return self
 
-func _can_drop_data(_at_position: Vector2, _data: Variant) -> bool:
-	# Allow dropping an object over another one (or over itself).
-	return true
-
-func _drop_data(at_position: Vector2, data: Variant) -> void:
-	data.position = position + at_position + data.drag_offset
-
 func make_visible() -> void:
 	self_modulate.a = 1
+	set_mouse_filter(MOUSE_FILTER_PASS)
 
 # When a drag ends, make the object visible again.
 func _notification(what: int) -> void:
