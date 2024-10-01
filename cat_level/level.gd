@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 
 var slot_counter: int
 var score := 0

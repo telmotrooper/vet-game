@@ -13,7 +13,14 @@
 [ext_resource type="PackedScene" uid="uid://c7v1migha7ig" path="res://ui/volume_button/volume_button.tscn" id="7_wexbm"]
 [ext_resource type="Texture2D" uid="uid://6xae6ixeinrn" path="res://square_alt.svg" id="12_ygnpx"]
 
-[node name="CatLevel" type="Node2D"]
+[node name="CatLevel" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
 script = ExtResource("1_kkgaa")
 metadata/_edit_horizontal_guides_ = [121.0]
 
