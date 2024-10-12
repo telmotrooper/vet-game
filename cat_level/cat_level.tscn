@@ -147,24 +147,29 @@ pivot_offset = Vector2(300, 300)
 [node name="MarginContainer" type="MarginContainer" parent="VictoryPanel"]
 layout_mode = 2
 
-[node name="RichTextLabel" type="RichTextLabel" parent="VictoryPanel/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="VictoryPanel/MarginContainer"]
 layout_mode = 2
+alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VictoryPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
 bbcode_enabled = true
 text = "[center][b]Parabéns![/b]
 Você concluiu esse nível![/center]"
+fit_content = true
 
-[node name="VBoxContainer" type="VBoxContainer" parent="VictoryPanel/MarginContainer"]
+[node name="Buttons" type="VBoxContainer" parent="VictoryPanel/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_constants/separation = 15
-alignment = 2
 
-[node name="FigureButton" type="Button" parent="VictoryPanel/MarginContainer/VBoxContainer"]
+[node name="FigureButton" type="Button" parent="VictoryPanel/MarginContainer/VBoxContainer/Buttons"]
 layout_mode = 2
 size_flags_vertical = 8
 theme = ExtResource("13_d7q3b")
 text = "Ver figura"
 
-[node name="ContinueButton" type="Button" parent="VictoryPanel/MarginContainer/VBoxContainer"]
+[node name="ContinueButton" type="Button" parent="VictoryPanel/MarginContainer/VBoxContainer/Buttons"]
 layout_mode = 2
 size_flags_vertical = 8
 theme = ExtResource("13_d7q3b")
@@ -173,5 +178,5 @@ script = ExtResource("13_hnmnr")
 
 [connection signal="slot_filled" from="Slots/SquareSlot" to="." method="_on_slot_filled"]
 [connection signal="slot_filled" from="Slots/SquareSlot2" to="." method="_on_slot_filled"]
-[connection signal="pressed" from="VictoryPanel/MarginContainer/VBoxContainer/FigureButton" to="." method="hide_victory_panel"]
-[connection signal="pressed" from="VictoryPanel/MarginContainer/VBoxContainer/ContinueButton" to="VictoryPanel/MarginContainer/VBoxContainer/ContinueButton" method="_on_pressed"]
+[connection signal="pressed" from="VictoryPanel/MarginContainer/VBoxContainer/Buttons/FigureButton" to="." method="hide_victory_panel"]
+[connection signal="pressed" from="VictoryPanel/MarginContainer/VBoxContainer/Buttons/ContinueButton" to="VictoryPanel/MarginContainer/VBoxContainer/Buttons/ContinueButton" method="_on_pressed"]
