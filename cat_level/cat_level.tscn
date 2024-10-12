@@ -156,11 +156,17 @@ alignment = 1
 [node name="RichTextLabel" type="RichTextLabel" parent="VictoryPanel/MarginContainer/VBoxContainer"]
 layout_mode = 2
 bbcode_enabled = true
-text = "[center][b]Parabéns![/b]
-Você concluiu esse nível![/center]"
+text = "[center][b]Parabéns![/b][/center]"
+fit_content = true
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="VictoryPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+bbcode_enabled = true
+text = "[center]Você concluiu esse nível![/center]"
 fit_content = true
 
 [node name="Stars" type="HBoxContainer" parent="VictoryPanel/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6

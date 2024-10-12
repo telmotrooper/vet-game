@@ -23,12 +23,16 @@ func update_text() -> void:
 	%Score.text = base_text % [score, slot_counter]
 
 func show_victory_panel() -> void:
+	%Stars/Star.custom_minimum_size = Vector2.ZERO
+	%Stars/Star2.custom_minimum_size = Vector2.ZERO
+	%Stars/Star3.custom_minimum_size = Vector2.ZERO
 	%VictoryPanel.set_visible(true)
 	var tween = create_tween()
-	#tween.set_trans(Tween.TRANS_SINE)
-	#tween.set_trans(Tween.TRANS_CIRC)
 	tween.set_trans(Tween.TRANS_CUBIC)
 	tween.tween_property(%VictoryPanel, "scale", Vector2(1,1), 0.7)
+	tween.tween_property(%Stars/Star, "custom_minimum_size", Vector2(128,128), 0.3)
+	tween.tween_property(%Stars/Star2, "custom_minimum_size", Vector2(128,128), 0.3)
+	tween.tween_property(%Stars/Star3, "custom_minimum_size", Vector2(128,128), 0.3)
 
 func hide_victory_panel() -> void:
 	var tween = create_tween()
