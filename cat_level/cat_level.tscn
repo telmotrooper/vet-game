@@ -26,6 +26,8 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_kkgaa")
+empty_star = ExtResource("13_62bxt")
+filled_star = ExtResource("13_0x6jh")
 metadata/_edit_horizontal_guides_ = [121.0]
 
 [node name="Background" type="CanvasLayer" parent="."]

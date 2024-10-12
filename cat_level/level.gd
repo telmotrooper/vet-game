@@ -1,5 +1,8 @@
 extends Control
 
+@export var empty_star: Texture2D
+@export var filled_star: Texture2D
+
 var slot_counter: int
 var score := 0
 
@@ -22,10 +25,17 @@ func _on_slot_filled() -> void:
 func update_text() -> void:
 	%Score.text = base_text % [score, slot_counter]
 
+func set_stars(quantity: int):
+	%Stars/Star.texture = filled_star if quantity >= 1 else empty_star
+	%Stars/Star2.texture = filled_star if quantity >= 2 else empty_star
+	%Stars/Star3.texture = filled_star if quantity >= 3 else empty_star
+
 func show_victory_panel() -> void:
-	%Stars/Star.custom_minimum_size = Vector2.ZERO
-	%Stars/Star2.custom_minimum_size = Vector2.ZERO
-	%Stars/Star3.custom_minimum_size = Vector2.ZERO
+	set_stars(3)
+	
+	for star in %Stars.get_children():
+		star.custom_minimum_size = Vector2.ZERO
+
 	%VictoryPanel.set_visible(true)
 	var tween = create_tween()
 	tween.set_trans(Tween.TRANS_CUBIC)
