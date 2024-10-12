@@ -152,7 +152,11 @@ layout_mode = 2
 bbcode_enabled = true
 text = "[center][b]Parabéns![/b] você concluiu esse nível![/center]"
 
-[node name="Button" type="Button" parent="VictoryPanel/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="VictoryPanel/MarginContainer"]
+layout_mode = 2
+alignment = 2
+
+[node name="ContinueButton" type="Button" parent="VictoryPanel/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 8
 theme = ExtResource("13_d7q3b")
@@ -161,4 +165,4 @@ script = ExtResource("13_hnmnr")
 
 [connection signal="slot_filled" from="Slots/SquareSlot" to="." method="_on_slot_filled"]
 [connection signal="slot_filled" from="Slots/SquareSlot2" to="." method="_on_slot_filled"]
-[connection signal="pressed" from="VictoryPanel/MarginContainer/Button" to="VictoryPanel/MarginContainer/Button" method="_on_pressed"]
+[connection signal="pressed" from="VictoryPanel/MarginContainer/VBoxContainer/ContinueButton" to="VictoryPanel/MarginContainer/VBoxContainer/ContinueButton" method="_on_pressed"]
