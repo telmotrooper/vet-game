@@ -29,3 +29,9 @@ func show_victory_panel() -> void:
 	#tween.set_trans(Tween.TRANS_CIRC)
 	tween.set_trans(Tween.TRANS_CUBIC)
 	tween.tween_property(%VictoryPanel, "scale", Vector2(1,1), 0.7)
+
+func hide_victory_panel() -> void:
+	var tween = create_tween()
+	tween.set_trans(Tween.TRANS_CUBIC)
+	tween.tween_property(%VictoryPanel, "scale", Vector2(0,0), 0.7)
+	tween.tween_callback(%VictoryPanel.hide)
