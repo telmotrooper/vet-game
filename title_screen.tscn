@@ -1,12 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://bwq2aip0hywte"]
+[gd_scene load_steps=6 format=3 uid="uid://bwq2aip0hywte"]
 
 [ext_resource type="Script" path="res://title_screen.gd" id="1_mjlm7"]
 [ext_resource type="PackedScene" uid="uid://gpvwrquanwhj" path="res://ui/maximize_button/maximize_button.tscn" id="2_csjh6"]
+[ext_resource type="FontFile" uid="uid://ckq5gw7frn8xf" path="res://assets/LondrinaSolid-Black.ttf" id="2_q5b3s"]
 [ext_resource type="PackedScene" uid="uid://c7v1migha7ig" path="res://ui/volume_button/volume_button.tscn" id="3_afivn"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ho86y"]
+font = ExtResource("2_q5b3s")
 font_size = 100
-outline_size = 30
+font_color = Color(0.635294, 0.152941, 0.172549, 1)
 outline_color = Color(0, 0, 0, 1)
 
 [node name="TitleScreen" type="Control"]
@@ -27,6 +29,22 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.635294, 0.152941, 0.172549, 1)
 
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 590.0
+offset_top = 227.0
+offset_right = 1322.0
+offset_bottom = 362.0
+color = Color(1, 0.972549, 0.929412, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 691.0
+offset_top = 351.0
+offset_right = 1224.0
+offset_bottom = 486.0
+color = Color(1, 0.972549, 0.929412, 1)
+
 [node name="Logo" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = 8
@@ -40,11 +58,13 @@ offset_right = 488.0
 offset_bottom = -25.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "SISTEMAS VITAIS DOS ANIMAIS"
+text = "SISTEMAS VITAIS
+DOS ANIMAIS"
 label_settings = SubResource("LabelSettings_ho86y")
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
 
 [node name="DogButton" type="Button" parent="."]
 layout_mode = 1
