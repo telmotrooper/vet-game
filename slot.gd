@@ -14,6 +14,8 @@ func _can_drop_data(_at_position: Vector2, _data: Variant) -> bool:
 
 func _drop_data(at_position: Vector2, data: Variant) -> void:
 	if data.value == expected_value:
+		# Make the size of the object match that of the slot (to centralize text).
+		data.size.x = data.size.x if (data.size.x > size.x) else size.x
 		# Move the object to the exact position of the slot.
 		data.position = position
 		slot_filled.emit()
