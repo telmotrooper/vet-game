@@ -246,7 +246,7 @@ script = ExtResource("14_ni0bv")
 [node name="ArteriaBraquial" type="Label" parent="Pieces"]
 offset_left = 4.0
 offset_top = 428.0
-offset_right = 297.0
+offset_right = 291.0
 offset_bottom = 477.0
 mouse_filter = 1
 text = "Artéria Braquial"
@@ -255,7 +255,7 @@ script = ExtResource("14_ni0bv")
 [node name="VeiaCefalica" type="Label" parent="Pieces"]
 offset_left = 10.0
 offset_top = 478.0
-offset_right = 303.0
+offset_right = 245.0
 offset_bottom = 527.0
 mouse_filter = 1
 text = "Veia Cefálica"
@@ -264,7 +264,7 @@ script = ExtResource("14_ni0bv")
 [node name="Coracao" type="Label" parent="Pieces"]
 offset_left = 11.0
 offset_top = 532.0
-offset_right = 304.0
+offset_right = 163.0
 offset_bottom = 581.0
 mouse_filter = 1
 text = "Coração"
@@ -273,7 +273,7 @@ script = ExtResource("14_ni0bv")
 [node name="VeiasPortas" type="Label" parent="Pieces"]
 offset_left = 10.0
 offset_top = 590.0
-offset_right = 303.0
+offset_right = 235.0
 offset_bottom = 639.0
 mouse_filter = 1
 text = "Veias Portas"
@@ -282,7 +282,7 @@ script = ExtResource("14_ni0bv")
 [node name="Baco" type="Label" parent="Pieces"]
 offset_left = 10.0
 offset_top = 643.0
-offset_right = 303.0
+offset_right = 101.0
 offset_bottom = 692.0
 mouse_filter = 1
 text = "Baço"
@@ -291,7 +291,7 @@ script = ExtResource("14_ni0bv")
 [node name="VeiaSafena" type="Label" parent="Pieces"]
 offset_left = 11.0
 offset_top = 699.0
-offset_right = 304.0
+offset_right = 226.0
 offset_bottom = 748.0
 mouse_filter = 1
 text = "Veia Safena"
@@ -309,7 +309,7 @@ script = ExtResource("14_ni0bv")
 [node name="Aorta" type="Label" parent="Pieces"]
 offset_left = 12.0
 offset_top = 796.0
-offset_right = 329.0
+offset_right = 116.0
 offset_bottom = 845.0
 mouse_filter = 1
 text = "Aorta"
