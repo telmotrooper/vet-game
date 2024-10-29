@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cb2vmldiuibbj"
-path="res://.godot/imported/cat_skeleton_drawing_4x.png-27b215bcf530a6cb3afdca7f3ee83f06.ctex"
+uid="uid://dgyy8ryhn84k6"
+path="res://.godot/imported/dog.png-984eb2fa2d251b0e6043b26754848474.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://cat_level/cat_skeleton_drawing_4x.png"
-dest_files=["res://.godot/imported/cat_skeleton_drawing_4x.png-27b215bcf530a6cb3afdca7f3ee83f06.ctex"]
+source_file="res://dog_level/dog.png"
+dest_files=["res://.godot/imported/dog.png-984eb2fa2d251b0e6043b26754848474.ctex"]
 
 [params]
 
