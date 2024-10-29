@@ -223,6 +223,7 @@ offset_right = 236.0
 offset_bottom = 815.0
 mouse_filter = 1
 text = "Veia Jugular"
+horizontal_alignment = 1
 script = ExtResource("14_ni0bv")
 
 [node name="ArteriaFemoral" type="Label" parent="Pieces"]
@@ -232,6 +233,7 @@ offset_right = 297.0
 offset_bottom = 382.0
 mouse_filter = 1
 text = "Artéria Femoral"
+horizontal_alignment = 1
 script = ExtResource("14_ni0bv")
 
 [node name="ArteriaCarotida" type="Label" parent="Pieces"]
@@ -241,6 +243,7 @@ offset_right = 316.0
 offset_bottom = 907.0
 mouse_filter = 1
 text = "Artéria Carótida"
+horizontal_alignment = 1
 script = ExtResource("14_ni0bv")
 
 [node name="ArteriaBraquial" type="Label" parent="Pieces"]
@@ -250,6 +253,7 @@ offset_right = 298.0
 offset_bottom = 435.0
 mouse_filter = 1
 text = "Artéria Braquial"
+horizontal_alignment = 1
 script = ExtResource("14_ni0bv")
 
 [node name="VeiaCefalica" type="Label" parent="Pieces"]
@@ -259,6 +263,7 @@ offset_right = 254.0
 offset_bottom = 600.0
 mouse_filter = 1
 text = "Veia Cefálica"
+horizontal_alignment = 1
 script = ExtResource("14_ni0bv")
 
 [node name="Coracao" type="Label" parent="Pieces"]
@@ -268,6 +273,7 @@ offset_right = 175.0
 offset_bottom = 644.0
 mouse_filter = 1
 text = "Coração"
+horizontal_alignment = 1
 script = ExtResource("14_ni0bv")
 
 [node name="VeiasPortas" type="Label" parent="Pieces"]
@@ -277,6 +283,7 @@ offset_right = 250.0
 offset_bottom = 697.0
 mouse_filter = 1
 text = "Veias Portas"
+horizontal_alignment = 1
 script = ExtResource("14_ni0bv")
 
 [node name="Baco" type="Label" parent="Pieces"]
@@ -286,6 +293,7 @@ offset_right = 130.0
 offset_bottom = 547.0
 mouse_filter = 1
 text = "Baço"
+horizontal_alignment = 1
 script = ExtResource("14_ni0bv")
 
 [node name="VeiaSafena" type="Label" parent="Pieces"]
@@ -295,6 +303,7 @@ offset_right = 239.0
 offset_bottom = 504.0
 mouse_filter = 1
 text = "Veia Safena"
+horizontal_alignment = 1
 script = ExtResource("14_ni0bv")
 
 [node name="VeiaCavaCaudal" type="Label" parent="Pieces"]
@@ -304,6 +313,7 @@ offset_right = 334.0
 offset_bottom = 754.0
 mouse_filter = 1
 text = "Veia Cava Caudal"
+horizontal_alignment = 1
 script = ExtResource("14_ni0bv")
 
 [node name="Aorta" type="Label" parent="Pieces"]
@@ -313,6 +323,7 @@ offset_right = 132.0
 offset_bottom = 860.0
 mouse_filter = 1
 text = "Aorta"
+horizontal_alignment = 1
 script = ExtResource("14_ni0bv")
 
 [node name="VeiaCavaCranial" type="Label" parent="Pieces"]
@@ -322,6 +333,7 @@ offset_right = 319.0
 offset_bottom = 325.0
 mouse_filter = 1
 text = "Veia Cava Cranial"
+horizontal_alignment = 1
 script = ExtResource("14_ni0bv")
 
 [node name="VictoryPanel" type="PanelContainer" parent="."]
