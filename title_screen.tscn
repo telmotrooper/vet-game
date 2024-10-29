@@ -2,12 +2,12 @@
 
 [ext_resource type="Script" path="res://title_screen.gd" id="1_mjlm7"]
 [ext_resource type="PackedScene" uid="uid://gpvwrquanwhj" path="res://ui/maximize_button/maximize_button.tscn" id="2_csjh6"]
-[ext_resource type="FontFile" uid="uid://ckq5gw7frn8xf" path="res://assets/LondrinaSolid-Black.ttf" id="2_q5b3s"]
+[ext_resource type="FontFile" uid="uid://ckq5gw7frn8xf" path="res://assets/londrina_solid_black.ttf" id="2_q5b3s"]
 [ext_resource type="PackedScene" uid="uid://c7v1migha7ig" path="res://ui/volume_button/volume_button.tscn" id="3_afivn"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ho86y"]
 font = ExtResource("2_q5b3s")
-font_size = 100
+font_size = 120
 font_color = Color(0.635294, 0.152941, 0.172549, 1)
 outline_color = Color(0, 0, 0, 1)
 
@@ -29,40 +29,47 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.635294, 0.152941, 0.172549, 1)
 
-[node name="ColorRect2" type="ColorRect" parent="."]
-layout_mode = 0
-offset_left = 691.0
-offset_top = 351.0
-offset_right = 1224.0
-offset_bottom = 486.0
-color = Color(1, 0.972549, 0.929412, 1)
-
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRectTop" type="ColorRect" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -333.0
-offset_top = -303.5
-offset_right = 333.0
-offset_bottom = -168.5
+offset_left = -399.5
+offset_top = -365.0
+offset_right = 399.5
+offset_bottom = -149.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(1, 0.972549, 0.929412, 1)
 
-[node name="Logo" type="Label" parent="ColorRect"]
+[node name="ColorRectBottom" type="ColorRect" parent="ColorRectTop"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -301.5
-offset_top = -61.5
-offset_right = 301.5
-offset_bottom = 179.5
+offset_left = -302.5
+offset_top = 75.5
+offset_right = 302.5
+offset_bottom = 210.5
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0.972549, 0.929412, 1)
+
+[node name="LogoLabel" type="Label" parent="ColorRectTop"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -361.5
+offset_top = -90.5
+offset_right = 361.5
+offset_bottom = 198.5
 grow_horizontal = 2
 grow_vertical = 2
 text = "SISTEMAS VITAIS
@@ -156,7 +163,8 @@ offset_right = 349.5
 offset_bottom = 113.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "ESCOLHA UM DESAFIO:"
+bbcode_enabled = true
+text = "[center]ESCOLHA UM DESAFIO:[/center]"
 fit_content = true
 autowrap_mode = 0
 
