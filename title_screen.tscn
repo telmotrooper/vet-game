@@ -59,9 +59,8 @@ offset_right = -239.0
 offset_bottom = 450.0
 grow_horizontal = 2
 grow_vertical = 2
-disabled = true
 text = "CÃES
-(QUIZ)"
+(FIGURA)"
 expand_icon = true
 
 [node name="CatButton" type="Button" parent="."]
@@ -136,6 +135,6 @@ text = "ESCOLHA UM DESAFIO:"
 fit_content = true
 autowrap_mode = 0
 
-[connection signal="pressed" from="DogButton" to="." method="_on_cat_button_pressed"]
+[connection signal="pressed" from="DogButton" to="." method="_on_dog_button_pressed"]
 [connection signal="pressed" from="CatButton" to="." method="_on_cat_button_pressed"]
 [connection signal="pressed" from="BirdButton" to="." method="_on_cat_button_pressed"]
