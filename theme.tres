@@ -1,7 +1,7 @@
 [gd_resource type="Theme" load_steps=4 format=3 uid="uid://csa6agkygg3nq"]
 
-[ext_resource type="FontFile" uid="uid://dicevutkrjalm" path="res://assets/fredoka_regular.ttf" id="1_t7x1l"]
-[ext_resource type="FontFile" uid="uid://boh53cjm22t5d" path="res://assets/fredoka_semibold.ttf" id="2_dtnby"]
+[ext_resource type="FontFile" uid="uid://ckq5gw7frn8xf" path="res://assets/fonts/londrina_solid_black.ttf" id="2_iogpy"]
+[ext_resource type="FontFile" uid="uid://bsywbyicuycen" path="res://assets/fonts/londrina_solid_regular.ttf" id="3_gaspx"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7ch7u"]
 bg_color = Color(0.831373, 0.705882, 0.513726, 1)
@@ -16,11 +16,10 @@ corner_radius_bottom_right = 25
 corner_radius_bottom_left = 25
 
 [resource]
-default_font = ExtResource("1_t7x1l")
+default_font = ExtResource("3_gaspx")
 Button/font_sizes/font_size = 49
 Label/constants/outline_size = 10
 Label/font_sizes/font_size = 40
-Label/fonts/font = ExtResource("1_t7x1l")
 MarginContainer/constants/margin_bottom = 20
 MarginContainer/constants/margin_left = 20
 MarginContainer/constants/margin_right = 20
@@ -28,5 +27,5 @@ MarginContainer/constants/margin_top = 20
 PanelContainer/styles/panel = SubResource("StyleBoxFlat_7ch7u")
 RichTextLabel/font_sizes/bold_font_size = 64
 RichTextLabel/font_sizes/normal_font_size = 64
-RichTextLabel/fonts/bold_font = ExtResource("2_dtnby")
-RichTextLabel/fonts/normal_font = ExtResource("1_t7x1l")
+RichTextLabel/fonts/bold_font = ExtResource("2_iogpy")
+RichTextLabel/fonts/normal_font = ExtResource("3_gaspx")

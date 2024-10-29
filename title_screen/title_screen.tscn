@@ -1,12 +1,20 @@
-[gd_scene load_steps=5 format=3 uid="uid://bwq2aip0hywte"]
+[gd_scene load_steps=12 format=3 uid="uid://bwq2aip0hywte"]
 
-[ext_resource type="Script" path="res://title_screen.gd" id="1_mjlm7"]
+[ext_resource type="Script" path="res://title_screen/title_screen.gd" id="1_mjlm7"]
 [ext_resource type="PackedScene" uid="uid://gpvwrquanwhj" path="res://ui/maximize_button/maximize_button.tscn" id="2_csjh6"]
+[ext_resource type="FontFile" uid="uid://ckq5gw7frn8xf" path="res://assets/fonts/londrina_solid_black.ttf" id="2_q5b3s"]
 [ext_resource type="PackedScene" uid="uid://c7v1migha7ig" path="res://ui/volume_button/volume_button.tscn" id="3_afivn"]
+[ext_resource type="Texture2D" uid="uid://b810j526r3pqn" path="res://title_screen/heart.svg" id="5_7d6p2"]
+[ext_resource type="Texture2D" uid="uid://b876cep1ky0pb" path="res://title_screen/red_cells.svg" id="6_6cxu3"]
+[ext_resource type="Texture2D" uid="uid://c4hjfkkx8r08g" path="res://title_screen/kidneys.svg" id="7_mgk47"]
+[ext_resource type="Texture2D" uid="uid://dtpkx0rrmm4kw" path="res://title_screen/intestine.svg" id="8_ye1c4"]
+[ext_resource type="Texture2D" uid="uid://bmfnu1qxj1kty" path="res://title_screen/lungs.png" id="9_ps17f"]
+[ext_resource type="Texture2D" uid="uid://dsoo6oj32e7xa" path="res://title_screen/stomach.svg" id="10_f4btk"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ho86y"]
-font_size = 100
-outline_size = 30
+font = ExtResource("2_q5b3s")
+font_size = 120
+font_color = Color(0.635294, 0.152941, 0.172549, 1)
 outline_color = Color(0, 0, 0, 1)
 
 [node name="TitleScreen" type="Control"]
@@ -25,26 +33,88 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0.435294, 0.639216, 1)
+color = Color(0.635294, 0.152941, 0.172549, 1)
 
-[node name="Logo" type="Label" parent="."]
+[node name="Heart" type="Sprite2D" parent="Background"]
+position = Vector2(220, 237)
+scale = Vector2(1.16562, 1.16562)
+texture = ExtResource("5_7d6p2")
+
+[node name="BloodCells" type="Sprite2D" parent="Background"]
+position = Vector2(208, 623)
+scale = Vector2(0.952769, 0.952769)
+texture = ExtResource("6_6cxu3")
+
+[node name="Kidneys" type="Sprite2D" parent="Background"]
+position = Vector2(174, 906)
+scale = Vector2(0.53246, 0.53246)
+texture = ExtResource("7_mgk47")
+
+[node name="Intestine" type="Sprite2D" parent="Background"]
+position = Vector2(1741.34, 195.25)
+scale = Vector2(0.544487, 0.544487)
+texture = ExtResource("8_ye1c4")
+
+[node name="Lungs" type="Sprite2D" parent="Background"]
+position = Vector2(1744, 491)
+rotation = 0.466136
+scale = Vector2(0.474111, 0.474111)
+texture = ExtResource("9_ps17f")
+
+[node name="Stomach" type="Sprite2D" parent="Background"]
+position = Vector2(1785, 906)
+rotation = 0.31252
+scale = Vector2(0.629534, 0.629534)
+texture = ExtResource("10_f4btk")
+
+[node name="ColorRectTop" type="ColorRect" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -488.0
-offset_top = -340.0
-offset_right = 488.0
-offset_bottom = -25.0
+offset_left = -399.5
+offset_top = -365.0
+offset_right = 399.5
+offset_bottom = -149.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "SISTEMAS VITAIS DOS ANIMAIS"
+color = Color(1, 0.972549, 0.929412, 1)
+
+[node name="ColorRectBottom" type="ColorRect" parent="ColorRectTop"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -302.5
+offset_top = 75.5
+offset_right = 302.5
+offset_bottom = 210.5
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0.972549, 0.929412, 1)
+
+[node name="LogoLabel" type="Label" parent="ColorRectTop"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -361.5
+offset_top = -90.5
+offset_right = 361.5
+offset_bottom = 198.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "SISTEMAS VITAIS
+DOS ANIMAIS"
 label_settings = SubResource("LabelSettings_ho86y")
 horizontal_alignment = 1
 vertical_alignment = 1
-autowrap_mode = 2
 
 [node name="DogButton" type="Button" parent="."]
 layout_mode = 1
@@ -131,7 +201,8 @@ offset_right = 349.5
 offset_bottom = 113.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "ESCOLHA UM DESAFIO:"
+bbcode_enabled = true
+text = "[center]ESCOLHA UM DESAFIO:[/center]"
 fit_content = true
 autowrap_mode = 0
 

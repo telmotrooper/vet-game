@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://crk2xg5swr8j"
-path="res://.godot/imported/fredoka_bold.ttf-8b02ac87644530c61e40f0c6743c95cd.fontdata"
+uid="uid://dicevutkrjalm"
+path="res://.godot/imported/fredoka_regular.ttf-665e54117b5b12c2b3b1a553db3d30bb.fontdata"
 
 [deps]
 
-source_file="res://assets/fredoka_bold.ttf"
-dest_files=["res://.godot/imported/fredoka_bold.ttf-8b02ac87644530c61e40f0c6743c95cd.fontdata"]
+source_file="res://assets/fonts/fredoka_regular.ttf"
+dest_files=["res://.godot/imported/fredoka_regular.ttf-665e54117b5b12c2b3b1a553db3d30bb.fontdata"]
 
 [params]
 
