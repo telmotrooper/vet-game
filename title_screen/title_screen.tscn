@@ -1,9 +1,15 @@
-[gd_scene load_steps=6 format=3 uid="uid://bwq2aip0hywte"]
+[gd_scene load_steps=12 format=3 uid="uid://bwq2aip0hywte"]
 
 [ext_resource type="Script" path="res://title_screen/title_screen.gd" id="1_mjlm7"]
 [ext_resource type="PackedScene" uid="uid://gpvwrquanwhj" path="res://ui/maximize_button/maximize_button.tscn" id="2_csjh6"]
 [ext_resource type="FontFile" uid="uid://ckq5gw7frn8xf" path="res://assets/fonts/londrina_solid_black.ttf" id="2_q5b3s"]
 [ext_resource type="PackedScene" uid="uid://c7v1migha7ig" path="res://ui/volume_button/volume_button.tscn" id="3_afivn"]
+[ext_resource type="Texture2D" uid="uid://b810j526r3pqn" path="res://title_screen/heart.svg" id="5_7d6p2"]
+[ext_resource type="Texture2D" uid="uid://b876cep1ky0pb" path="res://title_screen/red_cells.svg" id="6_6cxu3"]
+[ext_resource type="Texture2D" uid="uid://c4hjfkkx8r08g" path="res://title_screen/kidneys.svg" id="7_mgk47"]
+[ext_resource type="Texture2D" uid="uid://dtpkx0rrmm4kw" path="res://title_screen/intestine.svg" id="8_ye1c4"]
+[ext_resource type="Texture2D" uid="uid://bmfnu1qxj1kty" path="res://title_screen/lungs.png" id="9_ps17f"]
+[ext_resource type="Texture2D" uid="uid://dsoo6oj32e7xa" path="res://title_screen/stomach.svg" id="10_f4btk"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ho86y"]
 font = ExtResource("2_q5b3s")
@@ -167,6 +173,30 @@ bbcode_enabled = true
 text = "[center]ESCOLHA UM DESAFIO:[/center]"
 fit_content = true
 autowrap_mode = 0
+
+[node name="Heart" type="Sprite2D" parent="."]
+position = Vector2(235, 259)
+texture = ExtResource("5_7d6p2")
+
+[node name="Cells" type="Sprite2D" parent="."]
+position = Vector2(255, 588)
+texture = ExtResource("6_6cxu3")
+
+[node name="S" type="Sprite2D" parent="."]
+position = Vector2(232, 893)
+texture = ExtResource("7_mgk47")
+
+[node name="1" type="Sprite2D" parent="."]
+position = Vector2(1622, 313)
+texture = ExtResource("8_ye1c4")
+
+[node name="2" type="Sprite2D" parent="."]
+position = Vector2(1645, 497)
+texture = ExtResource("9_ps17f")
+
+[node name="3" type="Sprite2D" parent="."]
+position = Vector2(1688, 854)
+texture = ExtResource("10_f4btk")
 
 [connection signal="pressed" from="DogButton" to="." method="_on_dog_button_pressed"]
 [connection signal="pressed" from="CatButton" to="." method="_on_cat_button_pressed"]
