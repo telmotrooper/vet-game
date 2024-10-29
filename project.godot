@@ -29,3 +29,4 @@ window/stretch/mode="viewport"
 [gui]
 
 theme/custom="res://theme.tres"
+theme/custom_font="res://assets/fonts/londrina_solid_regular.ttf"
