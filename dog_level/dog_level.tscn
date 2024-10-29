@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://b8ki845joqcnh"]
+[gd_scene load_steps=14 format=3 uid="uid://b8ki845joqcnh"]
 
 [ext_resource type="Script" path="res://level.gd" id="1_d8efn"]
 [ext_resource type="Texture2D" uid="uid://dccvgy7grvwon" path="res://ui/star_regular.svg" id="2_dlmkr"]
@@ -10,8 +10,6 @@
 [ext_resource type="PackedScene" uid="uid://c7v1migha7ig" path="res://ui/volume_button/volume_button.tscn" id="9_5id82"]
 [ext_resource type="Texture2D" uid="uid://btvovgytwfq74" path="res://square_slot.svg" id="10_10lmo"]
 [ext_resource type="Script" path="res://slot.gd" id="11_suqmt"]
-[ext_resource type="Texture2D" uid="uid://bwvk2il82mqsk" path="res://square.svg" id="12_ib87x"]
-[ext_resource type="Script" path="res://draggable_object.gd" id="13_6iceu"]
 [ext_resource type="Script" path="res://draggable_label.gd" id="14_ni0bv"]
 [ext_resource type="Theme" uid="uid://dih34ywnda3er" path="res://panel_button_theme.tres" id="15_tiibd"]
 [ext_resource type="Script" path="res://ui/back_button/back_button.gd" id="16_y7wcw"]
@@ -97,6 +95,83 @@ expected_value = "Veia Jugular"
 
 [node name="SquareSlot2" type="TextureRect" parent="Slots"]
 z_index = -1
+offset_left = 268.0
+offset_top = 404.0
+offset_right = 498.0
+offset_bottom = 454.0
+texture = ExtResource("10_10lmo")
+expand_mode = 1
+script = ExtResource("11_suqmt")
+expected_value = "Artéria Carótida"
+
+[node name="SquareSlot3" type="TextureRect" parent="Slots"]
+z_index = -1
+offset_left = 280.0
+offset_top = 517.0
+offset_right = 530.0
+offset_bottom = 567.0
+texture = ExtResource("10_10lmo")
+expand_mode = 1
+script = ExtResource("11_suqmt")
+expected_value = "Artéria Braquial"
+
+[node name="SquareSlot4" type="TextureRect" parent="Slots"]
+z_index = -1
+offset_left = 255.0
+offset_top = 606.0
+offset_right = 505.0
+offset_bottom = 656.0
+texture = ExtResource("10_10lmo")
+expand_mode = 1
+script = ExtResource("11_suqmt")
+expected_value = "Veia Cefálica"
+
+[node name="SquareSlot5" type="TextureRect" parent="Slots"]
+z_index = -1
+offset_left = 819.0
+offset_top = 691.0
+offset_right = 969.0
+offset_bottom = 741.0
+texture = ExtResource("10_10lmo")
+expand_mode = 1
+script = ExtResource("11_suqmt")
+expected_value = "Coração"
+
+[node name="SquareSlot6" type="TextureRect" parent="Slots"]
+z_index = -1
+offset_left = 988.0
+offset_top = 695.0
+offset_right = 1188.0
+offset_bottom = 745.0
+texture = ExtResource("10_10lmo")
+expand_mode = 1
+script = ExtResource("11_suqmt")
+expected_value = "Veias Portas"
+
+[node name="SquareSlot7" type="TextureRect" parent="Slots"]
+z_index = -1
+offset_left = 1077.0
+offset_top = 610.0
+offset_right = 1197.0
+offset_bottom = 660.0
+texture = ExtResource("10_10lmo")
+expand_mode = 1
+script = ExtResource("11_suqmt")
+expected_value = "Baço"
+
+[node name="SquareSlot8" type="TextureRect" parent="Slots"]
+z_index = -1
+offset_left = 1410.0
+offset_top = 646.0
+offset_right = 1670.0
+offset_bottom = 696.0
+texture = ExtResource("10_10lmo")
+expand_mode = 1
+script = ExtResource("11_suqmt")
+expected_value = "Veia Safena"
+
+[node name="SquareSlot9" type="TextureRect" parent="Slots"]
+z_index = -1
 offset_left = 1399.0
 offset_top = 410.0
 offset_right = 1679.0
@@ -107,15 +182,6 @@ script = ExtResource("11_suqmt")
 expected_value = "Artéria Femoral"
 
 [node name="Pieces" type="Node" parent="."]
-
-[node name="Square" type="TextureRect" parent="Pieces"]
-offset_left = 16.0
-offset_top = 188.0
-offset_right = 187.0
-offset_bottom = 359.0
-texture = ExtResource("12_ib87x")
-script = ExtResource("13_6iceu")
-value = "abacate"
 
 [node name="VeiaJugular" type="Label" parent="Pieces"]
 offset_left = 11.0
@@ -133,6 +199,69 @@ offset_right = 294.0
 offset_bottom = 511.0
 mouse_filter = 1
 text = "Artéria Femoral"
+script = ExtResource("14_ni0bv")
+
+[node name="ArteriaCarotida" type="Label" parent="Pieces"]
+offset_left = 12.0
+offset_top = 527.0
+offset_right = 305.0
+offset_bottom = 576.0
+mouse_filter = 1
+text = "Artéria Carótida"
+script = ExtResource("14_ni0bv")
+
+[node name="ArteriaBraquial" type="Label" parent="Pieces"]
+offset_left = 6.0
+offset_top = 578.0
+offset_right = 299.0
+offset_bottom = 627.0
+mouse_filter = 1
+text = "Artéria Braquial"
+script = ExtResource("14_ni0bv")
+
+[node name="VeiaCefalica" type="Label" parent="Pieces"]
+offset_left = 12.0
+offset_top = 628.0
+offset_right = 305.0
+offset_bottom = 677.0
+mouse_filter = 1
+text = "Veia Cefálica"
+script = ExtResource("14_ni0bv")
+
+[node name="Coracao" type="Label" parent="Pieces"]
+offset_left = 13.0
+offset_top = 682.0
+offset_right = 306.0
+offset_bottom = 731.0
+mouse_filter = 1
+text = "Coração"
+script = ExtResource("14_ni0bv")
+
+[node name="VeiasPortas" type="Label" parent="Pieces"]
+offset_left = 12.0
+offset_top = 740.0
+offset_right = 305.0
+offset_bottom = 789.0
+mouse_filter = 1
+text = "Veias Portas"
+script = ExtResource("14_ni0bv")
+
+[node name="Baco" type="Label" parent="Pieces"]
+offset_left = 12.0
+offset_top = 793.0
+offset_right = 305.0
+offset_bottom = 842.0
+mouse_filter = 1
+text = "Baço"
+script = ExtResource("14_ni0bv")
+
+[node name="VeiaSafena" type="Label" parent="Pieces"]
+offset_left = 13.0
+offset_top = 849.0
+offset_right = 306.0
+offset_bottom = 898.0
+mouse_filter = 1
+text = "Veia Safena"
 script = ExtResource("14_ni0bv")
 
 [node name="VictoryPanel" type="PanelContainer" parent="."]
@@ -218,5 +347,12 @@ script = ExtResource("16_y7wcw")
 
 [connection signal="slot_filled" from="Slots/SquareSlot" to="." method="_on_slot_filled"]
 [connection signal="slot_filled" from="Slots/SquareSlot2" to="." method="_on_slot_filled"]
+[connection signal="slot_filled" from="Slots/SquareSlot3" to="." method="_on_slot_filled"]
+[connection signal="slot_filled" from="Slots/SquareSlot4" to="." method="_on_slot_filled"]
+[connection signal="slot_filled" from="Slots/SquareSlot5" to="." method="_on_slot_filled"]
+[connection signal="slot_filled" from="Slots/SquareSlot6" to="." method="_on_slot_filled"]
+[connection signal="slot_filled" from="Slots/SquareSlot7" to="." method="_on_slot_filled"]
+[connection signal="slot_filled" from="Slots/SquareSlot8" to="." method="_on_slot_filled"]
+[connection signal="slot_filled" from="Slots/SquareSlot9" to="." method="_on_slot_filled"]
 [connection signal="pressed" from="VictoryPanel/MarginContainer/VBoxContainer/Buttons/FigureButton" to="." method="hide_victory_panel"]
 [connection signal="pressed" from="VictoryPanel/MarginContainer/VBoxContainer/Buttons/ContinueButton" to="VictoryPanel/MarginContainer/VBoxContainer/Buttons/ContinueButton" method="_on_pressed"]
