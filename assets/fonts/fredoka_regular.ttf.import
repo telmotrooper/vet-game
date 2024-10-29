@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://boh53cjm22t5d"
-path="res://.godot/imported/fredoka_semibold.ttf-c0faceea321b37d7516051ef7e16c892.fontdata"
+uid="uid://dicevutkrjalm"
+path="res://.godot/imported/fredoka_regular.ttf-665e54117b5b12c2b3b1a553db3d30bb.fontdata"
 
 [deps]
 
-source_file="res://assets/fredoka_semibold.ttf"
-dest_files=["res://.godot/imported/fredoka_semibold.ttf-c0faceea321b37d7516051ef7e16c892.fontdata"]
+source_file="res://assets/fonts/fredoka_regular.ttf"
+dest_files=["res://.godot/imported/fredoka_regular.ttf-665e54117b5b12c2b3b1a553db3d30bb.fontdata"]
 
 [params]
 

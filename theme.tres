@@ -1,8 +1,8 @@
 [gd_resource type="Theme" load_steps=5 format=3 uid="uid://csa6agkygg3nq"]
 
-[ext_resource type="FontFile" uid="uid://dicevutkrjalm" path="res://assets/fredoka_regular.ttf" id="1_t7x1l"]
-[ext_resource type="FontFile" uid="uid://ckq5gw7frn8xf" path="res://assets/londrina_solid_black.ttf" id="2_iogpy"]
-[ext_resource type="FontFile" uid="uid://bsywbyicuycen" path="res://assets/londrina_solid_regular.ttf" id="3_gaspx"]
+[ext_resource type="FontFile" uid="uid://dicevutkrjalm" path="res://assets/fonts/fredoka_regular.ttf" id="1_t7x1l"]
+[ext_resource type="FontFile" uid="uid://ckq5gw7frn8xf" path="res://assets/fonts/londrina_solid_black.ttf" id="2_iogpy"]
+[ext_resource type="FontFile" uid="uid://bsywbyicuycen" path="res://assets/fonts/londrina_solid_regular.ttf" id="3_gaspx"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7ch7u"]
 bg_color = Color(0.831373, 0.705882, 0.513726, 1)

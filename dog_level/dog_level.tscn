@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://btvovgytwfq74" path="res://square_slot.svg" id="10_10lmo"]
 [ext_resource type="Script" path="res://slot.gd" id="11_suqmt"]
 [ext_resource type="Script" path="res://draggable_label.gd" id="14_ni0bv"]
-[ext_resource type="Theme" uid="uid://dih34ywnda3er" path="res://panel_button_theme.tres" id="15_tiibd"]
+[ext_resource type="Theme" uid="uid://dih34ywnda3er" path="res://dialog_button_theme.tres" id="15_tiibd"]
 [ext_resource type="Script" path="res://ui/back_button/back_button.gd" id="16_y7wcw"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_hcqab"]

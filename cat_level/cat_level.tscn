@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://6xae6ixeinrn" path="res://square_alt.svg" id="12_ygnpx"]
 [ext_resource type="Texture2D" uid="uid://q28cdfoueli8" path="res://ui/star_solid.svg" id="13_0x6jh"]
 [ext_resource type="Texture2D" uid="uid://dccvgy7grvwon" path="res://ui/star_regular.svg" id="13_62bxt"]
-[ext_resource type="Theme" uid="uid://dih34ywnda3er" path="res://panel_button_theme.tres" id="13_d7q3b"]
+[ext_resource type="Theme" uid="uid://dih34ywnda3er" path="res://dialog_button_theme.tres" id="13_d7q3b"]
 [ext_resource type="Script" path="res://ui/back_button/back_button.gd" id="13_hnmnr"]
 
 [node name="CatLevel" type="Control"]

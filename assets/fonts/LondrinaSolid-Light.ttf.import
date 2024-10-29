@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://bsywbyicuycen"
-path="res://.godot/imported/londrina_solid_regular.ttf-b878de2a8de8699a7fb18a9c3fe7c6f7.fontdata"
+uid="uid://ci1ebjt6qxjy0"
+path="res://.godot/imported/LondrinaSolid-Light.ttf-147b2606ea308d77b573d5c8a804b002.fontdata"
 
 [deps]
 
-source_file="res://assets/londrina_solid_regular.ttf"
-dest_files=["res://.godot/imported/londrina_solid_regular.ttf-b878de2a8de8699a7fb18a9c3fe7c6f7.fontdata"]
+source_file="res://assets/fonts/LondrinaSolid-Light.ttf"
+dest_files=["res://.godot/imported/LondrinaSolid-Light.ttf-147b2606ea308d77b573d5c8a804b002.fontdata"]
 
 [params]
 

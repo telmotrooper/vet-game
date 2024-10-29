@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://ci1ebjt6qxjy0"
-path="res://.godot/imported/LondrinaSolid-Light.ttf-28dc26ffb59e183604bf1599b47b0dab.fontdata"
+uid="uid://crk2xg5swr8j"
+path="res://.godot/imported/fredoka_bold.ttf-61314e2738da63aaf46249ed56239738.fontdata"
 
 [deps]
 
-source_file="res://assets/LondrinaSolid-Light.ttf"
-dest_files=["res://.godot/imported/LondrinaSolid-Light.ttf-28dc26ffb59e183604bf1599b47b0dab.fontdata"]
+source_file="res://assets/fonts/fredoka_bold.ttf"
+dest_files=["res://.godot/imported/fredoka_bold.ttf-61314e2738da63aaf46249ed56239738.fontdata"]
 
 [params]
 

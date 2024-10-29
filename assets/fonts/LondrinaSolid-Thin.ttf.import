@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://dicevutkrjalm"
-path="res://.godot/imported/fredoka_regular.ttf-603921cfcb3dbc23a072b2aa553e296c.fontdata"
+uid="uid://dsm2ow47y4l76"
+path="res://.godot/imported/LondrinaSolid-Thin.ttf-f68e15219a2d4eadcfedd875bdd3d020.fontdata"
 
 [deps]
 
-source_file="res://assets/fredoka_regular.ttf"
-dest_files=["res://.godot/imported/fredoka_regular.ttf-603921cfcb3dbc23a072b2aa553e296c.fontdata"]
+source_file="res://assets/fonts/LondrinaSolid-Thin.ttf"
+dest_files=["res://.godot/imported/LondrinaSolid-Thin.ttf-f68e15219a2d4eadcfedd875bdd3d020.fontdata"]
 
 [params]
 
