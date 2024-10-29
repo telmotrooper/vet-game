@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dccvgy7grvwon" path="res://ui/star_regular.svg" id="2_dlmkr"]
 [ext_resource type="Texture2D" uid="uid://q28cdfoueli8" path="res://ui/star_solid.svg" id="3_fqcxr"]
 [ext_resource type="Script" path="res://droppable_background.gd" id="4_21gbo"]
-[ext_resource type="Texture2D" uid="uid://dgyy8ryhn84k6" path="res://dog_level/dog.png" id="5_6p3aa"]
+[ext_resource type="Texture2D" uid="uid://b6a1pyyhtlivt" path="res://dog_level/dog_notext.jpg" id="5_utaug"]
 [ext_resource type="PackedScene" uid="uid://gpvwrquanwhj" path="res://ui/maximize_button/maximize_button.tscn" id="7_ywdc7"]
 [ext_resource type="PackedScene" uid="uid://c4e4q5arhn8f2" path="res://ui/back_button/back_button.tscn" id="8_tbklm"]
 [ext_resource type="PackedScene" uid="uid://c7v1migha7ig" path="res://ui/volume_button/volume_button.tscn" id="9_5id82"]
@@ -42,7 +42,7 @@ script = ExtResource("4_21gbo")
 [node name="DogFigure" type="Sprite2D" parent="Background"]
 position = Vector2(964, 533)
 scale = Vector2(0.6, 0.6)
-texture = ExtResource("5_6p3aa")
+texture = ExtResource("5_utaug")
 
 [node name="MaximizeButton" parent="Background" instance=ExtResource("7_ywdc7")]
 anchors_preset = 1
@@ -79,11 +79,13 @@ offset_right = 0.0
 grow_horizontal = 0
 pivot_offset = Vector2(350, 20)
 
-[node name="Slots" type="Node" parent="."]
+[node name="Slots" type="Control" parent="."]
 unique_name_in_owner = true
+anchors_preset = 0
 
 [node name="SquareSlot" type="TextureRect" parent="Slots"]
 z_index = -1
+layout_mode = 0
 offset_left = 250.0
 offset_top = 317.0
 offset_right = 480.0
@@ -95,6 +97,7 @@ expected_value = "Veia Jugular"
 
 [node name="SquareSlot2" type="TextureRect" parent="Slots"]
 z_index = -1
+layout_mode = 0
 offset_left = 268.0
 offset_top = 404.0
 offset_right = 498.0
@@ -106,6 +109,7 @@ expected_value = "Artéria Carótida"
 
 [node name="SquareSlot3" type="TextureRect" parent="Slots"]
 z_index = -1
+layout_mode = 0
 offset_left = 280.0
 offset_top = 517.0
 offset_right = 575.0
@@ -117,6 +121,7 @@ expected_value = "Artéria Braquial"
 
 [node name="SquareSlot4" type="TextureRect" parent="Slots"]
 z_index = -1
+layout_mode = 0
 offset_left = 255.0
 offset_top = 606.0
 offset_right = 505.0
@@ -128,6 +133,7 @@ expected_value = "Veia Cefálica"
 
 [node name="SquareSlot5" type="TextureRect" parent="Slots"]
 z_index = -1
+layout_mode = 0
 offset_left = 815.0
 offset_top = 691.0
 offset_right = 980.0
@@ -139,6 +145,7 @@ expected_value = "Coração"
 
 [node name="SquareSlot6" type="TextureRect" parent="Slots"]
 z_index = -1
+layout_mode = 0
 offset_left = 988.0
 offset_top = 695.0
 offset_right = 1218.0
@@ -150,6 +157,7 @@ expected_value = "Veias Portas"
 
 [node name="SquareSlot7" type="TextureRect" parent="Slots"]
 z_index = -1
+layout_mode = 0
 offset_left = 1077.0
 offset_top = 610.0
 offset_right = 1197.0
@@ -161,6 +169,7 @@ expected_value = "Baço"
 
 [node name="SquareSlot8" type="TextureRect" parent="Slots"]
 z_index = -1
+layout_mode = 0
 offset_left = 1410.0
 offset_top = 646.0
 offset_right = 1670.0
@@ -172,6 +181,7 @@ expected_value = "Veia Safena"
 
 [node name="SquareSlot9" type="TextureRect" parent="Slots"]
 z_index = -1
+layout_mode = 0
 offset_left = 1399.0
 offset_top = 410.0
 offset_right = 1689.0
@@ -183,6 +193,7 @@ expected_value = "Artéria Femoral"
 
 [node name="SquareSlot10" type="TextureRect" parent="Slots"]
 z_index = -1
+layout_mode = 0
 offset_left = 1121.0
 offset_top = 173.0
 offset_right = 1411.0
@@ -194,6 +205,7 @@ expected_value = "Veia Cava Caudal"
 
 [node name="SquareSlot11" type="TextureRect" parent="Slots"]
 z_index = -1
+layout_mode = 0
 offset_left = 965.0
 offset_top = 256.0
 offset_right = 1065.0
@@ -205,6 +217,7 @@ expected_value = "Aorta"
 
 [node name="SquareSlot12" type="TextureRect" parent="Slots"]
 z_index = -1
+layout_mode = 0
 offset_left = 766.0
 offset_top = 173.0
 offset_right = 1091.0
