@@ -122,6 +122,7 @@ offset_left = 11.0
 offset_top = 393.0
 offset_right = 237.0
 offset_bottom = 442.0
+mouse_filter = 1
 text = "Veia Jugular"
 script = ExtResource("14_ni0bv")
 
@@ -130,6 +131,7 @@ offset_left = 10.0
 offset_top = 462.0
 offset_right = 294.0
 offset_bottom = 511.0
+mouse_filter = 1
 text = "Artéria Femoral"
 script = ExtResource("14_ni0bv")
 
