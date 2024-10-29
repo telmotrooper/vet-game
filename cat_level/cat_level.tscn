@@ -1,11 +1,10 @@
-[gd_scene load_steps=17 format=3 uid="uid://cqqouxh0tnhtp"]
+[gd_scene load_steps=16 format=3 uid="uid://cqqouxh0tnhtp"]
 
 [ext_resource type="Texture2D" uid="uid://bwvk2il82mqsk" path="res://square.svg" id="1_7qxg0"]
 [ext_resource type="Script" path="res://droppable_background.gd" id="1_f7l06"]
-[ext_resource type="Script" path="res://cat_level/level.gd" id="1_kkgaa"]
-[ext_resource type="Texture2D" uid="uid://dsca8fe4ifouc" path="res://cat_level/cat_drawing_4x.png" id="2_ei4k5"]
+[ext_resource type="Script" path="res://level.gd" id="1_kkgaa"]
+[ext_resource type="Texture2D" uid="uid://dsca8fe4ifouc" path="res://cat_level/cat.png" id="2_ei4k5"]
 [ext_resource type="Script" path="res://draggable_object.gd" id="2_jfxkb"]
-[ext_resource type="Texture2D" uid="uid://cb2vmldiuibbj" path="res://cat_level/cat_skeleton_drawing_4x.png" id="2_qsntf"]
 [ext_resource type="Texture2D" uid="uid://btvovgytwfq74" path="res://square_slot.svg" id="3_25sf6"]
 [ext_resource type="PackedScene" uid="uid://gpvwrquanwhj" path="res://ui/maximize_button/maximize_button.tscn" id="4_bygoh"]
 [ext_resource type="Script" path="res://slot.gd" id="4_cleui"]
@@ -46,12 +45,6 @@ script = ExtResource("1_f7l06")
 position = Vector2(964, 533)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("2_ei4k5")
-
-[node name="CatSkeletonDrawing4x" type="Sprite2D" parent="Background"]
-visible = false
-position = Vector2(964, 533)
-scale = Vector2(0.6, 0.6)
-texture = ExtResource("2_qsntf")
 
 [node name="MaximizeButton" parent="Background" instance=ExtResource("4_bygoh")]
 anchors_preset = 1

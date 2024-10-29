@@ -53,14 +53,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -553.0
-offset_top = 110.0
-offset_right = -247.0
-offset_bottom = 416.0
+offset_left = -545.0
+offset_top = 144.0
+offset_right = -239.0
+offset_bottom = 450.0
 grow_horizontal = 2
 grow_vertical = 2
-disabled = true
-text = "CÃES"
+text = "CÃES
+(FIGURA)"
 expand_icon = true
 
 [node name="CatButton" type="Button" parent="."]
@@ -71,12 +71,13 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -153.0
-offset_top = 110.0
+offset_top = 144.0
 offset_right = 153.0
-offset_bottom = 416.0
+offset_bottom = 450.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "GATOS"
+text = "GATOS
+(FIGURA)"
 expand_icon = true
 
 [node name="BirdButton" type="Button" parent="."]
@@ -86,14 +87,15 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 247.0
-offset_top = 110.0
-offset_right = 553.0
-offset_bottom = 416.0
+offset_left = 231.5
+offset_top = 144.0
+offset_right = 552.5
+offset_bottom = 450.0
 grow_horizontal = 2
 grow_vertical = 2
 disabled = true
-text = "PÁSSAROS"
+text = "RUMINANTES
+(QUIZ)"
 expand_icon = true
 
 [node name="MaximizeButton" parent="." instance=ExtResource("2_csjh6")]
@@ -116,6 +118,23 @@ offset_right = 0.0
 grow_horizontal = 0
 pivot_offset = Vector2(350, 20)
 
-[connection signal="pressed" from="DogButton" to="." method="_on_cat_button_pressed"]
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -349.5
+offset_top = 34.0
+offset_right = 349.5
+offset_bottom = 113.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "ESCOLHA UM DESAFIO:"
+fit_content = true
+autowrap_mode = 0
+
+[connection signal="pressed" from="DogButton" to="." method="_on_dog_button_pressed"]
 [connection signal="pressed" from="CatButton" to="." method="_on_cat_button_pressed"]
 [connection signal="pressed" from="BirdButton" to="." method="_on_cat_button_pressed"]
