@@ -97,13 +97,14 @@ expected_value = "Veia Jugular"
 
 [node name="SquareSlot2" type="TextureRect" parent="Slots"]
 z_index = -1
-offset_left = 1112.0
-offset_top = 418.0
-offset_right = 1283.0
-offset_bottom = 589.0
+offset_left = 1399.0
+offset_top = 410.0
+offset_right = 1679.0
+offset_bottom = 460.0
 texture = ExtResource("10_10lmo")
+expand_mode = 1
 script = ExtResource("11_suqmt")
-expected_value = "abacate"
+expected_value = "Artéria Femoral"
 
 [node name="Pieces" type="Node" parent="."]
 
@@ -122,6 +123,14 @@ offset_top = 393.0
 offset_right = 237.0
 offset_bottom = 442.0
 text = "Veia Jugular"
+script = ExtResource("14_ni0bv")
+
+[node name="ArteriaFemoral" type="Label" parent="Pieces"]
+offset_left = 10.0
+offset_top = 462.0
+offset_right = 294.0
+offset_bottom = 511.0
+text = "Artéria Femoral"
 script = ExtResource("14_ni0bv")
 
 [node name="VictoryPanel" type="PanelContainer" parent="."]
