@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://btvovgytwfq74"
-path="res://.godot/imported/square_slot.svg-fcd64a910b0bcd77829da1c4ef64de06.ctex"
+uid="uid://6xae6ixeinrn"
+path="res://.godot/imported/square_alt.svg-f29a4a8a1d76ec6dfa2cb5454391b255.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://square_slot.svg"
-dest_files=["res://.godot/imported/square_slot.svg-fcd64a910b0bcd77829da1c4ef64de06.ctex"]
+source_file="res://cat_level/square_alt.svg"
+dest_files=["res://.godot/imported/square_alt.svg-f29a4a8a1d76ec6dfa2cb5454391b255.ctex"]
 
 [params]
 
