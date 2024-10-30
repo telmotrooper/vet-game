@@ -17,6 +17,7 @@ corner_radius_bottom_left = 25
 
 [resource]
 default_font = ExtResource("3_gaspx")
+default_font_size = 32
 Button/font_sizes/font_size = 49
 Label/constants/outline_size = 10
 Label/font_sizes/font_size = 40
