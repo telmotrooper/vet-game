@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://b8ki845joqcnh"]
+[gd_scene load_steps=16 format=3 uid="uid://b8ki845joqcnh"]
 
 [ext_resource type="Script" path="res://level.gd" id="1_d8efn"]
 [ext_resource type="Texture2D" uid="uid://dccvgy7grvwon" path="res://ui/star_regular.svg" id="2_dlmkr"]
@@ -16,6 +16,11 @@
 
 [sub_resource type="LabelSettings" id="LabelSettings_hcqab"]
 font_size = 64
+font_color = Color(0.635294, 0.152941, 0.172549, 1)
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_k6rhw"]
+font_size = 40
 font_color = Color(0.635294, 0.152941, 0.172549, 1)
 outline_color = Color(0, 0, 0, 1)
 
@@ -62,6 +67,26 @@ offset_bottom = 181.0
 grow_horizontal = 2
 size_flags_horizontal = 4
 color = Color(1, 0.972549, 0.929412, 1)
+
+[node name="TitleBackground" type="ColorRect" parent="Background"]
+offset_left = 694.0
+offset_top = 28.0
+offset_right = 1225.0
+offset_bottom = 109.0
+color = Color(1, 0.972549, 0.929412, 1)
+
+[node name="TitleLabel" type="Label" parent="Background"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -290.0
+offset_top = 28.0
+offset_right = 290.0
+offset_bottom = 107.0
+grow_horizontal = 2
+text = "Sistema Circulatório"
+label_settings = SubResource("LabelSettings_hcqab")
+horizontal_alignment = 1
 
 [node name="Score" type="RichTextLabel" parent="Background"]
 unique_name_in_owner = true
@@ -248,6 +273,34 @@ expected_value = "Veia Cava Cranial"
 
 [node name="Pieces" type="Node" parent="."]
 
+[node name="TitleBackground" type="ColorRect" parent="Pieces"]
+self_modulate = Color(1, 1, 1, 0.509804)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -932.0
+offset_top = 274.0
+offset_right = -686.0
+offset_bottom = 342.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+mouse_filter = 2
+color = Color(1, 0.972549, 0.929412, 1)
+
+[node name="TitleLabel" type="Label" parent="Pieces/TitleBackground"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -107.0
+offset_top = 12.0
+offset_right = 108.0
+offset_bottom = 60.0
+grow_horizontal = 2
+text = "Componentes:"
+label_settings = SubResource("LabelSettings_k6rhw")
+horizontal_alignment = 1
+
 [node name="PiecesBackground" type="ColorRect" parent="Pieces"]
 self_modulate = Color(1, 1, 1, 0.509804)
 offset_left = 28.0
@@ -256,13 +309,6 @@ offset_right = 344.0
 offset_bottom = 961.0
 mouse_filter = 2
 color = Color(1, 0.972549, 0.929412, 1)
-
-[node name="PiecesLabel" type="Label" parent="Pieces"]
-offset_left = 31.0
-offset_top = 281.0
-offset_right = 289.0
-offset_bottom = 330.0
-text = "Componentes:"
 
 [node name="VeiaJugular" type="Label" parent="Pieces"]
 offset_left = 44.0
@@ -464,28 +510,6 @@ size_flags_vertical = 8
 theme = ExtResource("15_tiibd")
 text = "Continuar"
 script = ExtResource("16_y7wcw")
-
-[node name="TitleBackground" type="ColorRect" parent="."]
-layout_mode = 0
-offset_left = 694.0
-offset_top = 28.0
-offset_right = 1225.0
-offset_bottom = 109.0
-color = Color(1, 0.972549, 0.929412, 1)
-
-[node name="TitleLabel" type="Label" parent="."]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -290.0
-offset_top = 28.0
-offset_right = 290.0
-offset_bottom = 107.0
-grow_horizontal = 2
-text = "Sistema Circulatório"
-label_settings = SubResource("LabelSettings_hcqab")
-horizontal_alignment = 1
 
 [connection signal="slot_filled" from="Slots/SquareSlot" to="." method="_on_slot_filled"]
 [connection signal="slot_filled" from="Slots/SquareSlot2" to="." method="_on_slot_filled"]
