@@ -18,8 +18,28 @@ func _drop_data(at_position: Vector2, data: Variant) -> void:
 		data.size.x = data.size.x if (data.size.x > size.x) else size.x
 		# Move the object to the exact position of the slot.
 		data.position = position
-		slot_filled.emit()
 		data.freeze()
+		
+		var check_mark := TextureRect.new()
+		check_mark.texture = load("res://assets/check_solid.svg")
+		check_mark.z_index = data.z_index + 2
+		check_mark.scale = Vector2.ZERO
+		add_child(check_mark)
+		
+		var score_position = Vector2(
+			%Score.position.x + (%Score.size.x/2),
+			%Score.position.y + (%Score.size.y/2)
+		)
+		
+		var tween = create_tween()
+		tween.tween_property(check_mark, "scale", Vector2.ONE, 0.25)
+		tween.tween_interval(1.0)
+		tween.tween_property(check_mark, "global_position", score_position, 0.5)
+		tween.tween_property(check_mark, "scale", Vector2.ZERO, 0.5)
+		tween.tween_callback(func():
+			slot_filled.emit()
+			check_mark.queue_free()
+		)
 	else:
 		# Compensate the offset so that the object is placed in the position of the drag preview.
 		data.position = position + at_position + data.drag_offset
