@@ -30,10 +30,7 @@ func _drop_data(at_position: Vector2, data: Variant) -> void:
 		check_mark.pivot_offset = Vector2(check_mark.size.x / 2, check_mark.size.y / 2)
 		check_mark.z_index = data.z_index + 2
 		
-		var score_position = Vector2(
-			%Score.position.x + (%Score.size.x/2),
-			%Score.position.y + (%Score.size.y/2)
-		)
+		var score_position = %Score.position + (%Score.size / 2)
 		
 		var tween = create_tween()
 		tween.tween_property(check_mark, "scale", Vector2.ONE, 0.25)
