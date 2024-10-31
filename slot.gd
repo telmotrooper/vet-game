@@ -3,6 +3,8 @@ class_name Slot
 
 @export var expected_value: String
 
+var check_mark_texture := "res://assets/check_solid.svg"
+
 signal slot_filled
 
 func _ready() -> void:
@@ -21,20 +23,23 @@ func _drop_data(at_position: Vector2, data: Variant) -> void:
 		data.freeze()
 		
 		var check_mark := TextureRect.new()
-		check_mark.texture = load("res://assets/check_solid.svg")
-		check_mark.z_index = data.z_index + 2
-		check_mark.scale = Vector2.ZERO
-		add_child(check_mark)
+		check_mark.texture = load(check_mark_texture)
+		add_child(check_mark) # Already add to the scene tree so we can get the "size".
 		
-		var score_position = Vector2(
-			%Score.position.x + (%Score.size.x/2),
-			%Score.position.y + (%Score.size.y/2)
-		)
+		check_mark.scale = Vector2.ZERO
+		check_mark.pivot_offset = check_mark.size / 2
+		check_mark.z_index = data.z_index + 2
+		
+		# Center of the score label.
+		var score_position = %Score.position + (%Score.size / 2)
+		
+		# Compensate size of "check mark" to centralize it on the score label.
+		var target_position = score_position - (check_mark.size / 2)
 		
 		var tween = create_tween()
 		tween.tween_property(check_mark, "scale", Vector2.ONE, 0.25)
 		tween.tween_interval(1.0)
-		tween.tween_property(check_mark, "global_position", score_position, 0.5)
+		tween.tween_property(check_mark, "global_position", target_position, 0.5)
 		tween.tween_property(check_mark, "scale", Vector2.ZERO, 0.5)
 		tween.tween_callback(func():
 			slot_filled.emit()
