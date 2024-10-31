@@ -58,6 +58,7 @@ MarginContainer/constants/margin_left = 20
 MarginContainer/constants/margin_right = 20
 MarginContainer/constants/margin_top = 20
 PanelContainer/styles/panel = SubResource("StyleBoxFlat_7ch7u")
+RichTextLabel/colors/default_color = Color(0.635294, 0.152941, 0.172549, 1)
 RichTextLabel/font_sizes/bold_font_size = 64
 RichTextLabel/font_sizes/normal_font_size = 64
 RichTextLabel/fonts/bold_font = ExtResource("2_iogpy")
