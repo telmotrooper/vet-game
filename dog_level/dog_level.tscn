@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://b8ki845joqcnh"]
+[gd_scene load_steps=16 format=3 uid="uid://b8ki845joqcnh"]
 
 [ext_resource type="Script" path="res://level.gd" id="1_d8efn"]
 [ext_resource type="Texture2D" uid="uid://dccvgy7grvwon" path="res://ui/star_regular.svg" id="2_dlmkr"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://btvovgytwfq74" path="res://cat_level/square_slot.svg" id="10_10lmo"]
 [ext_resource type="Script" path="res://slot.gd" id="11_suqmt"]
 [ext_resource type="Script" path="res://draggable_label.gd" id="14_ni0bv"]
+[ext_resource type="Texture2D" uid="uid://cth5lvbgau8ow" path="res://assets/pink_stain.png" id="14_r2hca"]
 [ext_resource type="Theme" uid="uid://dih34ywnda3er" path="res://dialog_button_theme.tres" id="15_tiibd"]
 [ext_resource type="Script" path="res://ui/back_button/back_button.gd" id="16_y7wcw"]
 
@@ -43,6 +44,19 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.972549, 0.772549, 0.745098, 1)
 script = ExtResource("4_21gbo")
+
+[node name="PinkStain" type="Sprite2D" parent="Background"]
+self_modulate = Color(1, 1, 1, 0.470588)
+position = Vector2(908, 420)
+rotation = 0.879464
+texture = ExtResource("14_r2hca")
+
+[node name="ColorRect2" type="ColorRect" parent="Background"]
+offset_left = 365.0
+offset_top = 179.0
+offset_right = 1865.0
+offset_bottom = 1013.0
+color = Color(1, 0.972549, 0.929412, 1)
 
 [node name="DogFigure" type="Sprite2D" parent="Background"]
 position = Vector2(1122.4, 609.2)
@@ -235,130 +249,130 @@ expected_value = "Veia Cava Cranial"
 [node name="Pieces" type="Node" parent="."]
 
 [node name="VeiaJugular" type="Label" parent="Pieces"]
-offset_left = 10.0
-offset_top = 766.0
-offset_right = 194.0
-offset_bottom = 815.0
+offset_left = 44.0
+offset_top = 786.0
+offset_right = 228.0
+offset_bottom = 835.0
 mouse_filter = 1
 text = "Veia Jugular"
 horizontal_alignment = 1
 script = ExtResource("14_ni0bv")
 
 [node name="ArteriaFemoral" type="Label" parent="Pieces"]
-offset_left = 10.0
-offset_top = 361.0
-offset_right = 247.0
-offset_bottom = 410.0
+offset_left = 44.0
+offset_top = 381.0
+offset_right = 281.0
+offset_bottom = 430.0
 mouse_filter = 1
 text = "Artéria Femoral"
 horizontal_alignment = 1
 script = ExtResource("14_ni0bv")
 
 [node name="ArteriaCarotida" type="Label" parent="Pieces"]
-offset_left = 10.0
-offset_top = 858.0
-offset_right = 258.0
-offset_bottom = 907.0
+offset_left = 44.0
+offset_top = 878.0
+offset_right = 292.0
+offset_bottom = 927.0
 mouse_filter = 1
 text = "Artéria Carótida"
 horizontal_alignment = 1
 script = ExtResource("14_ni0bv")
 
 [node name="ArteriaBraquial" type="Label" parent="Pieces"]
-offset_left = 10.0
-offset_top = 408.0
-offset_right = 250.0
-offset_bottom = 457.0
+offset_left = 44.0
+offset_top = 428.0
+offset_right = 284.0
+offset_bottom = 477.0
 mouse_filter = 1
 text = "Artéria Braquial"
 horizontal_alignment = 1
 script = ExtResource("14_ni0bv")
 
 [node name="VeiaCefalica" type="Label" parent="Pieces"]
-offset_left = 10.0
-offset_top = 551.0
-offset_right = 204.0
-offset_bottom = 600.0
+offset_left = 44.0
+offset_top = 571.0
+offset_right = 238.0
+offset_bottom = 620.0
 mouse_filter = 1
 text = "Veia Cefálica"
 horizontal_alignment = 1
 script = ExtResource("14_ni0bv")
 
 [node name="Coracao" type="Label" parent="Pieces"]
-offset_left = 10.0
-offset_top = 595.0
-offset_right = 136.0
-offset_bottom = 644.0
+offset_left = 44.0
+offset_top = 615.0
+offset_right = 170.0
+offset_bottom = 664.0
 mouse_filter = 1
 text = "Coração"
 horizontal_alignment = 1
 script = ExtResource("14_ni0bv")
 
 [node name="VeiasPortas" type="Label" parent="Pieces"]
-offset_left = 10.0
-offset_top = 648.0
-offset_right = 202.0
-offset_bottom = 697.0
+offset_left = 44.0
+offset_top = 668.0
+offset_right = 236.0
+offset_bottom = 717.0
 mouse_filter = 1
 text = "Veias Portas"
 horizontal_alignment = 1
 script = ExtResource("14_ni0bv")
 
 [node name="Baco" type="Label" parent="Pieces"]
-offset_left = 10.0
-offset_top = 498.0
-offset_right = 84.0
-offset_bottom = 547.0
+offset_left = 44.0
+offset_top = 518.0
+offset_right = 118.0
+offset_bottom = 567.0
 mouse_filter = 1
 text = "Baço"
 horizontal_alignment = 1
 script = ExtResource("14_ni0bv")
 
 [node name="VeiaSafena" type="Label" parent="Pieces"]
-offset_left = 10.0
-offset_top = 455.0
-offset_right = 188.0
-offset_bottom = 504.0
+offset_left = 44.0
+offset_top = 475.0
+offset_right = 222.0
+offset_bottom = 524.0
 mouse_filter = 1
 text = "Veia Safena"
 horizontal_alignment = 1
 script = ExtResource("14_ni0bv")
 
 [node name="VeiaCavaCaudal" type="Label" parent="Pieces"]
-offset_left = 10.0
-offset_top = 705.0
-offset_right = 264.0
-offset_bottom = 754.0
+offset_left = 44.0
+offset_top = 725.0
+offset_right = 298.0
+offset_bottom = 774.0
 mouse_filter = 1
 text = "Veia Cava Caudal"
 horizontal_alignment = 1
 script = ExtResource("14_ni0bv")
 
 [node name="Aorta" type="Label" parent="Pieces"]
-offset_left = 10.0
-offset_top = 811.0
-offset_right = 94.0
-offset_bottom = 860.0
+offset_left = 44.0
+offset_top = 831.0
+offset_right = 128.0
+offset_bottom = 880.0
 mouse_filter = 1
 text = "Aorta"
 horizontal_alignment = 1
 script = ExtResource("14_ni0bv")
 
 [node name="VeiaCavaCranial" type="Label" parent="Pieces"]
-offset_left = 10.0
-offset_top = 315.0
-offset_right = 268.0
-offset_bottom = 364.0
+offset_left = 44.0
+offset_top = 335.0
+offset_right = 302.0
+offset_bottom = 384.0
 mouse_filter = 1
 text = "Veia Cava Cranial"
 horizontal_alignment = 1
 script = ExtResource("14_ni0bv")
 
 [node name="Label" type="Label" parent="Pieces"]
-offset_left = 10.0
-offset_top = 239.0
-offset_right = 268.0
-offset_bottom = 288.0
+offset_left = 31.0
+offset_top = 258.0
+offset_right = 289.0
+offset_bottom = 307.0
 text = "Componentes:"
 
 [node name="VictoryPanel" type="PanelContainer" parent="."]
@@ -454,6 +468,20 @@ offset_bottom = 107.0
 grow_horizontal = 2
 text = "Sistema Circulatório"
 label_settings = SubResource("LabelSettings_hcqab")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 28.0
+offset_top = 319.0
+offset_right = 344.0
+offset_bottom = 938.0
+color = Color(1, 0.972549, 0.929412, 1)
+
+[node name="PinkStain" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(113, 585)
+rotation = -0.677312
+scale = Vector2(0.26953, 0.26953)
+texture = ExtResource("14_r2hca")
 
 [connection signal="slot_filled" from="Slots/SquareSlot" to="." method="_on_slot_filled"]
 [connection signal="slot_filled" from="Slots/SquareSlot2" to="." method="_on_slot_filled"]
