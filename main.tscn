@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://main.gd" id="1_e7iyt"]
 [ext_resource type="PackedScene" uid="uid://bwq2aip0hywte" path="res://title_screen/title_screen.tscn" id="2_wmm72"]
-[ext_resource type="Script" path="res://fade_transition.gd" id="3_qt7il"]
+[ext_resource type="Script" path="res://ui/fade_transition.gd" id="3_qt7il"]
 
 [node name="Main" type="Control"]
 layout_mode = 3

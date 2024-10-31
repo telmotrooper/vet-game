@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bg6m0fn6ht7be"
-path="res://.godot/imported/dog.jpg-88178b745afca8cf07768a8037168a3b.ctex"
+uid="uid://btvovgytwfq74"
+path="res://.godot/imported/square_slot.svg-27b57ca9ffb2e1e0f720e920d1f79ec7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://dog_level/dog.jpg"
-dest_files=["res://.godot/imported/dog.jpg-88178b745afca8cf07768a8037168a3b.ctex"]
+source_file="res://cat_level/square_slot.svg"
+dest_files=["res://.godot/imported/square_slot.svg-27b57ca9ffb2e1e0f720e920d1f79ec7.ctex"]
 
 [params]
 
@@ -32,3 +32,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=1.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false
