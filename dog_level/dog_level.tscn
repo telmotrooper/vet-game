@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://level.gd" id="1_d8efn"]
 [ext_resource type="Texture2D" uid="uid://dccvgy7grvwon" path="res://ui/star_regular.svg" id="2_dlmkr"]
 [ext_resource type="Texture2D" uid="uid://q28cdfoueli8" path="res://ui/star_solid.svg" id="3_fqcxr"]
-[ext_resource type="Script" path="res://droppable_background.gd" id="4_21gbo"]
+[ext_resource type="PackedScene" uid="uid://cwsj1bfgbxsnk" path="res://pink_background.tscn" id="4_bbo4n"]
 [ext_resource type="Texture2D" uid="uid://bxrlpv42ntyr1" path="res://dog_level/dog.png" id="5_et6nn"]
 [ext_resource type="PackedScene" uid="uid://gpvwrquanwhj" path="res://ui/maximize_button/maximize_button.tscn" id="7_ywdc7"]
 [ext_resource type="PackedScene" uid="uid://c4e4q5arhn8f2" path="res://ui/back_button/back_button.tscn" id="8_tbklm"]
@@ -36,20 +36,7 @@ metadata/_edit_horizontal_guides_ = [121.0]
 [node name="Background" type="CanvasLayer" parent="."]
 layer = -2
 
-[node name="ColorRect" type="ColorRect" parent="Background"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.972549, 0.772549, 0.745098, 1)
-script = ExtResource("4_21gbo")
-
-[node name="PinkStain" type="Sprite2D" parent="Background/ColorRect"]
-self_modulate = Color(1, 1, 1, 0.470588)
-position = Vector2(908, 420)
-rotation = 0.879464
-texture = ExtResource("14_r2hca")
+[node name="PinkBackground" parent="Background" instance=ExtResource("4_bbo4n")]
 
 [node name="ColorRect2" type="ColorRect" parent="Background"]
 self_modulate = Color(1, 1, 1, 0.509804)
