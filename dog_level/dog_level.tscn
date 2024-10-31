@@ -261,11 +261,20 @@ expected_value = "Veia Cava Cranial"
 
 [node name="Pieces" type="Node" parent="."]
 
+[node name="ColorRect" type="ColorRect" parent="Pieces"]
+self_modulate = Color(1, 1, 1, 0.509804)
+offset_left = 28.0
+offset_top = 342.0
+offset_right = 344.0
+offset_bottom = 961.0
+mouse_filter = 2
+color = Color(1, 0.972549, 0.929412, 1)
+
 [node name="VeiaJugular" type="Label" parent="Pieces"]
 offset_left = 44.0
-offset_top = 809.0
+offset_top = 803.0
 offset_right = 228.0
-offset_bottom = 858.0
+offset_bottom = 852.0
 mouse_filter = 1
 text = "Veia Jugular"
 horizontal_alignment = 1
@@ -273,9 +282,9 @@ script = ExtResource("14_ni0bv")
 
 [node name="ArteriaFemoral" type="Label" parent="Pieces"]
 offset_left = 44.0
-offset_top = 404.0
+offset_top = 494.0
 offset_right = 281.0
-offset_bottom = 453.0
+offset_bottom = 543.0
 mouse_filter = 1
 text = "Artéria Femoral"
 horizontal_alignment = 1
@@ -283,9 +292,9 @@ script = ExtResource("14_ni0bv")
 
 [node name="ArteriaCarotida" type="Label" parent="Pieces"]
 offset_left = 44.0
-offset_top = 901.0
+offset_top = 444.0
 offset_right = 292.0
-offset_bottom = 950.0
+offset_bottom = 493.0
 mouse_filter = 1
 text = "Artéria Carótida"
 horizontal_alignment = 1
@@ -293,9 +302,9 @@ script = ExtResource("14_ni0bv")
 
 [node name="ArteriaBraquial" type="Label" parent="Pieces"]
 offset_left = 44.0
-offset_top = 451.0
+offset_top = 396.0
 offset_right = 284.0
-offset_bottom = 500.0
+offset_bottom = 445.0
 mouse_filter = 1
 text = "Artéria Braquial"
 horizontal_alignment = 1
@@ -303,9 +312,9 @@ script = ExtResource("14_ni0bv")
 
 [node name="VeiaCefalica" type="Label" parent="Pieces"]
 offset_left = 44.0
-offset_top = 594.0
+offset_top = 747.0
 offset_right = 238.0
-offset_bottom = 643.0
+offset_bottom = 796.0
 mouse_filter = 1
 text = "Veia Cefálica"
 horizontal_alignment = 1
@@ -313,9 +322,9 @@ script = ExtResource("14_ni0bv")
 
 [node name="Coracao" type="Label" parent="Pieces"]
 offset_left = 44.0
-offset_top = 638.0
+offset_top = 589.0
 offset_right = 170.0
-offset_bottom = 687.0
+offset_bottom = 638.0
 mouse_filter = 1
 text = "Coração"
 horizontal_alignment = 1
@@ -323,9 +332,9 @@ script = ExtResource("14_ni0bv")
 
 [node name="VeiasPortas" type="Label" parent="Pieces"]
 offset_left = 44.0
-offset_top = 691.0
+offset_top = 853.0
 offset_right = 236.0
-offset_bottom = 740.0
+offset_bottom = 902.0
 mouse_filter = 1
 text = "Veias Portas"
 horizontal_alignment = 1
@@ -333,9 +342,9 @@ script = ExtResource("14_ni0bv")
 
 [node name="Baco" type="Label" parent="Pieces"]
 offset_left = 44.0
-offset_top = 541.0
+offset_top = 540.0
 offset_right = 118.0
-offset_bottom = 590.0
+offset_bottom = 588.0
 mouse_filter = 1
 text = "Baço"
 horizontal_alignment = 1
@@ -343,9 +352,9 @@ script = ExtResource("14_ni0bv")
 
 [node name="VeiaSafena" type="Label" parent="Pieces"]
 offset_left = 44.0
-offset_top = 498.0
+offset_top = 907.0
 offset_right = 222.0
-offset_bottom = 547.0
+offset_bottom = 956.0
 mouse_filter = 1
 text = "Veia Safena"
 horizontal_alignment = 1
@@ -353,9 +362,9 @@ script = ExtResource("14_ni0bv")
 
 [node name="VeiaCavaCaudal" type="Label" parent="Pieces"]
 offset_left = 44.0
-offset_top = 748.0
+offset_top = 638.0
 offset_right = 298.0
-offset_bottom = 797.0
+offset_bottom = 687.0
 mouse_filter = 1
 text = "Veia Cava Caudal"
 horizontal_alignment = 1
@@ -363,9 +372,9 @@ script = ExtResource("14_ni0bv")
 
 [node name="Aorta" type="Label" parent="Pieces"]
 offset_left = 44.0
-offset_top = 854.0
+offset_top = 352.0
 offset_right = 128.0
-offset_bottom = 903.0
+offset_bottom = 401.0
 mouse_filter = 1
 text = "Aorta"
 horizontal_alignment = 1
@@ -373,9 +382,9 @@ script = ExtResource("14_ni0bv")
 
 [node name="VeiaCavaCranial" type="Label" parent="Pieces"]
 offset_left = 44.0
-offset_top = 358.0
+offset_top = 692.0
 offset_right = 302.0
-offset_bottom = 407.0
+offset_bottom = 741.0
 mouse_filter = 1
 text = "Veia Cava Cranial"
 horizontal_alignment = 1
@@ -490,15 +499,6 @@ grow_horizontal = 2
 text = "Sistema Circulatório"
 label_settings = SubResource("LabelSettings_hcqab")
 horizontal_alignment = 1
-
-[node name="ColorRect" type="ColorRect" parent="."]
-self_modulate = Color(1, 1, 1, 0.509804)
-offset_left = 28.0
-offset_top = 342.0
-offset_right = 344.0
-offset_bottom = 961.0
-mouse_filter = 2
-color = Color(1, 0.972549, 0.929412, 1)
 
 [node name="PinkStain" type="Sprite2D" parent="."]
 visible = false
