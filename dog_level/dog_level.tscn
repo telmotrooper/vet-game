@@ -68,11 +68,12 @@ pivot_offset = Vector2(20, 20)
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -205.0
-offset_top = 93.0
-offset_right = 205.0
-offset_bottom = 174.0
+offset_left = -216.5
+offset_top = 100.0
+offset_right = 216.5
+offset_bottom = 181.0
 grow_horizontal = 2
+size_flags_horizontal = 4
 color = Color(1, 0.972549, 0.929412, 1)
 
 [node name="Score" type="RichTextLabel" parent="Background"]
