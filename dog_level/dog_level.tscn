@@ -45,13 +45,14 @@ grow_vertical = 2
 color = Color(0.972549, 0.772549, 0.745098, 1)
 script = ExtResource("4_21gbo")
 
-[node name="PinkStain" type="Sprite2D" parent="Background"]
+[node name="PinkStain" type="Sprite2D" parent="Background/ColorRect"]
 self_modulate = Color(1, 1, 1, 0.470588)
 position = Vector2(908, 420)
 rotation = 0.879464
 texture = ExtResource("14_r2hca")
 
 [node name="ColorRect2" type="ColorRect" parent="Background"]
+self_modulate = Color(1, 1, 1, 0.509804)
 offset_left = 365.0
 offset_top = 179.0
 offset_right = 1865.0
@@ -470,6 +471,7 @@ text = "Sistema Circulatório"
 label_settings = SubResource("LabelSettings_hcqab")
 
 [node name="ColorRect" type="ColorRect" parent="."]
+self_modulate = Color(1, 1, 1, 0.509804)
 offset_left = 28.0
 offset_top = 319.0
 offset_right = 344.0
