@@ -4,12 +4,12 @@
 [ext_resource type="FontFile" uid="uid://bsywbyicuycen" path="res://assets/fonts/londrina_solid_regular.ttf" id="3_gaspx"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2k6c4"]
-bg_color = Color(1, 0.996078, 0.984314, 1)
+bg_color = Color(1, 1, 0.996078, 1)
 border_width_left = 40
 border_width_top = 40
 border_width_right = 40
 border_width_bottom = 40
-border_color = Color(1, 0.996078, 0.984314, 1)
+border_color = Color(1, 1, 0.996078, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l5bdc"]
 bg_color = Color(1, 0.972549, 0.929412, 1)
