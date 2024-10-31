@@ -1,9 +1,9 @@
-[gd_scene load_steps=16 format=3 uid="uid://b8ki845joqcnh"]
+[gd_scene load_steps=15 format=3 uid="uid://b8ki845joqcnh"]
 
 [ext_resource type="Script" path="res://level.gd" id="1_d8efn"]
 [ext_resource type="Texture2D" uid="uid://dccvgy7grvwon" path="res://ui/star_regular.svg" id="2_dlmkr"]
 [ext_resource type="Texture2D" uid="uid://q28cdfoueli8" path="res://ui/star_solid.svg" id="3_fqcxr"]
-[ext_resource type="Script" path="res://droppable_background.gd" id="4_21gbo"]
+[ext_resource type="PackedScene" uid="uid://cwsj1bfgbxsnk" path="res://pink_background.tscn" id="4_bbo4n"]
 [ext_resource type="Texture2D" uid="uid://bxrlpv42ntyr1" path="res://dog_level/dog.png" id="5_et6nn"]
 [ext_resource type="PackedScene" uid="uid://gpvwrquanwhj" path="res://ui/maximize_button/maximize_button.tscn" id="7_ywdc7"]
 [ext_resource type="PackedScene" uid="uid://c4e4q5arhn8f2" path="res://ui/back_button/back_button.tscn" id="8_tbklm"]
@@ -11,7 +11,6 @@
 [ext_resource type="Texture2D" uid="uid://btvovgytwfq74" path="res://cat_level/square_slot.svg" id="10_10lmo"]
 [ext_resource type="Script" path="res://slot.gd" id="11_suqmt"]
 [ext_resource type="Script" path="res://draggable_label.gd" id="14_ni0bv"]
-[ext_resource type="Texture2D" uid="uid://cth5lvbgau8ow" path="res://assets/pink_stain.png" id="14_r2hca"]
 [ext_resource type="Theme" uid="uid://dih34ywnda3er" path="res://dialog_button_theme.tres" id="15_tiibd"]
 [ext_resource type="Script" path="res://ui/back_button/back_button.gd" id="16_y7wcw"]
 
@@ -36,22 +35,9 @@ metadata/_edit_horizontal_guides_ = [121.0]
 [node name="Background" type="CanvasLayer" parent="."]
 layer = -2
 
-[node name="ColorRect" type="ColorRect" parent="Background"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.972549, 0.772549, 0.745098, 1)
-script = ExtResource("4_21gbo")
+[node name="PinkBackground" parent="Background" instance=ExtResource("4_bbo4n")]
 
-[node name="PinkStain" type="Sprite2D" parent="Background/ColorRect"]
-self_modulate = Color(1, 1, 1, 0.470588)
-position = Vector2(908, 420)
-rotation = 0.879464
-texture = ExtResource("14_r2hca")
-
-[node name="ColorRect2" type="ColorRect" parent="Background"]
+[node name="DogBackground" type="ColorRect" parent="Background"]
 self_modulate = Color(1, 1, 1, 0.509804)
 offset_left = 365.0
 offset_top = 202.0
@@ -65,27 +51,16 @@ position = Vector2(1122.4, 632.2)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("5_et6nn")
 
-[node name="MaximizeButton" parent="Background" instance=ExtResource("7_ywdc7")]
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -520.0
-offset_right = 0.0
-grow_horizontal = 0
-pivot_offset = Vector2(500, 20)
-
-[node name="BackButton" parent="Background" instance=ExtResource("8_tbklm")]
-pivot_offset = Vector2(20, 20)
-
-[node name="ColorRect3" type="ColorRect" parent="Background"]
+[node name="ScoreBackground" type="ColorRect" parent="Background"]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -205.0
-offset_top = 93.0
-offset_right = 205.0
-offset_bottom = 174.0
+offset_left = -216.5
+offset_top = 100.0
+offset_right = 216.5
+offset_bottom = 181.0
 grow_horizontal = 2
+size_flags_horizontal = 4
 color = Color(1, 0.972549, 0.929412, 1)
 
 [node name="Score" type="RichTextLabel" parent="Background"]
@@ -101,6 +76,18 @@ grow_horizontal = 2
 mouse_filter = 2
 bbcode_enabled = true
 text = "[center][b]( Acertos:[/b] 0/1 )[/center]"
+
+[node name="MaximizeButton" parent="Background" instance=ExtResource("7_ywdc7")]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -520.0
+offset_right = 0.0
+grow_horizontal = 0
+pivot_offset = Vector2(500, 20)
+
+[node name="BackButton" parent="Background" instance=ExtResource("8_tbklm")]
+pivot_offset = Vector2(20, 20)
 
 [node name="VolumeButton" parent="Background" instance=ExtResource("9_5id82")]
 anchors_preset = 1
@@ -261,7 +248,7 @@ expected_value = "Veia Cava Cranial"
 
 [node name="Pieces" type="Node" parent="."]
 
-[node name="ColorRect" type="ColorRect" parent="Pieces"]
+[node name="PiecesBackground" type="ColorRect" parent="Pieces"]
 self_modulate = Color(1, 1, 1, 0.509804)
 offset_left = 28.0
 offset_top = 342.0
@@ -269,6 +256,13 @@ offset_right = 344.0
 offset_bottom = 961.0
 mouse_filter = 2
 color = Color(1, 0.972549, 0.929412, 1)
+
+[node name="PiecesLabel" type="Label" parent="Pieces"]
+offset_left = 31.0
+offset_top = 281.0
+offset_right = 289.0
+offset_bottom = 330.0
+text = "Componentes:"
 
 [node name="VeiaJugular" type="Label" parent="Pieces"]
 offset_left = 44.0
@@ -390,13 +384,6 @@ text = "Veia Cava Cranial"
 horizontal_alignment = 1
 script = ExtResource("14_ni0bv")
 
-[node name="Label" type="Label" parent="Pieces"]
-offset_left = 31.0
-offset_top = 281.0
-offset_right = 289.0
-offset_bottom = 330.0
-text = "Componentes:"
-
 [node name="VictoryPanel" type="PanelContainer" parent="."]
 unique_name_in_owner = true
 visible = false
@@ -478,7 +465,7 @@ theme = ExtResource("15_tiibd")
 text = "Continuar"
 script = ExtResource("16_y7wcw")
 
-[node name="ColorRect2" type="ColorRect" parent="."]
+[node name="TitleBackground" type="ColorRect" parent="."]
 layout_mode = 0
 offset_left = 694.0
 offset_top = 28.0
@@ -486,7 +473,7 @@ offset_right = 1225.0
 offset_bottom = 109.0
 color = Color(1, 0.972549, 0.929412, 1)
 
-[node name="Label" type="Label" parent="."]
+[node name="TitleLabel" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -499,13 +486,6 @@ grow_horizontal = 2
 text = "Sistema Circulatório"
 label_settings = SubResource("LabelSettings_hcqab")
 horizontal_alignment = 1
-
-[node name="PinkStain" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(113, 585)
-rotation = -0.677312
-scale = Vector2(0.26953, 0.26953)
-texture = ExtResource("14_r2hca")
 
 [connection signal="slot_filled" from="Slots/SquareSlot" to="." method="_on_slot_filled"]
 [connection signal="slot_filled" from="Slots/SquareSlot2" to="." method="_on_slot_filled"]
