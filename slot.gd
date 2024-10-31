@@ -30,6 +30,9 @@ func _drop_data(at_position: Vector2, data: Variant) -> void:
 		check_mark.pivot_offset = check_mark.size / 2
 		check_mark.z_index = data.z_index + 2
 		
+		# Centralize "check mark" on slot.
+		check_mark.position = (size / 2) - (check_mark.size / 2)
+		
 		# Center of the score label.
 		var score_position = %Score.position + (%Score.size / 2)
 		
