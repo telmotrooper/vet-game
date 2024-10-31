@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://cqqouxh0tnhtp"]
+[gd_scene load_steps=17 format=3 uid="uid://cqqouxh0tnhtp"]
 
 [ext_resource type="Texture2D" uid="uid://bwvk2il82mqsk" path="res://cat_level/square.svg" id="1_7qxg0"]
 [ext_resource type="Script" path="res://droppable_background.gd" id="1_f7l06"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://gpvwrquanwhj" path="res://ui/maximize_button/maximize_button.tscn" id="4_bygoh"]
 [ext_resource type="Script" path="res://slot.gd" id="4_cleui"]
 [ext_resource type="PackedScene" uid="uid://c4e4q5arhn8f2" path="res://ui/back_button/back_button.tscn" id="5_jgko5"]
+[ext_resource type="Texture2D" uid="uid://cth5lvbgau8ow" path="res://assets/pink_stain.png" id="5_on33v"]
 [ext_resource type="PackedScene" uid="uid://c7v1migha7ig" path="res://ui/volume_button/volume_button.tscn" id="7_wexbm"]
 [ext_resource type="Texture2D" uid="uid://6xae6ixeinrn" path="res://cat_level/square_alt.svg" id="12_ygnpx"]
 [ext_resource type="Texture2D" uid="uid://q28cdfoueli8" path="res://ui/star_solid.svg" id="13_0x6jh"]
@@ -40,6 +41,12 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.972549, 0.772549, 0.745098, 1)
 script = ExtResource("1_f7l06")
+
+[node name="PinkStain" type="Sprite2D" parent="Background/ColorRect"]
+self_modulate = Color(1, 1, 1, 0.470588)
+position = Vector2(908, 420)
+rotation = 0.879464
+texture = ExtResource("5_on33v")
 
 [node name="CatDrawing4x" type="Sprite2D" parent="Background"]
 position = Vector2(964, 533)

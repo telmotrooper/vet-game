@@ -6,7 +6,7 @@ extends Control
 var slot_counter: int
 var score := 0
 
-const base_text := "[b]Acertos:[/b] %d/%d"
+const base_text := "[center][b]( Acertos:[/b] %d/%d )[/center]"
 
 func _ready() -> void:
 	%VictoryPanel.visible = false

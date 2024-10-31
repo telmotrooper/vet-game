@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://b8ki845joqcnh"]
+[gd_scene load_steps=16 format=3 uid="uid://b8ki845joqcnh"]
 
 [ext_resource type="Script" path="res://level.gd" id="1_d8efn"]
 [ext_resource type="Texture2D" uid="uid://dccvgy7grvwon" path="res://ui/star_regular.svg" id="2_dlmkr"]
@@ -11,12 +11,13 @@
 [ext_resource type="Texture2D" uid="uid://btvovgytwfq74" path="res://cat_level/square_slot.svg" id="10_10lmo"]
 [ext_resource type="Script" path="res://slot.gd" id="11_suqmt"]
 [ext_resource type="Script" path="res://draggable_label.gd" id="14_ni0bv"]
+[ext_resource type="Texture2D" uid="uid://cth5lvbgau8ow" path="res://assets/pink_stain.png" id="14_r2hca"]
 [ext_resource type="Theme" uid="uid://dih34ywnda3er" path="res://dialog_button_theme.tres" id="15_tiibd"]
 [ext_resource type="Script" path="res://ui/back_button/back_button.gd" id="16_y7wcw"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_hcqab"]
 font_size = 64
-outline_size = 20
+font_color = Color(0.635294, 0.152941, 0.172549, 1)
 outline_color = Color(0, 0, 0, 1)
 
 [node name="DogLevel" type="Control"]
@@ -44,8 +45,23 @@ grow_vertical = 2
 color = Color(0.972549, 0.772549, 0.745098, 1)
 script = ExtResource("4_21gbo")
 
+[node name="PinkStain" type="Sprite2D" parent="Background/ColorRect"]
+self_modulate = Color(1, 1, 1, 0.470588)
+position = Vector2(908, 420)
+rotation = 0.879464
+texture = ExtResource("14_r2hca")
+
+[node name="ColorRect2" type="ColorRect" parent="Background"]
+self_modulate = Color(1, 1, 1, 0.509804)
+offset_left = 365.0
+offset_top = 202.0
+offset_right = 1865.0
+offset_bottom = 1036.0
+mouse_filter = 2
+color = Color(1, 0.972549, 0.929412, 1)
+
 [node name="DogFigure" type="Sprite2D" parent="Background"]
-position = Vector2(1122.4, 609.2)
+position = Vector2(1122.4, 632.2)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("5_et6nn")
 
@@ -61,6 +77,17 @@ pivot_offset = Vector2(500, 20)
 [node name="BackButton" parent="Background" instance=ExtResource("8_tbklm")]
 pivot_offset = Vector2(20, 20)
 
+[node name="ColorRect3" type="ColorRect" parent="Background"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -205.0
+offset_top = 93.0
+offset_right = 205.0
+offset_bottom = 174.0
+grow_horizontal = 2
+color = Color(1, 0.972549, 0.929412, 1)
+
 [node name="Score" type="RichTextLabel" parent="Background"]
 unique_name_in_owner = true
 anchors_preset = 5
@@ -73,7 +100,7 @@ offset_bottom = 188.0
 grow_horizontal = 2
 mouse_filter = 2
 bbcode_enabled = true
-text = "[b]Acertos:[/b] 0/1"
+text = "[center][b]( Acertos:[/b] 0/1 )[/center]"
 
 [node name="VolumeButton" parent="Background" instance=ExtResource("9_5id82")]
 anchors_preset = 1
@@ -92,9 +119,9 @@ anchors_preset = 0
 z_index = -1
 layout_mode = 0
 offset_left = 408.4
-offset_top = 393.2
+offset_top = 416.2
 offset_right = 638.4
-offset_bottom = 443.2
+offset_bottom = 466.2
 texture = ExtResource("10_10lmo")
 expand_mode = 1
 script = ExtResource("11_suqmt")
@@ -104,9 +131,9 @@ expected_value = "Veia Jugular"
 z_index = -1
 layout_mode = 0
 offset_left = 426.4
-offset_top = 480.2
+offset_top = 503.2
 offset_right = 726.4
-offset_bottom = 530.2
+offset_bottom = 553.2
 texture = ExtResource("10_10lmo")
 expand_mode = 1
 script = ExtResource("11_suqmt")
@@ -116,9 +143,9 @@ expected_value = "Artéria Carótida"
 z_index = -1
 layout_mode = 0
 offset_left = 438.4
-offset_top = 593.2
+offset_top = 616.2
 offset_right = 733.4
-offset_bottom = 643.2
+offset_bottom = 666.2
 texture = ExtResource("10_10lmo")
 expand_mode = 1
 script = ExtResource("11_suqmt")
@@ -128,9 +155,9 @@ expected_value = "Artéria Braquial"
 z_index = -1
 layout_mode = 0
 offset_left = 413.4
-offset_top = 682.2
+offset_top = 705.2
 offset_right = 663.4
-offset_bottom = 732.2
+offset_bottom = 755.2
 texture = ExtResource("10_10lmo")
 expand_mode = 1
 script = ExtResource("11_suqmt")
@@ -140,9 +167,9 @@ expected_value = "Veia Cefálica"
 z_index = -1
 layout_mode = 0
 offset_left = 973.4
-offset_top = 767.2
+offset_top = 790.2
 offset_right = 1138.4
-offset_bottom = 817.2
+offset_bottom = 840.2
 texture = ExtResource("10_10lmo")
 expand_mode = 1
 script = ExtResource("11_suqmt")
@@ -152,9 +179,9 @@ expected_value = "Coração"
 z_index = -1
 layout_mode = 0
 offset_left = 1146.4
-offset_top = 771.2
+offset_top = 794.2
 offset_right = 1376.4
-offset_bottom = 821.2
+offset_bottom = 844.2
 texture = ExtResource("10_10lmo")
 expand_mode = 1
 script = ExtResource("11_suqmt")
@@ -164,9 +191,9 @@ expected_value = "Veias Portas"
 z_index = -1
 layout_mode = 0
 offset_left = 1235.4
-offset_top = 686.2
+offset_top = 709.2
 offset_right = 1335.4
-offset_bottom = 736.2
+offset_bottom = 759.2
 texture = ExtResource("10_10lmo")
 expand_mode = 1
 script = ExtResource("11_suqmt")
@@ -176,9 +203,9 @@ expected_value = "Baço"
 z_index = -1
 layout_mode = 0
 offset_left = 1568.4
-offset_top = 722.2
+offset_top = 745.2
 offset_right = 1793.4
-offset_bottom = 772.2
+offset_bottom = 795.2
 texture = ExtResource("10_10lmo")
 expand_mode = 1
 script = ExtResource("11_suqmt")
@@ -188,9 +215,9 @@ expected_value = "Veia Safena"
 z_index = -1
 layout_mode = 0
 offset_left = 1557.4
-offset_top = 486.2
+offset_top = 509.2
 offset_right = 1847.4
-offset_bottom = 536.2
+offset_bottom = 559.2
 texture = ExtResource("10_10lmo")
 expand_mode = 1
 script = ExtResource("11_suqmt")
@@ -200,9 +227,9 @@ expected_value = "Artéria Femoral"
 z_index = -1
 layout_mode = 0
 offset_left = 1272.4
-offset_top = 249.2
+offset_top = 272.2
 offset_right = 1597.4
-offset_bottom = 299.2
+offset_bottom = 322.2
 texture = ExtResource("10_10lmo")
 expand_mode = 1
 script = ExtResource("11_suqmt")
@@ -212,9 +239,9 @@ expected_value = "Veia Cava Caudal"
 z_index = -1
 layout_mode = 0
 offset_left = 1123.4
-offset_top = 332.2
+offset_top = 355.2
 offset_right = 1238.4
-offset_bottom = 382.2
+offset_bottom = 405.2
 texture = ExtResource("10_10lmo")
 expand_mode = 1
 script = ExtResource("11_suqmt")
@@ -224,9 +251,9 @@ expected_value = "Aorta"
 z_index = -1
 layout_mode = 0
 offset_left = 924.4
-offset_top = 249.2
+offset_top = 272.2
 offset_right = 1249.4
-offset_bottom = 299.2
+offset_bottom = 322.2
 texture = ExtResource("10_10lmo")
 expand_mode = 1
 script = ExtResource("11_suqmt")
@@ -234,131 +261,140 @@ expected_value = "Veia Cava Cranial"
 
 [node name="Pieces" type="Node" parent="."]
 
+[node name="ColorRect" type="ColorRect" parent="Pieces"]
+self_modulate = Color(1, 1, 1, 0.509804)
+offset_left = 28.0
+offset_top = 342.0
+offset_right = 344.0
+offset_bottom = 961.0
+mouse_filter = 2
+color = Color(1, 0.972549, 0.929412, 1)
+
 [node name="VeiaJugular" type="Label" parent="Pieces"]
-offset_left = 10.0
-offset_top = 766.0
-offset_right = 194.0
-offset_bottom = 815.0
+offset_left = 44.0
+offset_top = 803.0
+offset_right = 228.0
+offset_bottom = 852.0
 mouse_filter = 1
 text = "Veia Jugular"
 horizontal_alignment = 1
 script = ExtResource("14_ni0bv")
 
 [node name="ArteriaFemoral" type="Label" parent="Pieces"]
-offset_left = 10.0
-offset_top = 361.0
-offset_right = 247.0
-offset_bottom = 410.0
+offset_left = 44.0
+offset_top = 494.0
+offset_right = 281.0
+offset_bottom = 543.0
 mouse_filter = 1
 text = "Artéria Femoral"
 horizontal_alignment = 1
 script = ExtResource("14_ni0bv")
 
 [node name="ArteriaCarotida" type="Label" parent="Pieces"]
-offset_left = 10.0
-offset_top = 858.0
-offset_right = 258.0
-offset_bottom = 907.0
+offset_left = 44.0
+offset_top = 444.0
+offset_right = 292.0
+offset_bottom = 493.0
 mouse_filter = 1
 text = "Artéria Carótida"
 horizontal_alignment = 1
 script = ExtResource("14_ni0bv")
 
 [node name="ArteriaBraquial" type="Label" parent="Pieces"]
-offset_left = 10.0
-offset_top = 408.0
-offset_right = 250.0
-offset_bottom = 457.0
+offset_left = 44.0
+offset_top = 396.0
+offset_right = 284.0
+offset_bottom = 445.0
 mouse_filter = 1
 text = "Artéria Braquial"
 horizontal_alignment = 1
 script = ExtResource("14_ni0bv")
 
 [node name="VeiaCefalica" type="Label" parent="Pieces"]
-offset_left = 10.0
-offset_top = 551.0
-offset_right = 204.0
-offset_bottom = 600.0
+offset_left = 44.0
+offset_top = 747.0
+offset_right = 238.0
+offset_bottom = 796.0
 mouse_filter = 1
 text = "Veia Cefálica"
 horizontal_alignment = 1
 script = ExtResource("14_ni0bv")
 
 [node name="Coracao" type="Label" parent="Pieces"]
-offset_left = 10.0
-offset_top = 595.0
-offset_right = 136.0
-offset_bottom = 644.0
+offset_left = 44.0
+offset_top = 589.0
+offset_right = 170.0
+offset_bottom = 638.0
 mouse_filter = 1
 text = "Coração"
 horizontal_alignment = 1
 script = ExtResource("14_ni0bv")
 
 [node name="VeiasPortas" type="Label" parent="Pieces"]
-offset_left = 10.0
-offset_top = 648.0
-offset_right = 202.0
-offset_bottom = 697.0
+offset_left = 44.0
+offset_top = 853.0
+offset_right = 236.0
+offset_bottom = 902.0
 mouse_filter = 1
 text = "Veias Portas"
 horizontal_alignment = 1
 script = ExtResource("14_ni0bv")
 
 [node name="Baco" type="Label" parent="Pieces"]
-offset_left = 10.0
-offset_top = 498.0
-offset_right = 84.0
-offset_bottom = 547.0
+offset_left = 44.0
+offset_top = 540.0
+offset_right = 118.0
+offset_bottom = 588.0
 mouse_filter = 1
 text = "Baço"
 horizontal_alignment = 1
 script = ExtResource("14_ni0bv")
 
 [node name="VeiaSafena" type="Label" parent="Pieces"]
-offset_left = 10.0
-offset_top = 455.0
-offset_right = 188.0
-offset_bottom = 504.0
+offset_left = 44.0
+offset_top = 907.0
+offset_right = 222.0
+offset_bottom = 956.0
 mouse_filter = 1
 text = "Veia Safena"
 horizontal_alignment = 1
 script = ExtResource("14_ni0bv")
 
 [node name="VeiaCavaCaudal" type="Label" parent="Pieces"]
-offset_left = 10.0
-offset_top = 705.0
-offset_right = 264.0
-offset_bottom = 754.0
+offset_left = 44.0
+offset_top = 638.0
+offset_right = 298.0
+offset_bottom = 687.0
 mouse_filter = 1
 text = "Veia Cava Caudal"
 horizontal_alignment = 1
 script = ExtResource("14_ni0bv")
 
 [node name="Aorta" type="Label" parent="Pieces"]
-offset_left = 10.0
-offset_top = 811.0
-offset_right = 94.0
-offset_bottom = 860.0
+offset_left = 44.0
+offset_top = 352.0
+offset_right = 128.0
+offset_bottom = 401.0
 mouse_filter = 1
 text = "Aorta"
 horizontal_alignment = 1
 script = ExtResource("14_ni0bv")
 
 [node name="VeiaCavaCranial" type="Label" parent="Pieces"]
-offset_left = 10.0
-offset_top = 315.0
-offset_right = 268.0
-offset_bottom = 364.0
+offset_left = 44.0
+offset_top = 692.0
+offset_right = 302.0
+offset_bottom = 741.0
 mouse_filter = 1
 text = "Veia Cava Cranial"
 horizontal_alignment = 1
 script = ExtResource("14_ni0bv")
 
 [node name="Label" type="Label" parent="Pieces"]
-offset_left = 10.0
-offset_top = 239.0
-offset_right = 268.0
-offset_bottom = 288.0
+offset_left = 31.0
+offset_top = 281.0
+offset_right = 289.0
+offset_bottom = 330.0
 text = "Componentes:"
 
 [node name="VictoryPanel" type="PanelContainer" parent="."]
@@ -442,6 +478,14 @@ theme = ExtResource("15_tiibd")
 text = "Continuar"
 script = ExtResource("16_y7wcw")
 
+[node name="ColorRect2" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 694.0
+offset_top = 28.0
+offset_right = 1225.0
+offset_bottom = 109.0
+color = Color(1, 0.972549, 0.929412, 1)
+
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = 5
@@ -454,6 +498,14 @@ offset_bottom = 107.0
 grow_horizontal = 2
 text = "Sistema Circulatório"
 label_settings = SubResource("LabelSettings_hcqab")
+horizontal_alignment = 1
+
+[node name="PinkStain" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(113, 585)
+rotation = -0.677312
+scale = Vector2(0.26953, 0.26953)
+texture = ExtResource("14_r2hca")
 
 [connection signal="slot_filled" from="Slots/SquareSlot" to="." method="_on_slot_filled"]
 [connection signal="slot_filled" from="Slots/SquareSlot2" to="." method="_on_slot_filled"]
