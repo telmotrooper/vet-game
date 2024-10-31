@@ -27,7 +27,7 @@ func _drop_data(at_position: Vector2, data: Variant) -> void:
 		add_child(check_mark) # Already add to the scene tree so we can get the "size".
 		
 		check_mark.scale = Vector2.ZERO
-		check_mark.pivot_offset = Vector2(check_mark.size.x / 2, check_mark.size.y / 2)
+		check_mark.pivot_offset = check_mark.size / 2
 		check_mark.z_index = data.z_index + 2
 		
 		var score_position = %Score.position + (%Score.size / 2)
