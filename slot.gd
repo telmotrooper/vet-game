@@ -3,6 +3,8 @@ class_name Slot
 
 @export var expected_value: String
 
+var check_mark_texture := "res://assets/check_solid.svg"
+
 signal slot_filled
 
 func _ready() -> void:
@@ -21,10 +23,12 @@ func _drop_data(at_position: Vector2, data: Variant) -> void:
 		data.freeze()
 		
 		var check_mark := TextureRect.new()
-		check_mark.texture = load("res://assets/check_solid.svg")
-		check_mark.z_index = data.z_index + 2
+		check_mark.texture = load(check_mark_texture)
+		add_child(check_mark) # Already add to the scene tree so we can get the "size".
+		
 		check_mark.scale = Vector2.ZERO
-		add_child(check_mark)
+		check_mark.pivot_offset = Vector2(check_mark.size.x / 2, check_mark.size.y / 2)
+		check_mark.z_index = data.z_index + 2
 		
 		var score_position = Vector2(
 			%Score.position.x + (%Score.size.x/2),
