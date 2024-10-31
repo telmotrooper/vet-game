@@ -4,6 +4,7 @@ class_name Slot
 @export var expected_value: String
 
 var check_mark_texture := "res://assets/check_solid.svg"
+var x_mark_texture := "res://assets/xmark_solid.svg"
 
 signal slot_filled
 
@@ -30,6 +31,9 @@ func _drop_data(at_position: Vector2, data: Variant) -> void:
 		check_mark.pivot_offset = check_mark.size / 2
 		check_mark.z_index = data.z_index + 2
 		
+		# Centralize "check mark" on slot.
+		check_mark.position = (size / 2) - (check_mark.size / 2)
+		
 		# Center of the score label.
 		var score_position = %Score.position + (%Score.size / 2)
 		
@@ -48,3 +52,20 @@ func _drop_data(at_position: Vector2, data: Variant) -> void:
 	else:
 		# Compensate the offset so that the object is placed in the position of the drag preview.
 		data.position = position + at_position + data.drag_offset
+		
+		var x_mark := TextureRect.new()
+		x_mark.texture = load(x_mark_texture)
+		add_child(x_mark) # Already add to the scene tree so we can get the "size".
+		
+		x_mark.scale = Vector2.ZERO
+		x_mark.pivot_offset = x_mark.size / 2
+		x_mark.z_index = data.z_index + 2
+		
+		# Centralize "x mark" on slot.
+		x_mark.position = (size / 2) - (x_mark.size / 2)
+		
+		var tween = create_tween()
+		tween.tween_property(x_mark, "scale", Vector2.ONE, 0.25)
+		tween.tween_interval(1.0)
+		tween.tween_property(x_mark, "scale", Vector2.ZERO, 0.5)
+		tween.tween_callback(x_mark.queue_free)
