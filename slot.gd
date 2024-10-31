@@ -30,12 +30,16 @@ func _drop_data(at_position: Vector2, data: Variant) -> void:
 		check_mark.pivot_offset = check_mark.size / 2
 		check_mark.z_index = data.z_index + 2
 		
+		# Center of the score label.
 		var score_position = %Score.position + (%Score.size / 2)
+		
+		# Compensate size of "check mark" to centralize it on the score label.
+		var target_position = score_position - (check_mark.size / 2)
 		
 		var tween = create_tween()
 		tween.tween_property(check_mark, "scale", Vector2.ONE, 0.25)
 		tween.tween_interval(1.0)
-		tween.tween_property(check_mark, "global_position", score_position, 0.5)
+		tween.tween_property(check_mark, "global_position", target_position, 0.5)
 		tween.tween_property(check_mark, "scale", Vector2.ZERO, 0.5)
 		tween.tween_callback(func():
 			slot_filled.emit()
