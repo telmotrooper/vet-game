@@ -197,7 +197,9 @@ theme = ExtResource("13_d7q3b")
 text = "Continuar"
 script = ExtResource("13_hnmnr")
 
+[connection signal="mistake_made" from="Slots/SquareSlot" to="." method="_on_mistake_made"]
 [connection signal="slot_filled" from="Slots/SquareSlot" to="." method="_on_slot_filled"]
+[connection signal="mistake_made" from="Slots/SquareSlot2" to="." method="_on_mistake_made"]
 [connection signal="slot_filled" from="Slots/SquareSlot2" to="." method="_on_slot_filled"]
 [connection signal="pressed" from="VictoryPanel/MarginContainer/VBoxContainer/Buttons/FigureButton" to="." method="hide_victory_panel"]
 [connection signal="pressed" from="VictoryPanel/MarginContainer/VBoxContainer/Buttons/ContinueButton" to="VictoryPanel/MarginContainer/VBoxContainer/Buttons/ContinueButton" method="_on_pressed"]

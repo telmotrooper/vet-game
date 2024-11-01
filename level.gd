@@ -5,6 +5,7 @@ extends Control
 
 var slot_counter: int
 var score := 0
+var mistakes := 0
 
 const base_text := "[center][b]( Acertos:[/b] %d/%d )[/center]"
 
@@ -31,7 +32,12 @@ func set_stars(quantity: int):
 	%Stars/Star3.texture = filled_star if quantity >= 3 else empty_star
 
 func show_victory_panel() -> void:
-	set_stars(3)
+	if mistakes == 0:
+		set_stars(3)
+	elif mistakes <= 3:
+		set_stars(2)
+	else:
+		set_stars(1)
 	
 	for star in %Stars.get_children():
 		star.custom_minimum_size = Vector2.ZERO
@@ -49,3 +55,6 @@ func hide_victory_panel() -> void:
 	tween.set_trans(Tween.TRANS_CUBIC)
 	tween.tween_property(%VictoryPanel, "scale", Vector2(0,0), 0.7)
 	tween.tween_callback(%VictoryPanel.hide)
+
+func _on_mistake_made():
+	mistakes += 1

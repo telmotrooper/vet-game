@@ -7,6 +7,7 @@ var check_mark_texture := "res://assets/check_solid.svg"
 var x_mark_texture := "res://assets/xmark_solid.svg"
 
 signal slot_filled
+signal mistake_made
 
 func _ready() -> void:
 	pass
@@ -68,4 +69,7 @@ func _drop_data(at_position: Vector2, data: Variant) -> void:
 		tween.tween_property(x_mark, "scale", Vector2.ONE, 0.25)
 		tween.tween_interval(1.0)
 		tween.tween_property(x_mark, "scale", Vector2.ZERO, 0.5)
-		tween.tween_callback(x_mark.queue_free)
+		tween.tween_callback(func():
+			mistake_made.emit()
+			x_mark.queue_free()
+		)
