@@ -5,6 +5,7 @@ extends Control
 
 var slot_counter: int
 var score := 0
+var mistakes := 0
 
 const base_text := "[center][b]( Acertos:[/b] %d/%d )[/center]"
 
@@ -49,3 +50,6 @@ func hide_victory_panel() -> void:
 	tween.set_trans(Tween.TRANS_CUBIC)
 	tween.tween_property(%VictoryPanel, "scale", Vector2(0,0), 0.7)
 	tween.tween_callback(%VictoryPanel.hide)
+
+func _on_mistake_made():
+	mistakes += 1
