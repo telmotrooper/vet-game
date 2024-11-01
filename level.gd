@@ -32,7 +32,12 @@ func set_stars(quantity: int):
 	%Stars/Star3.texture = filled_star if quantity >= 3 else empty_star
 
 func show_victory_panel() -> void:
-	set_stars(3)
+	if mistakes == 0:
+		set_stars(3)
+	elif mistakes <= 3:
+		set_stars(2)
+	else:
+		set_stars(1)
 	
 	for star in %Stars.get_children():
 		star.custom_minimum_size = Vector2.ZERO
