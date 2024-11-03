@@ -1,15 +1,13 @@
-[gd_scene load_steps=16 format=3 uid="uid://cqqouxh0tnhtp"]
+[gd_scene load_steps=14 format=3 uid="uid://cqqouxh0tnhtp"]
 
 [ext_resource type="Texture2D" uid="uid://bwvk2il82mqsk" path="res://cat_level/square.svg" id="1_7qxg0"]
 [ext_resource type="Script" path="res://level.gd" id="1_kkgaa"]
 [ext_resource type="Texture2D" uid="uid://dsca8fe4ifouc" path="res://cat_level/cat.png" id="2_ei4k5"]
 [ext_resource type="Script" path="res://draggable_object.gd" id="2_jfxkb"]
 [ext_resource type="Texture2D" uid="uid://btvovgytwfq74" path="res://cat_level/square_slot.svg" id="3_25sf6"]
-[ext_resource type="PackedScene" uid="uid://gpvwrquanwhj" path="res://ui/maximize_button/maximize_button.tscn" id="4_bygoh"]
 [ext_resource type="Script" path="res://slot.gd" id="4_cleui"]
 [ext_resource type="PackedScene" uid="uid://cwsj1bfgbxsnk" path="res://pink_background.tscn" id="4_n07gr"]
-[ext_resource type="PackedScene" uid="uid://c4e4q5arhn8f2" path="res://ui/back_button/back_button.tscn" id="5_jgko5"]
-[ext_resource type="PackedScene" uid="uid://c7v1migha7ig" path="res://ui/volume_button/volume_button.tscn" id="7_wexbm"]
+[ext_resource type="PackedScene" uid="uid://dwesfoxx58stl" path="res://ui/top_buttons.tscn" id="6_t6vyl"]
 [ext_resource type="Texture2D" uid="uid://6xae6ixeinrn" path="res://cat_level/square_alt.svg" id="12_ygnpx"]
 [ext_resource type="Texture2D" uid="uid://q28cdfoueli8" path="res://ui/star_solid.svg" id="13_0x6jh"]
 [ext_resource type="Texture2D" uid="uid://dccvgy7grvwon" path="res://ui/star_regular.svg" id="13_62bxt"]
@@ -27,29 +25,18 @@ mouse_filter = 2
 script = ExtResource("1_kkgaa")
 empty_star = ExtResource("13_62bxt")
 filled_star = ExtResource("13_0x6jh")
-metadata/_edit_horizontal_guides_ = [121.0]
 
 [node name="Background" type="CanvasLayer" parent="."]
 layer = -2
 
 [node name="PinkBackground" parent="Background" instance=ExtResource("4_n07gr")]
 
+[node name="TopButtons" parent="Background" instance=ExtResource("6_t6vyl")]
+
 [node name="CatDrawing4x" type="Sprite2D" parent="Background"]
 position = Vector2(964, 533)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("2_ei4k5")
-
-[node name="MaximizeButton" parent="Background" instance=ExtResource("4_bygoh")]
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -520.0
-offset_right = 0.0
-grow_horizontal = 0
-pivot_offset = Vector2(500, 20)
-
-[node name="BackButton" parent="Background" instance=ExtResource("5_jgko5")]
-pivot_offset = Vector2(20, 20)
 
 [node name="Score" type="RichTextLabel" parent="Background"]
 unique_name_in_owner = true
@@ -64,15 +51,6 @@ grow_horizontal = 2
 mouse_filter = 2
 bbcode_enabled = true
 text = "[b]Acertos:[/b] 0/1"
-
-[node name="VolumeButton" parent="Background" instance=ExtResource("7_wexbm")]
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -520.0
-offset_right = 0.0
-grow_horizontal = 0
-pivot_offset = Vector2(350, 20)
 
 [node name="Slots" type="Node" parent="."]
 unique_name_in_owner = true
