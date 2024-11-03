@@ -148,5 +148,4 @@ autowrap_mode = 0
 
 [connection signal="pressed" from="DogButton" to="." method="_on_dog_button_pressed"]
 [connection signal="pressed" from="CatButton" to="." method="_on_cat_button_pressed"]
-[connection signal="pressed" from="LympathicSystemButton" to="." method="_on_cat_button_pressed"]
 [connection signal="pressed" from="LympathicSystemButton" to="." method="_on_lympathic_system_button_pressed"]
