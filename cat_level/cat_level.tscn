@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cqqouxh0tnhtp"]
+[gd_scene load_steps=11 format=3 uid="uid://cqqouxh0tnhtp"]
 
 [ext_resource type="Texture2D" uid="uid://bwvk2il82mqsk" path="res://cat_level/square.svg" id="1_7qxg0"]
 [ext_resource type="Script" path="res://level.gd" id="1_kkgaa"]
@@ -8,11 +8,8 @@
 [ext_resource type="Script" path="res://slot.gd" id="4_cleui"]
 [ext_resource type="PackedScene" uid="uid://cwsj1bfgbxsnk" path="res://pink_background.tscn" id="4_n07gr"]
 [ext_resource type="PackedScene" uid="uid://dwesfoxx58stl" path="res://ui/top_buttons.tscn" id="6_t6vyl"]
+[ext_resource type="PackedScene" uid="uid://wnlhcjcm0qc" path="res://ui/victory_panel.tscn" id="12_cmf7c"]
 [ext_resource type="Texture2D" uid="uid://6xae6ixeinrn" path="res://cat_level/square_alt.svg" id="12_ygnpx"]
-[ext_resource type="Texture2D" uid="uid://q28cdfoueli8" path="res://ui/star_solid.svg" id="13_0x6jh"]
-[ext_resource type="Texture2D" uid="uid://dccvgy7grvwon" path="res://ui/star_regular.svg" id="13_62bxt"]
-[ext_resource type="Theme" uid="uid://dih34ywnda3er" path="res://dialog_button_theme.tres" id="13_d7q3b"]
-[ext_resource type="Script" path="res://ui/back_button/back_button.gd" id="13_hnmnr"]
 
 [node name="CatLevel" type="Control"]
 layout_mode = 3
@@ -23,8 +20,6 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_kkgaa")
-empty_star = ExtResource("13_62bxt")
-filled_star = ExtResource("13_0x6jh")
 
 [node name="Background" type="CanvasLayer" parent="."]
 layer = -2
@@ -95,89 +90,13 @@ texture = ExtResource("12_ygnpx")
 script = ExtResource("2_jfxkb")
 value = "pera"
 
-[node name="VictoryPanel" type="PanelContainer" parent="."]
+[node name="VictoryPanel" parent="." instance=ExtResource("12_cmf7c")]
 unique_name_in_owner = true
-z_index = 1
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -300.0
-offset_top = -300.0
-offset_right = 300.0
-offset_bottom = 350.0
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset = Vector2(300, 325)
-
-[node name="MarginContainer" type="MarginContainer" parent="VictoryPanel"]
-layout_mode = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="VictoryPanel/MarginContainer"]
-layout_mode = 2
-alignment = 1
-
-[node name="RichTextLabel" type="RichTextLabel" parent="VictoryPanel/MarginContainer/VBoxContainer"]
-layout_mode = 2
-bbcode_enabled = true
-text = "[center][b]Parabéns![/b][/center]"
-fit_content = true
-
-[node name="RichTextLabel2" type="RichTextLabel" parent="VictoryPanel/MarginContainer/VBoxContainer"]
-layout_mode = 2
-bbcode_enabled = true
-text = "[center]Você concluiu esse nível![/center]"
-fit_content = true
-
-[node name="Stars" type="HBoxContainer" parent="VictoryPanel/MarginContainer/VBoxContainer"]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 6
-
-[node name="Star" type="TextureRect" parent="VictoryPanel/MarginContainer/VBoxContainer/Stars"]
-custom_minimum_size = Vector2(128, 128)
-layout_mode = 2
-texture = ExtResource("13_0x6jh")
-expand_mode = 1
-stretch_mode = 4
-
-[node name="Star2" type="TextureRect" parent="VictoryPanel/MarginContainer/VBoxContainer/Stars"]
-custom_minimum_size = Vector2(128, 128)
-layout_mode = 2
-texture = ExtResource("13_0x6jh")
-expand_mode = 1
-stretch_mode = 4
-
-[node name="Star3" type="TextureRect" parent="VictoryPanel/MarginContainer/VBoxContainer/Stars"]
-custom_minimum_size = Vector2(128, 128)
-layout_mode = 2
-texture = ExtResource("13_62bxt")
-expand_mode = 1
-stretch_mode = 4
-
-[node name="Buttons" type="VBoxContainer" parent="VictoryPanel/MarginContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_constants/separation = 15
-
-[node name="FigureButton" type="Button" parent="VictoryPanel/MarginContainer/VBoxContainer/Buttons"]
-layout_mode = 2
-size_flags_vertical = 8
-theme = ExtResource("13_d7q3b")
-text = "Ver figura"
-
-[node name="ContinueButton" type="Button" parent="VictoryPanel/MarginContainer/VBoxContainer/Buttons"]
-layout_mode = 2
-size_flags_vertical = 8
-theme = ExtResource("13_d7q3b")
-text = "Continuar"
-script = ExtResource("13_hnmnr")
+offset_top = -325.0
+offset_bottom = 325.0
 
 [connection signal="mistake_made" from="Slots/SquareSlot" to="." method="_on_mistake_made"]
 [connection signal="slot_filled" from="Slots/SquareSlot" to="." method="_on_slot_filled"]
 [connection signal="mistake_made" from="Slots/SquareSlot2" to="." method="_on_mistake_made"]
 [connection signal="slot_filled" from="Slots/SquareSlot2" to="." method="_on_slot_filled"]
-[connection signal="pressed" from="VictoryPanel/MarginContainer/VBoxContainer/Buttons/FigureButton" to="." method="hide_victory_panel"]
-[connection signal="pressed" from="VictoryPanel/MarginContainer/VBoxContainer/Buttons/ContinueButton" to="VictoryPanel/MarginContainer/VBoxContainer/Buttons/ContinueButton" method="_on_pressed"]
