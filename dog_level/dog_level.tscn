@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://b8ki845joqcnh"]
 
-[ext_resource type="Script" path="res://level.gd" id="1_d8efn"]
+[ext_resource type="Script" path="res://figure_level.gd" id="1_d8efn"]
 [ext_resource type="PackedScene" uid="uid://cwsj1bfgbxsnk" path="res://pink_background.tscn" id="4_bbo4n"]
 [ext_resource type="Texture2D" uid="uid://bxrlpv42ntyr1" path="res://dog_level/dog.png" id="5_et6nn"]
 [ext_resource type="PackedScene" uid="uid://dwesfoxx58stl" path="res://ui/top_buttons.tscn" id="6_6nnd4"]
