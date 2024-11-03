@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://btvovgytwfq74"
-path="res://.godot/imported/square_slot.svg-27b57ca9ffb2e1e0f720e920d1f79ec7.ctex"
+path="res://.godot/imported/square_slot.svg-bc72896f1f2b74bc4a5c9e77005729c0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://cat_level/square_slot.svg"
-dest_files=["res://.godot/imported/square_slot.svg-27b57ca9ffb2e1e0f720e920d1f79ec7.ctex"]
+source_file="res://levels/cat_level/square_slot.svg"
+dest_files=["res://.godot/imported/square_slot.svg-bc72896f1f2b74bc4a5c9e77005729c0.ctex"]
 
 [params]
 
