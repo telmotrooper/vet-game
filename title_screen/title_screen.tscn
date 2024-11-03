@@ -1,10 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://bwq2aip0hywte"]
+[gd_scene load_steps=6 format=3 uid="uid://bwq2aip0hywte"]
 
 [ext_resource type="Script" path="res://title_screen/title_screen.gd" id="1_mjlm7"]
-[ext_resource type="PackedScene" uid="uid://gpvwrquanwhj" path="res://ui/maximize_button/maximize_button.tscn" id="2_csjh6"]
 [ext_resource type="PackedScene" uid="uid://bla37xan3xup8" path="res://title_screen/red_background.tscn" id="2_fqtuq"]
 [ext_resource type="FontFile" uid="uid://ckq5gw7frn8xf" path="res://assets/fonts/londrina_solid_black.ttf" id="2_q5b3s"]
-[ext_resource type="PackedScene" uid="uid://c7v1migha7ig" path="res://ui/volume_button/volume_button.tscn" id="3_afivn"]
+[ext_resource type="PackedScene" uid="uid://dwesfoxx58stl" path="res://ui/top_buttons.tscn" id="3_cj7x2"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ho86y"]
 font = ExtResource("2_q5b3s")
@@ -23,6 +22,10 @@ script = ExtResource("1_mjlm7")
 
 [node name="RedBackground" parent="." instance=ExtResource("2_fqtuq")]
 layout_mode = 1
+
+[node name="TopButtons" parent="." instance=ExtResource("3_cj7x2")]
+layout_mode = 1
+hide_back_button = true
 
 [node name="ColorRectTop" type="ColorRect" parent="."]
 layout_mode = 1
@@ -124,26 +127,6 @@ disabled = true
 text = "RUMINANTES
 (QUIZ)"
 expand_icon = true
-
-[node name="MaximizeButton" parent="." instance=ExtResource("2_csjh6")]
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -520.0
-offset_right = 0.0
-grow_horizontal = 0
-pivot_offset = Vector2(500, 20)
-
-[node name="VolumeButton" parent="." instance=ExtResource("3_afivn")]
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -520.0
-offset_right = 0.0
-grow_horizontal = 0
-pivot_offset = Vector2(350, 20)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 layout_mode = 1
