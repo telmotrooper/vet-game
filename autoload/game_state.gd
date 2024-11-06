@@ -2,6 +2,8 @@ extends Node
 
 @onready var audio_stream_player = $AudioStreamPlayer
 
+var stars_per_level: Dictionary = {}
+
 func toggle_volume() -> void:
 	$AudioStreamPlayer.playing = !$AudioStreamPlayer.playing
 
