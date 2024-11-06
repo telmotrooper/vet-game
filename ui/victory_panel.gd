@@ -7,6 +7,7 @@ func set_stars(quantity: int):
 	%Stars/Star.texture = filled_star if quantity >= 1 else empty_star
 	%Stars/Star2.texture = filled_star if quantity >= 2 else empty_star
 	%Stars/Star3.texture = filled_star if quantity >= 3 else empty_star
+	GameState.stars_per_level[GameState.current_scene] = quantity
 
 func show_panel():
 	for star in %Stars.get_children():
