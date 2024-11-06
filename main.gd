@@ -10,7 +10,7 @@ func _ready() -> void:
 	set_process(false)
 	load_scene(initial_scene.get_path())
 
-func load_scene(scene_to_load: NodePath) -> void:
+func load_scene(scene_to_load: String) -> void:
 	loading_scene = scene_to_load
 	ResourceLoader.load_threaded_request(loading_scene, "", true)
 	
