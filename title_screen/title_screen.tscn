@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://bwq2aip0hywte"]
+[gd_scene load_steps=7 format=3 uid="uid://bwq2aip0hywte"]
 
 [ext_resource type="Script" path="res://title_screen/title_screen.gd" id="1_mjlm7"]
 [ext_resource type="PackedScene" uid="uid://bla37xan3xup8" path="res://title_screen/red_background.tscn" id="2_fqtuq"]
 [ext_resource type="FontFile" uid="uid://ckq5gw7frn8xf" path="res://assets/fonts/londrina_solid_black.ttf" id="2_q5b3s"]
 [ext_resource type="PackedScene" uid="uid://dwesfoxx58stl" path="res://ui/top_buttons.tscn" id="3_cj7x2"]
+[ext_resource type="PackedScene" uid="uid://davgsjgl4cyry" path="res://ui/level_star_counter.tscn" id="5_g2hox"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ho86y"]
 font = ExtResource("2_q5b3s")
@@ -93,6 +94,11 @@ text = "CÃES
 (FIGURA)"
 expand_icon = true
 
+[node name="LevelStarCounter" parent="DogButton" instance=ExtResource("5_g2hox")]
+layout_mode = 1
+offset_left = -116.5
+offset_right = 116.5
+
 [node name="CatButton" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = 8
@@ -109,6 +115,11 @@ grow_vertical = 2
 text = "GATOS
 (FIGURA)"
 expand_icon = true
+
+[node name="LevelStarCounter" parent="CatButton" instance=ExtResource("5_g2hox")]
+layout_mode = 1
+offset_left = -116.5
+offset_right = 116.5
 
 [node name="LympathicSystemButton" type="Button" parent="."]
 layout_mode = 1
@@ -127,6 +138,11 @@ text = "SISTEMA
 LINFÁTICO
 (QUIZ)"
 expand_icon = true
+
+[node name="LevelStarCounter" parent="LympathicSystemButton" instance=ExtResource("5_g2hox")]
+layout_mode = 1
+offset_left = -116.5
+offset_right = 116.5
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 layout_mode = 1
