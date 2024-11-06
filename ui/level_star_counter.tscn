@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=3 uid="uid://davgsjgl4cyry"]
+
+[ext_resource type="Script" path="res://ui/level_star_counter.gd" id="1_tyx2e"]
+[ext_resource type="Texture2D" uid="uid://dg58jild0qw0e" path="res://ui/star_solid_red.svg" id="1_xwg8c"]
+[ext_resource type="Texture2D" uid="uid://dlmphcpbnxppu" path="res://ui/star_regular_red.svg" id="2_46oe8"]
+
+[node name="LevelStarCounter" type="HBoxContainer"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -37.5
+offset_top = -75.0
+offset_right = 37.5
+grow_horizontal = 2
+grow_vertical = 0
+alignment = 1
+script = ExtResource("1_tyx2e")
+empty_star = ExtResource("2_46oe8")
+filled_star = ExtResource("1_xwg8c")
+
+[node name="Star" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+texture = ExtResource("2_46oe8")
+expand_mode = 1
+
+[node name="Star2" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+texture = ExtResource("2_46oe8")
+expand_mode = 1
+
+[node name="Star3" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+texture = ExtResource("2_46oe8")
+expand_mode = 1
