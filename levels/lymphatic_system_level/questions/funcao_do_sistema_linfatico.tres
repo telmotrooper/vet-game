@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=2 format=3 uid="uid://cacanb31t3bwl"]
+
+[ext_resource type="Script" path="res://levels/lymphatic_system_level/question.gd" id="1_aex7q"]
+
+[resource]
+script = ExtResource("1_aex7q")
+text = "Qual das alternativas abaixo descreve corretamentea principal função do sistema linfático nos animais?"
+correct_answer = "Coletar e retornar fluidos e proteínas dos tecidos para o sangue, além de participar da defesa do organismo."
+wrong_answers = Array[String](["Transportar oxigênio para os tecidos do corpo.", "Produzir hormônios para o crescimento e desenvolvimento.", "Regular a temperatura corporal dos animais."])
