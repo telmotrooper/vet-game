@@ -20,13 +20,13 @@ offset_bottom = 350.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(300, 325)
+theme = ExtResource("3_cceb7")
 script = ExtResource("1_ity2m")
 empty_star = ExtResource("2_higjn")
 filled_star = ExtResource("1_3hspb")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 2
-theme = ExtResource("3_cceb7")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2

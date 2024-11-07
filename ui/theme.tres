@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=7 format=3 uid="uid://csa6agkygg3nq"]
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://csa6agkygg3nq"]
 
 [ext_resource type="FontFile" uid="uid://ckq5gw7frn8xf" path="res://assets/fonts/londrina_solid_black.ttf" id="1_ajffp"]
 [ext_resource type="FontFile" uid="uid://bsywbyicuycen" path="res://assets/fonts/londrina_solid_regular.ttf" id="2_6oqn0"]
@@ -27,18 +27,6 @@ border_width_right = 40
 border_width_bottom = 40
 border_color = Color(1, 0.933333, 0.847059, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7ch7u"]
-bg_color = Color(0.831373, 0.705882, 0.513726, 1)
-border_width_left = 5
-border_width_top = 5
-border_width_right = 5
-border_width_bottom = 5
-border_color = Color(0.901835, 0.805403, 0.660296, 1)
-corner_radius_top_left = 25
-corner_radius_top_right = 25
-corner_radius_bottom_right = 25
-corner_radius_bottom_left = 25
-
 [resource]
 default_font = ExtResource("2_6oqn0")
 default_font_size = 32
@@ -53,7 +41,6 @@ Button/styles/normal = SubResource("StyleBoxFlat_l5bdc")
 Button/styles/pressed = SubResource("StyleBoxFlat_a7qgb")
 Label/constants/outline_size = 10
 Label/font_sizes/font_size = 40
-PanelContainer/styles/panel = SubResource("StyleBoxFlat_7ch7u")
 RichTextLabel/colors/default_color = Color(0.635294, 0.152941, 0.172549, 1)
 RichTextLabel/font_sizes/bold_font_size = 64
 RichTextLabel/font_sizes/normal_font_size = 64
