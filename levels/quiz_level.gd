@@ -13,6 +13,17 @@ func _ready() -> void:
 	current_question = questions.pick_random()
 	%Question.text = current_question.text
 	
+	var answers: Array[String] = [current_question.correct_answer]
+	answers.append_array(current_question.wrong_answers)
+	answers.shuffle()
+	
+	var answer_counter = 1
+	
+	for answer in answers:
+		var button = find_child("Answer%d" % answer_counter)
+		button.text = "%d. %s" % [answer_counter, answer]
+		answer_counter += 1
+	
 	%VictoryPanel.visible = false
 	%VictoryPanel.scale = Vector2.ZERO
 	

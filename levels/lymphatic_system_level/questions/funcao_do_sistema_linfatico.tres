@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Question" load_steps=2 format=3 uid="uid://cacanb31t3bwl"]
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=2 format=3 uid="uid://cacanb31t3bwl"]
 
 [ext_resource type="Script" path="res://levels/lymphatic_system_level/question.gd" id="1_aex7q"]
 
