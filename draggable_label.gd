@@ -35,7 +35,8 @@ func _get_drag_data(at_position: Vector2) -> Variant:
 
 func make_visible() -> void:
 	self_modulate.a = 1
-	set_mouse_filter(MOUSE_FILTER_PASS) # Capture mouse events.
+	if not frozen:
+		set_mouse_filter(MOUSE_FILTER_PASS) # Capture mouse events.
 
 # When a drag ends, make the object visible again.
 func _notification(what: int) -> void:
