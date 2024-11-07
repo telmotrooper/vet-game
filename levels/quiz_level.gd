@@ -5,7 +5,6 @@ extends Control
 var current_question: QuizQuestion
 var question_counter: int
 var score := 0
-var mistakes := 0
 
 const base_text := "[center][b]( Acertos:[/b] %d/%d )[/center]"
 
@@ -38,20 +37,20 @@ func update_text() -> void:
 	%Score.text = base_text % [score, question_counter]
 
 func show_victory_panel() -> void:
-	if mistakes == 0:
+	if score == question_counter: # all correct
 		%VictoryPanel.set_stars(3)
-	elif mistakes <= 3:
+	elif score == question_counter - 1: # missed one
 		%VictoryPanel.set_stars(2)
-	else:
+	elif score > 0: # at least one correct
 		%VictoryPanel.set_stars(1)
+	else: # all wrong
+		%VictoryPanel.set_stars(0)
 	
 	%VictoryPanel.show_panel()
 
 func _on_question_answered(value: String) -> void:
 	if value == current_question.correct_answer:
 		score += 1
-	else:
-		mistakes += 1
 	update_text()
 	
 	var index = questions.find(current_question)
