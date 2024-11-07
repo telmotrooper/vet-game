@@ -1,5 +1,7 @@
 extends Control
 
+@export var questions: Array[QuizQuestion]
+
 var question_counter: int
 var score := 0
 var mistakes := 0
