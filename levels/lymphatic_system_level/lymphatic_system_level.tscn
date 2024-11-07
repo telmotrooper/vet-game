@@ -125,7 +125,7 @@ grow_vertical = 2
 color = Color(1, 0.972549, 0.929412, 1)
 metadata/_edit_lock_ = true
 
-[node name="Answer1" type="Button" parent="."]
+[node name="Answer1" type="Button" parent="." groups=["answers"]]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -142,7 +142,7 @@ text = "1. Transportar oxigênio para os tecidos do corpo."
 autowrap_mode = 2
 script = ExtResource("9_ywt1q")
 
-[node name="Answer2" type="Button" parent="."]
+[node name="Answer2" type="Button" parent="." groups=["answers"]]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -159,7 +159,7 @@ text = "2. Produzir hormônios para o crescimento e desenvolvimento."
 autowrap_mode = 2
 script = ExtResource("9_ywt1q")
 
-[node name="Answer3" type="Button" parent="."]
+[node name="Answer3" type="Button" parent="." groups=["answers"]]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -176,7 +176,7 @@ text = "3. Coletar e retornar fluidos e proteínas dos tecidos para o sangue, al
 autowrap_mode = 2
 script = ExtResource("9_ywt1q")
 
-[node name="Answer4" type="Button" parent="."]
+[node name="Answer4" type="Button" parent="." groups=["answers"]]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
