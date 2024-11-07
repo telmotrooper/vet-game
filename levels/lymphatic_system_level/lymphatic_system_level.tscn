@@ -192,3 +192,8 @@ grow_vertical = 2
 text = "4. Regular a temperatura corporal dos animais."
 autowrap_mode = 2
 script = ExtResource("9_ywt1q")
+
+[connection signal="question_answered" from="Answer1" to="." method="_on_question_answered"]
+[connection signal="question_answered" from="Answer2" to="." method="_on_question_answered"]
+[connection signal="question_answered" from="Answer3" to="." method="_on_question_answered"]
+[connection signal="question_answered" from="Answer4" to="." method="_on_question_answered"]

@@ -45,3 +45,6 @@ func show_victory_panel() -> void:
 
 func _on_mistake_made():
 	mistakes += 1
+
+func _on_question_answered(value: String) -> void:
+	print(value)
