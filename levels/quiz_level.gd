@@ -22,6 +22,7 @@ func _ready() -> void:
 	for answer in answers:
 		var button = find_child("Answer%d" % answer_counter)
 		button.text = "%d. %s" % [answer_counter, answer]
+		button.value = answer
 		answer_counter += 1
 	
 	%VictoryPanel.visible = false
