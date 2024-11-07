@@ -34,9 +34,25 @@ layer = -2
 [node name="TopButtons" parent="Background" instance=ExtResource("6_t6vyl")]
 
 [node name="CatDrawing4x" type="Sprite2D" parent="Background"]
-position = Vector2(964, 533)
+position = Vector2(964, 585)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("2_ei4k5")
+
+[node name="CatBackground" type="ColorRect" parent="Background/CatDrawing4x"]
+self_modulate = Color(1, 1, 1, 0.509804)
+show_behind_parent = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -980.0
+offset_top = -643.0
+offset_right = -980.0
+offset_bottom = -760.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(1, 0.972549, 0.929412, 1)
+metadata/_edit_lock_ = true
 
 [node name="ScoreBackground" type="ColorRect" parent="Background"]
 anchors_preset = 5
