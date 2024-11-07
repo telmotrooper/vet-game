@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://levels/quiz_level.gd" id="1_w7cp7"]
 [ext_resource type="PackedScene" uid="uid://cwsj1bfgbxsnk" path="res://pink_background.tscn" id="2_ys2ef"]
 [ext_resource type="PackedScene" uid="uid://dwesfoxx58stl" path="res://ui/top_buttons.tscn" id="3_exjlh"]
-[ext_resource type="PackedScene" uid="uid://wnlhcjcm0qc" path="res://ui/victory_panel.tscn" id="4_0qajo"]
+[ext_resource type="PackedScene" uid="uid://wnlhcjcm0qc" path="res://ui/victory_panel/victory_panel.tscn" id="4_0qajo"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_hcqab"]
 font_size = 64

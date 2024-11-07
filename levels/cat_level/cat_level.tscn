@@ -8,7 +8,7 @@
 [ext_resource type="Script" path="res://slot.gd" id="4_cleui"]
 [ext_resource type="PackedScene" uid="uid://cwsj1bfgbxsnk" path="res://pink_background.tscn" id="4_n07gr"]
 [ext_resource type="PackedScene" uid="uid://dwesfoxx58stl" path="res://ui/top_buttons.tscn" id="6_t6vyl"]
-[ext_resource type="PackedScene" uid="uid://wnlhcjcm0qc" path="res://ui/victory_panel.tscn" id="12_cmf7c"]
+[ext_resource type="PackedScene" uid="uid://wnlhcjcm0qc" path="res://ui/victory_panel/victory_panel.tscn" id="12_cmf7c"]
 [ext_resource type="Texture2D" uid="uid://6xae6ixeinrn" path="res://levels/cat_level/square_alt.svg" id="12_ygnpx"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_8ypfv"]

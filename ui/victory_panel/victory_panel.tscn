@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://wnlhcjcm0qc"]
 
 [ext_resource type="Texture2D" uid="uid://q28cdfoueli8" path="res://ui/star_solid.svg" id="1_3hspb"]
-[ext_resource type="Script" path="res://ui/victory_panel.gd" id="1_ity2m"]
+[ext_resource type="Script" path="res://ui/victory_panel/victory_panel.gd" id="1_ity2m"]
 [ext_resource type="Texture2D" uid="uid://dccvgy7grvwon" path="res://ui/star_regular.svg" id="2_higjn"]
-[ext_resource type="Theme" uid="uid://dih34ywnda3er" path="res://ui/victory_panel_theme.tres" id="3_cceb7"]
+[ext_resource type="Theme" uid="uid://dih34ywnda3er" path="res://ui/victory_panel/victory_panel_theme.tres" id="3_cceb7"]
 [ext_resource type="Script" path="res://ui/buttons/back_button/back_button.gd" id="4_i70ng"]
 
 [node name="VictoryPanel" type="PanelContainer"]
