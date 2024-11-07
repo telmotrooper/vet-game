@@ -1,7 +1,7 @@
-[gd_resource type="Theme" load_steps=7 format=3 uid="uid://csa6agkygg3nq"]
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://csa6agkygg3nq"]
 
-[ext_resource type="FontFile" uid="uid://ckq5gw7frn8xf" path="res://assets/fonts/londrina_solid_black.ttf" id="2_iogpy"]
-[ext_resource type="FontFile" uid="uid://bsywbyicuycen" path="res://assets/fonts/londrina_solid_regular.ttf" id="3_gaspx"]
+[ext_resource type="FontFile" uid="uid://ckq5gw7frn8xf" path="res://assets/fonts/londrina_solid_black.ttf" id="1_ajffp"]
+[ext_resource type="FontFile" uid="uid://bsywbyicuycen" path="res://assets/fonts/londrina_solid_regular.ttf" id="2_6oqn0"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2k6c4"]
 bg_color = Color(1, 1, 0.996078, 1)
@@ -27,20 +27,8 @@ border_width_right = 40
 border_width_bottom = 40
 border_color = Color(1, 0.933333, 0.847059, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7ch7u"]
-bg_color = Color(0.831373, 0.705882, 0.513726, 1)
-border_width_left = 5
-border_width_top = 5
-border_width_right = 5
-border_width_bottom = 5
-border_color = Color(0.901835, 0.805403, 0.660296, 1)
-corner_radius_top_left = 25
-corner_radius_top_right = 25
-corner_radius_bottom_right = 25
-corner_radius_bottom_left = 25
-
 [resource]
-default_font = ExtResource("3_gaspx")
+default_font = ExtResource("2_6oqn0")
 default_font_size = 32
 Button/colors/font_color = Color(0.635294, 0.152941, 0.172549, 1)
 Button/colors/font_focus_color = Color(0.635294, 0.152941, 0.172549, 1)
@@ -53,13 +41,8 @@ Button/styles/normal = SubResource("StyleBoxFlat_l5bdc")
 Button/styles/pressed = SubResource("StyleBoxFlat_a7qgb")
 Label/constants/outline_size = 10
 Label/font_sizes/font_size = 40
-MarginContainer/constants/margin_bottom = 20
-MarginContainer/constants/margin_left = 20
-MarginContainer/constants/margin_right = 20
-MarginContainer/constants/margin_top = 20
-PanelContainer/styles/panel = SubResource("StyleBoxFlat_7ch7u")
 RichTextLabel/colors/default_color = Color(0.635294, 0.152941, 0.172549, 1)
 RichTextLabel/font_sizes/bold_font_size = 64
 RichTextLabel/font_sizes/normal_font_size = 64
-RichTextLabel/fonts/bold_font = ExtResource("2_iogpy")
-RichTextLabel/fonts/normal_font = ExtResource("3_gaspx")
+RichTextLabel/fonts/bold_font = ExtResource("1_ajffp")
+RichTextLabel/fonts/normal_font = ExtResource("2_6oqn0")

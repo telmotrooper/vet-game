@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://dwesfoxx58stl"]
 
-[ext_resource type="PackedScene" uid="uid://c4e4q5arhn8f2" path="res://ui/back_button/back_button.tscn" id="1_234ed"]
+[ext_resource type="PackedScene" uid="uid://c4e4q5arhn8f2" path="res://ui/buttons/back_button/back_button.tscn" id="1_234ed"]
 [ext_resource type="Script" path="res://ui/top_buttons.gd" id="1_cj3v4"]
-[ext_resource type="PackedScene" uid="uid://c7v1migha7ig" path="res://ui/volume_button/volume_button.tscn" id="2_tn6k4"]
-[ext_resource type="PackedScene" uid="uid://gpvwrquanwhj" path="res://ui/maximize_button/maximize_button.tscn" id="3_iq775"]
+[ext_resource type="PackedScene" uid="uid://c7v1migha7ig" path="res://ui/buttons/volume_button/volume_button.tscn" id="2_tn6k4"]
+[ext_resource type="PackedScene" uid="uid://gpvwrquanwhj" path="res://ui/buttons/maximize_button/maximize_button.tscn" id="3_iq775"]
 
 [node name="TopButtons" type="Control"]
 layout_mode = 3
