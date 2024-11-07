@@ -60,5 +60,5 @@ func _on_question_answered(value: String) -> void:
 		current_question = questions.pick_random()
 		update_question()
 	else:
-		get_tree().call_group("answers", "set_disabled", true)
+		get_tree().call_group("answers", "freeze")
 		show_victory_panel()
