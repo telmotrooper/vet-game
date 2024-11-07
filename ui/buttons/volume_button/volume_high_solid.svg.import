@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d4h0b8ddee6es"
-path="res://.godot/imported/volume_xmark_solid.svg-d30f85ed1b9082d1cd4ac7f101eb150f.ctex"
+uid="uid://cxcfwoocrcdyt"
+path="res://.godot/imported/volume_high_solid.svg-c5b6e729cf5ecedc7fbbf4185a503533.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ui/volume_button/volume_xmark_solid.svg"
-dest_files=["res://.godot/imported/volume_xmark_solid.svg-d30f85ed1b9082d1cd4ac7f101eb150f.ctex"]
+source_file="res://ui/buttons/volume_button/volume_high_solid.svg"
+dest_files=["res://.godot/imported/volume_high_solid.svg-c5b6e729cf5ecedc7fbbf4185a503533.ctex"]
 
 [params]
 
