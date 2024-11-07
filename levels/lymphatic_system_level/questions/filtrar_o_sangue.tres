@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3 uid="uid://bhiuxc5uo3b7q"]
+
+[ext_resource type="Script" path="res://levels/lymphatic_system_level/question.gd" id="1_uu3si"]
+
+[resource]
+script = ExtResource("1_uu3si")
+text = "Qual órgão do sistema linfático é responsável por filtrar o sangue e armazenar células imunológicas nos animais?"
+correct_answer = "Baço"
+wrong_answers = Array[String](["Timo", "Linfonodos", "Medula óssea"])

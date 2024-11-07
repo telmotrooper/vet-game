@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=2 format=3 uid="uid://34mxkcv1bvt7"]
+
+[ext_resource type="Script" path="res://levels/lymphatic_system_level/question.gd" id="1_gjq7r"]
+
+[resource]
+script = ExtResource("1_gjq7r")
+text = "Qual célula do sistema linfático é fundamental para a resposta imunológica adaptativa nos animais?"
+correct_answer = "Linfócito"
+wrong_answers = Array[String](["Eritrócito", "Neutrófilo", "Monócito"])
