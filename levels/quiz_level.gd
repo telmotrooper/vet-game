@@ -47,4 +47,4 @@ func _on_mistake_made():
 	mistakes += 1
 
 func _on_question_answered(value: String) -> void:
-	print(value)
+	print(value == current_question.correct_answer)
