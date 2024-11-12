@@ -5,7 +5,6 @@ extends Control
 var current_question: QuizQuestion
 var question_counter: int
 var score := 0
-var tween = create_tween()
 
 const base_text := "[center][b]( Acertos:[/b] %d/%d )[/center]"
 
@@ -23,13 +22,18 @@ func _ready() -> void:
 	question_counter = len(questions)
 	update_text()
 	
-	# Make transparent.
-	%Question.modulate = Color(1,1,1,0)
+	#%Question.modulate = Color(1,1,1,0)
+	
 	for answer in %Answers.get_children():
 		answer.set_mouse_filter(MOUSE_FILTER_IGNORE) # Ignore mouse click.
-		answer.modulate = Color(1,1,1,0)
-		
-	tween.tween_property(%Question, "modulate", Color.WHITE, QUESTION_TIME)
+		answer.modulate = Color(1,1,1,0) # Make transparent.
+	
+	# If loaded from main, wait for "fade in" to finish before starting animation.
+	if get_tree().current_scene is MainScene:
+		await get_tree().current_scene.fade_transition.faded_in
+	
+	var tween = create_tween()
+	#tween.tween_property(%Question, "modulate", Color.WHITE, QUESTION_TIME)
 	tween.tween_interval(QUESTION_INTERVAL)
 	for answer in %Answers.get_children():
 		tween.tween_callback(func(): answer.set_mouse_filter(MOUSE_FILTER_STOP)) # Allow mouse click.

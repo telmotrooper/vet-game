@@ -1,3 +1,4 @@
+class_name MainScene
 extends Control
 
 @export var initial_scene: PackedScene
@@ -5,6 +6,8 @@ extends Control
 var current_scene = null
 var loading_scene = null
 var progress = []
+
+@onready var fade_transition = $FadeTransition
 
 func _ready() -> void:
 	set_process(false)
