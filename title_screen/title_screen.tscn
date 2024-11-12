@@ -1,10 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://bwq2aip0hywte"]
+[gd_scene load_steps=6 format=3 uid="uid://bwq2aip0hywte"]
 
 [ext_resource type="PackedScene" uid="uid://bla37xan3xup8" path="res://title_screen/red_background.tscn" id="2_fqtuq"]
 [ext_resource type="FontFile" uid="uid://ckq5gw7frn8xf" path="res://assets/fonts/londrina_solid_black.ttf" id="2_q5b3s"]
 [ext_resource type="PackedScene" uid="uid://dwesfoxx58stl" path="res://ui/top_buttons.tscn" id="3_cj7x2"]
-[ext_resource type="PackedScene" uid="uid://davgsjgl4cyry" path="res://ui/level_star_counter.tscn" id="5_g2hox"]
-[ext_resource type="Script" path="res://title_screen/level_button.gd" id="6_e8qp3"]
+[ext_resource type="Script" path="res://title_screen/menu_button.gd" id="4_p1w7n"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ho86y"]
 font = ExtResource("2_q5b3s")
@@ -76,96 +75,32 @@ label_settings = SubResource("LabelSettings_ho86y")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="DogButton" type="Button" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -545.0
-offset_top = 144.0
-offset_right = -239.0
-offset_bottom = 450.0
+offset_left = -204.0
+offset_top = 28.0
+offset_right = 204.0
+offset_bottom = 419.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "CÃES
-(FIGURA)"
-expand_icon = true
-script = ExtResource("6_e8qp3")
-target_scene = "res://levels/dog_level/dog_level.tscn"
 
-[node name="LevelStarCounter" parent="DogButton" instance=ExtResource("5_g2hox")]
-layout_mode = 1
-offset_left = -116.5
-offset_right = 116.5
+[node name="PlayButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 90
+text = "JOGAR"
+script = ExtResource("4_p1w7n")
+target_scene = "res://title_screen/level_selection.tscn"
+metadata/_edit_lock_ = true
 
-[node name="CatButton" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -153.0
-offset_top = 144.0
-offset_right = 153.0
-offset_bottom = 450.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "GATOS
-(FIGURA)"
-expand_icon = true
-script = ExtResource("6_e8qp3")
-target_scene = "res://levels/cat_level/cat_level.tscn"
-
-[node name="LevelStarCounter" parent="CatButton" instance=ExtResource("5_g2hox")]
-layout_mode = 1
-offset_left = -116.5
-offset_right = 116.5
-
-[node name="LympathicSystemButton" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 231.5
-offset_top = 144.0
-offset_right = 552.5
-offset_bottom = 450.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "SISTEMA
-LINFÁTICO
-(QUIZ)"
-expand_icon = true
-script = ExtResource("6_e8qp3")
-target_scene = "res://levels/lymphatic_system_level/lymphatic_system_level.tscn"
-
-[node name="LevelStarCounter" parent="LympathicSystemButton" instance=ExtResource("5_g2hox")]
-layout_mode = 1
-offset_left = -116.5
-offset_right = 116.5
-
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -349.5
-offset_top = 34.0
-offset_right = 349.5
-offset_bottom = 113.0
-grow_horizontal = 2
-grow_vertical = 2
-bbcode_enabled = true
-text = "[center]ESCOLHA UM DESAFIO:[/center]"
-fit_content = true
-autowrap_mode = 0
-
-[connection signal="pressed" from="CatButton" to="." method="_on_cat_button_pressed"]
-[connection signal="pressed" from="LympathicSystemButton" to="." method="_on_lympathic_system_button_pressed"]
+[node name="CreditsButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 90
+text = "CRÉDITOS"
+script = ExtResource("4_p1w7n")
+target_scene = "res://title_screen/credits.tscn"
+metadata/_edit_lock_ = true

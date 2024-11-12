@@ -1,0 +1,75 @@
+[gd_scene load_steps=5 format=3 uid="uid://du1hxb0nj6fgw"]
+
+[ext_resource type="PackedScene" uid="uid://bla37xan3xup8" path="res://title_screen/red_background.tscn" id="1_7vxay"]
+[ext_resource type="PackedScene" uid="uid://dwesfoxx58stl" path="res://ui/top_buttons.tscn" id="2_ro7lb"]
+[ext_resource type="FontFile" uid="uid://ckq5gw7frn8xf" path="res://assets/fonts/londrina_solid_black.ttf" id="3_ulqxg"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ho86y"]
+font = ExtResource("3_ulqxg")
+font_size = 120
+font_color = Color(0.635294, 0.152941, 0.172549, 1)
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Credits" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RedBackground" parent="." instance=ExtResource("1_7vxay")]
+layout_mode = 1
+
+[node name="TopButtons" parent="." instance=ExtResource("2_ro7lb")]
+layout_mode = 1
+back_button_target = "/home/telmo/Development/Personal/Godot/vet-game/title_screen/title_screen.tscn"
+
+[node name="ColorRectTop" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -399.5
+offset_top = -365.0
+offset_right = 399.5
+offset_bottom = -149.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0.972549, 0.929412, 1)
+
+[node name="ColorRectBottom" type="ColorRect" parent="ColorRectTop"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -302.5
+offset_top = 75.5
+offset_right = 302.5
+offset_bottom = 210.5
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0.972549, 0.929412, 1)
+
+[node name="LogoLabel" type="Label" parent="ColorRectTop"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -361.5
+offset_top = -90.5
+offset_right = 361.5
+offset_bottom = 198.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "SISTEMAS VITAIS
+DOS ANIMAIS"
+label_settings = SubResource("LabelSettings_ho86y")
+horizontal_alignment = 1
+vertical_alignment = 1
