@@ -60,6 +60,7 @@ func fade_out() -> void:
 
 func fade_in() -> void:
 	for answer in %Answers.get_children():
+		answer.release_focus() # If button was clicked before, release focus.
 		answer.modulate = COLOR_TRANSPARENT
 	%Answers.modulate = Color.WHITE
 	
