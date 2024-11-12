@@ -8,6 +8,10 @@ var score := 0
 
 const base_text := "[center][b]( Acertos:[/b] %d/%d )[/center]"
 
+const QUESTION_TIME = 0.75
+const QUESTION_INTERVAL = 1.25
+const ANSWER_TIME = 0.5
+
 func _ready() -> void:
 	current_question = questions.pick_random()
 	update_question()
@@ -17,6 +21,24 @@ func _ready() -> void:
 	
 	question_counter = len(questions)
 	update_text()
+	
+	#%Question.modulate = Color(1,1,1,0)
+	
+	for answer in %Answers.get_children():
+		answer.set_mouse_filter(MOUSE_FILTER_IGNORE) # Ignore mouse click.
+		answer.modulate = Color(1,1,1,0) # Make transparent.
+	
+	# If loaded from main, wait for "fade in" to finish before starting animation.
+	if get_tree().current_scene is MainScene:
+		await get_tree().current_scene.fade_transition.faded_in
+	
+	var tween = create_tween()
+	#tween.tween_property(%Question, "modulate", Color.WHITE, QUESTION_TIME)
+	tween.tween_interval(QUESTION_INTERVAL)
+	for answer in %Answers.get_children():
+		tween.tween_callback(func(): answer.set_mouse_filter(MOUSE_FILTER_STOP)) # Allow mouse click.
+		tween.tween_property(answer, "modulate", Color.WHITE, ANSWER_TIME)
+	
 
 func update_question() -> void:
 	%Question.text = current_question.text
