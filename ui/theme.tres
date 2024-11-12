@@ -46,3 +46,4 @@ RichTextLabel/font_sizes/bold_font_size = 64
 RichTextLabel/font_sizes/normal_font_size = 64
 RichTextLabel/fonts/bold_font = ExtResource("1_ajffp")
 RichTextLabel/fonts/normal_font = ExtResource("2_6oqn0")
+VBoxContainer/constants/separation = 15

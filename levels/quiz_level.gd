@@ -2,7 +2,7 @@ extends Control
 
 @export var questions: Array[QuizQuestion]
 
-var current_question: Resource
+var current_question: QuizQuestion
 var question_counter: int
 var score := 0
 
