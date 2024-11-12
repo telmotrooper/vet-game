@@ -96,6 +96,6 @@ size_flags_vertical = 8
 theme = ExtResource("3_cceb7")
 text = "Continuar"
 script = ExtResource("6_20jyd")
-target_scene = "/home/telmo/Development/Personal/Godot/vet-game/title_screen/level_selection.tscn"
+target_scene = "res://title_screen/level_selection.tscn"
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Buttons/FigureButton" to="." method="hide_panel"]

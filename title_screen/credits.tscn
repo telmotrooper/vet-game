@@ -23,7 +23,7 @@ layout_mode = 1
 
 [node name="TopButtons" parent="." instance=ExtResource("2_ro7lb")]
 layout_mode = 1
-back_button_target = "/home/telmo/Development/Personal/Godot/vet-game/title_screen/title_screen.tscn"
+back_button_target = "res://title_screen/title_screen.tscn"
 
 [node name="ColorRectTop" type="ColorRect" parent="."]
 layout_mode = 1
