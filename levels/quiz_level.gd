@@ -17,6 +17,23 @@ func _ready() -> void:
 	
 	question_counter = len(questions)
 	update_text()
+	
+	## Make question and answers invisible so they can't be interacted with initially.
+	#%Question.visible = false
+	#%Answers.visible = false
+	
+	# Make transparent.
+	%Question.modulate = Color(1,1,1,0)
+	for answer in %Answers.get_children():
+		answer.modulate = Color(1,1,1,0)
+	
+	var tween = create_tween()
+	
+	tween.tween_property(%Question, "modulate", Color.WHITE, 1.0)
+	tween.tween_interval(1.0)
+	for answer in %Answers.get_children():
+		tween.tween_property(answer, "modulate", Color.WHITE, 0.5)
+	
 
 func update_question() -> void:
 	%Question.text = current_question.text
