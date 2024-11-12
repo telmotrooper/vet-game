@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b810j526r3pqn"
-path="res://.godot/imported/heart.svg-f6348d98e1ca5933af6acaf25189c677.ctex"
+uid="uid://c4hjfkkx8r08g"
+path="res://.godot/imported/kidneys.svg-83a0361388420686d7b59414b59664c4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://title_screen/heart.svg"
-dest_files=["res://.godot/imported/heart.svg-f6348d98e1ca5933af6acaf25189c677.ctex"]
+source_file="res://title_screen/assets/kidneys.svg"
+dest_files=["res://.godot/imported/kidneys.svg-83a0361388420686d7b59414b59664c4.ctex"]
 
 [params]
 

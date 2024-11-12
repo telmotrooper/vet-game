@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://c4e4q5arhn8f2"]
 
 [ext_resource type="Texture2D" uid="uid://b450mpv3cp018" path="res://ui/buttons/back_button/arrow_left_solid.svg" id="1_to8cs"]
-[ext_resource type="Script" path="res://ui/buttons/back_button/back_button.gd" id="2_tw5cr"]
+[ext_resource type="Script" path="res://title_screen/menu_button.gd" id="2_tkol6"]
 
 [node name="BackButton" type="Button"]
 offset_right = 520.0
@@ -10,6 +10,7 @@ scale = Vector2(0.2, 0.2)
 icon = ExtResource("1_to8cs")
 icon_alignment = 1
 expand_icon = true
-script = ExtResource("2_tw5cr")
+script = ExtResource("2_tkol6")
+target_scene = "res://title_screen/level_selection.tscn"
 
 [connection signal="pressed" from="." to="." method="_on_pressed"]

@@ -1,0 +1,131 @@
+[gd_scene load_steps=5 format=3 uid="uid://sawxlo1ev8ay"]
+
+[ext_resource type="PackedScene" uid="uid://bla37xan3xup8" path="res://title_screen/red_background.tscn" id="1_gjcj7"]
+[ext_resource type="PackedScene" uid="uid://dwesfoxx58stl" path="res://ui/top_buttons.tscn" id="2_i2ro2"]
+[ext_resource type="Script" path="res://title_screen/level_button.gd" id="3_3mfj4"]
+[ext_resource type="PackedScene" uid="uid://davgsjgl4cyry" path="res://ui/level_star_counter.tscn" id="4_me8dp"]
+
+[node name="LevelSelection" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RedBackground" parent="." instance=ExtResource("1_gjcj7")]
+layout_mode = 1
+
+[node name="TopButtons" parent="." instance=ExtResource("2_i2ro2")]
+layout_mode = 1
+back_button_target = "res://title_screen/title_screen.tscn"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -272.0
+offset_top = -273.0
+offset_right = 272.0
+offset_bottom = -182.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0.972549, 0.929412, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -349.5
+offset_top = -39.5
+offset_right = 349.5
+offset_bottom = 39.5
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[center]ESCOLHA UM DESAFIO:[/center]"
+fit_content = true
+autowrap_mode = 0
+metadata/_edit_lock_ = true
+
+[node name="DogButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -545.0
+offset_top = -49.0
+offset_right = -239.0
+offset_bottom = 257.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "CÃES
+(FIGURA)"
+expand_icon = true
+script = ExtResource("3_3mfj4")
+target_scene = "res://levels/dog_level/dog_level.tscn"
+
+[node name="LevelStarCounter" parent="DogButton" instance=ExtResource("4_me8dp")]
+layout_mode = 1
+offset_left = -116.5
+offset_right = 116.5
+metadata/_edit_lock_ = true
+
+[node name="CatButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -153.0
+offset_top = -49.0
+offset_right = 153.0
+offset_bottom = 257.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "GATOS
+(FIGURA)"
+expand_icon = true
+script = ExtResource("3_3mfj4")
+target_scene = "res://levels/cat_level/cat_level.tscn"
+
+[node name="LevelStarCounter" parent="CatButton" instance=ExtResource("4_me8dp")]
+layout_mode = 1
+offset_left = -116.5
+offset_right = 116.5
+metadata/_edit_lock_ = true
+
+[node name="LympathicSystemButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 231.5
+offset_top = -49.0
+offset_right = 552.5
+offset_bottom = 257.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "SISTEMA
+LINFÁTICO
+(QUIZ)"
+expand_icon = true
+script = ExtResource("3_3mfj4")
+target_scene = "res://levels/lymphatic_system_level/lymphatic_system_level.tscn"
+
+[node name="LevelStarCounter" parent="LympathicSystemButton" instance=ExtResource("4_me8dp")]
+layout_mode = 1
+offset_left = -116.5
+offset_right = 116.5
+metadata/_edit_lock_ = true
