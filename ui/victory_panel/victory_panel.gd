@@ -1,7 +1,13 @@
 extends PanelContainer
 
+@export var hide_see_figure_button: bool
+
 @export var empty_star: Texture2D
 @export var filled_star: Texture2D
+
+func _ready():
+	if hide_see_figure_button:
+		%FigureButton.visible = false
 
 func set_stars(quantity: int):
 	%Stars/Star.texture = filled_star if quantity >= 1 else empty_star
