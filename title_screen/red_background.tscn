@@ -1,11 +1,11 @@
 [gd_scene load_steps=7 format=3 uid="uid://bla37xan3xup8"]
 
-[ext_resource type="Texture2D" uid="uid://b810j526r3pqn" path="res://title_screen/heart.svg" id="1_wjctu"]
-[ext_resource type="Texture2D" uid="uid://b876cep1ky0pb" path="res://title_screen/red_cells.svg" id="2_8xbsb"]
-[ext_resource type="Texture2D" uid="uid://c4hjfkkx8r08g" path="res://title_screen/kidneys.svg" id="3_nqxl2"]
-[ext_resource type="Texture2D" uid="uid://dtpkx0rrmm4kw" path="res://title_screen/intestine.svg" id="4_x36pi"]
-[ext_resource type="Texture2D" uid="uid://bmfnu1qxj1kty" path="res://title_screen/lungs.png" id="5_i7t7m"]
-[ext_resource type="Texture2D" uid="uid://dsoo6oj32e7xa" path="res://title_screen/stomach.svg" id="6_fphpp"]
+[ext_resource type="Texture2D" uid="uid://b810j526r3pqn" path="res://title_screen/assets/heart.svg" id="1_wjctu"]
+[ext_resource type="Texture2D" uid="uid://b876cep1ky0pb" path="res://title_screen/assets/red_cells.svg" id="2_8xbsb"]
+[ext_resource type="Texture2D" uid="uid://c4hjfkkx8r08g" path="res://title_screen/assets/kidneys.svg" id="3_nqxl2"]
+[ext_resource type="Texture2D" uid="uid://dtpkx0rrmm4kw" path="res://title_screen/assets/intestine.svg" id="4_x36pi"]
+[ext_resource type="Texture2D" uid="uid://bmfnu1qxj1kty" path="res://title_screen/assets/lungs.png" id="5_i7t7m"]
+[ext_resource type="Texture2D" uid="uid://dsoo6oj32e7xa" path="res://title_screen/assets/stomach.svg" id="6_fphpp"]
 
 [node name="RedBackground" type="ColorRect"]
 anchors_preset = 15

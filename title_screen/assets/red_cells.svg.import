@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b876cep1ky0pb"
-path="res://.godot/imported/red_cells.svg-4be3f071fcd7f6ab7135245d2d224119.ctex"
+path="res://.godot/imported/red_cells.svg-572e08efe5dc2627ce87908d8ed6c17e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://title_screen/red_cells.svg"
-dest_files=["res://.godot/imported/red_cells.svg-4be3f071fcd7f6ab7135245d2d224119.ctex"]
+source_file="res://title_screen/assets/red_cells.svg"
+dest_files=["res://.godot/imported/red_cells.svg-572e08efe5dc2627ce87908d8ed6c17e.ctex"]
 
 [params]
 

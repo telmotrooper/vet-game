@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dtpkx0rrmm4kw"
-path="res://.godot/imported/intestine.svg-9031a405a36580e6a2583882f832ab4f.ctex"
+uid="uid://dsoo6oj32e7xa"
+path="res://.godot/imported/stomach.svg-8fdf246028d6fc0856d788d285ddf063.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://title_screen/intestine.svg"
-dest_files=["res://.godot/imported/intestine.svg-9031a405a36580e6a2583882f832ab4f.ctex"]
+source_file="res://title_screen/assets/stomach.svg"
+dest_files=["res://.godot/imported/stomach.svg-8fdf246028d6fc0856d788d285ddf063.ctex"]
 
 [params]
 

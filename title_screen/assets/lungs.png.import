@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dsoo6oj32e7xa"
-path="res://.godot/imported/stomach.svg-7a2c88a1bfce89fbd8c159f897cf0dce.ctex"
+uid="uid://bmfnu1qxj1kty"
+path="res://.godot/imported/lungs.png-b537ce7ac8a28ce951e2c08019fae41a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://title_screen/stomach.svg"
-dest_files=["res://.godot/imported/stomach.svg-7a2c88a1bfce89fbd8c159f897cf0dce.ctex"]
+source_file="res://title_screen/assets/lungs.png"
+dest_files=["res://.godot/imported/lungs.png-b537ce7ac8a28ce951e2c08019fae41a.ctex"]
 
 [params]
 
@@ -32,6 +32,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false
