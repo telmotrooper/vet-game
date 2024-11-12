@@ -8,7 +8,7 @@ var score := 0
 
 const base_text := "[center][b]( Acertos:[/b] %d/%d )[/center]"
 
-func _ready() -> void:	
+func _ready() -> void:
 	current_question = questions.pick_random()
 	update_question()
 	
