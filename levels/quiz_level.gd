@@ -14,6 +14,8 @@ const ANSWER_TIME = 0.5
 const FADE_TIME = 1.0
 const COLOR_TRANSPARENT = Color(1,1,1,0)
 
+signal faded_out
+
 func _ready() -> void:
 	current_question = questions.pick_random()
 	update_question()
@@ -53,10 +55,7 @@ func fade_out() -> void:
 	tween.tween_property(%Question, "modulate", COLOR_TRANSPARENT, FADE_TIME)
 	tween.tween_property(%Answers, "modulate", COLOR_TRANSPARENT, FADE_TIME)
 	tween.set_parallel(false)
-	tween.tween_callback(func():
-		update_question()
-		fade_in()
-	)
+	tween.tween_callback(faded_out.emit)
 
 func fade_in() -> void:
 	for answer in %Answers.get_children():
@@ -111,6 +110,11 @@ func _on_question_answered(value: String) -> void:
 	if len(questions) > 0:
 		current_question = questions.pick_random()
 		fade_out()
+		await faded_out
+		update_question()
+		fade_in()
 	else:
+		fade_out()
+		await faded_out
 		get_tree().call_group("answers", "freeze")
 		show_victory_panel()
