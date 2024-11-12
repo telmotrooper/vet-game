@@ -11,6 +11,10 @@ const base_text := "[center][b]( Acertos:[/b] %d/%d )[/center]"
 const QUESTION_TIME = 0.75
 const QUESTION_INTERVAL = 1.25
 const ANSWER_TIME = 0.5
+const FADE_TIME = 1.0
+const COLOR_TRANSPARENT = Color(1,1,1,0)
+
+signal faded_out
 
 func _ready() -> void:
 	current_question = questions.pick_random()
@@ -22,23 +26,48 @@ func _ready() -> void:
 	question_counter = len(questions)
 	update_text()
 	
-	#%Question.modulate = Color(1,1,1,0)
-	
 	for answer in %Answers.get_children():
 		answer.set_mouse_filter(MOUSE_FILTER_IGNORE) # Ignore mouse click.
-		answer.modulate = Color(1,1,1,0) # Make transparent.
+		answer.modulate = COLOR_TRANSPARENT
 	
 	# If loaded from main, wait for "fade in" to finish before starting animation.
 	if get_tree().current_scene is MainScene:
 		await get_tree().current_scene.fade_transition.faded_in
 	
 	var tween = create_tween()
-	#tween.tween_property(%Question, "modulate", Color.WHITE, QUESTION_TIME)
 	tween.tween_interval(QUESTION_INTERVAL)
+	tween.tween_callback(fade_in_answers)
+
+func fade_in_answers() -> void:
+	var tween = create_tween()
+	
 	for answer in %Answers.get_children():
 		tween.tween_callback(func(): answer.set_mouse_filter(MOUSE_FILTER_STOP)) # Allow mouse click.
 		tween.tween_property(answer, "modulate", Color.WHITE, ANSWER_TIME)
+
+func fade_out() -> void:
+	var tween = create_tween()
+		
+	for answer in %Answers.get_children():
+		answer.set_mouse_filter(MOUSE_FILTER_IGNORE) # Ignore mouse click.
 	
+	tween.set_parallel(true)
+	tween.tween_property(%Question, "modulate", COLOR_TRANSPARENT, FADE_TIME)
+	tween.tween_property(%Answers, "modulate", COLOR_TRANSPARENT, FADE_TIME)
+	tween.set_parallel(false)
+	tween.tween_callback(faded_out.emit)
+
+func fade_in() -> void:
+	for answer in %Answers.get_children():
+		answer.release_focus() # If button was clicked before, release focus.
+		answer.modulate = COLOR_TRANSPARENT
+	%Answers.modulate = Color.WHITE
+	
+	var tween = create_tween()
+	
+	tween.tween_property(%Question, "modulate", Color.WHITE, QUESTION_TIME)
+	tween.tween_interval(QUESTION_INTERVAL)
+	tween.tween_callback(fade_in_answers)
 
 func update_question() -> void:
 	%Question.text = current_question.text
@@ -80,7 +109,12 @@ func _on_question_answered(value: String) -> void:
 	
 	if len(questions) > 0:
 		current_question = questions.pick_random()
+		fade_out()
+		await faded_out
 		update_question()
+		fade_in()
 	else:
+		fade_out()
+		await faded_out
 		get_tree().call_group("answers", "freeze")
 		show_victory_panel()

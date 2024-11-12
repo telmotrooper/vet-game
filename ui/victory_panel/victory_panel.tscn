@@ -84,6 +84,7 @@ layout_mode = 2
 theme_override_constants/separation = 15
 
 [node name="FigureButton" type="Button" parent="MarginContainer/VBoxContainer/Buttons"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 8
 theme = ExtResource("3_cceb7")

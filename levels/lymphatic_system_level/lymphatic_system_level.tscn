@@ -87,6 +87,7 @@ visible = false
 layout_mode = 1
 offset_top = -325.0
 offset_bottom = 325.0
+hide_see_figure_button = true
 
 [node name="Question" type="Label" parent="."]
 unique_name_in_owner = true
