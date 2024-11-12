@@ -12,6 +12,7 @@ const QUESTION_TIME = 0.75
 const QUESTION_INTERVAL = 1.25
 const ANSWER_TIME = 0.5
 const FADE_TIME = 1.0
+const COLOR_TRANSPARENT = Color(1,1,1,0)
 
 func _ready() -> void:
 	current_question = questions.pick_random()
@@ -23,11 +24,9 @@ func _ready() -> void:
 	question_counter = len(questions)
 	update_text()
 	
-	#%Question.modulate = Color(1,1,1,0)
-	
 	for answer in %Answers.get_children():
 		answer.set_mouse_filter(MOUSE_FILTER_IGNORE) # Ignore mouse click.
-		answer.modulate = Color(1,1,1,0) # Make transparent.
+		answer.modulate = COLOR_TRANSPARENT
 	
 	# If loaded from main, wait for "fade in" to finish before starting animation.
 	if get_tree().current_scene is MainScene:
@@ -37,6 +36,13 @@ func _ready() -> void:
 	tween.tween_interval(QUESTION_INTERVAL)
 	tween.tween_callback(fade_in_answers)
 
+func fade_in_answers() -> void:
+	var tween = create_tween()
+	
+	for answer in %Answers.get_children():
+		tween.tween_callback(func(): answer.set_mouse_filter(MOUSE_FILTER_STOP)) # Allow mouse click.
+		tween.tween_property(answer, "modulate", Color.WHITE, ANSWER_TIME)
+
 func fade_out() -> void:
 	var tween = create_tween()
 		
@@ -44,8 +50,8 @@ func fade_out() -> void:
 		answer.set_mouse_filter(MOUSE_FILTER_IGNORE) # Ignore mouse click.
 	
 	tween.set_parallel(true)
-	tween.tween_property(%Question, "modulate", Color(1,1,1,0), FADE_TIME)
-	tween.tween_property(%Answers, "modulate", Color(1,1,1,0), FADE_TIME)
+	tween.tween_property(%Question, "modulate", COLOR_TRANSPARENT, FADE_TIME)
+	tween.tween_property(%Answers, "modulate", COLOR_TRANSPARENT, FADE_TIME)
 	tween.set_parallel(false)
 	tween.tween_callback(func():
 		update_question()
@@ -54,7 +60,7 @@ func fade_out() -> void:
 
 func fade_in() -> void:
 	for answer in %Answers.get_children():
-		answer.modulate = Color(1,1,1,0)
+		answer.modulate = COLOR_TRANSPARENT
 	%Answers.modulate = Color.WHITE
 	
 	var tween = create_tween()
@@ -62,13 +68,6 @@ func fade_in() -> void:
 	tween.tween_property(%Question, "modulate", Color.WHITE, QUESTION_TIME)
 	tween.tween_interval(QUESTION_INTERVAL)
 	tween.tween_callback(fade_in_answers)
-
-func fade_in_answers() -> void:
-	var tween = create_tween()
-	
-	for answer in %Answers.get_children():
-		tween.tween_callback(func(): answer.set_mouse_filter(MOUSE_FILTER_STOP)) # Allow mouse click.
-		tween.tween_property(answer, "modulate", Color.WHITE, ANSWER_TIME)
 
 func update_question() -> void:
 	%Question.text = current_question.text
