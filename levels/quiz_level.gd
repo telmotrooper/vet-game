@@ -11,6 +11,7 @@ const base_text := "[center][b]( Acertos:[/b] %d/%d )[/center]"
 const QUESTION_TIME = 0.75
 const QUESTION_INTERVAL = 1.25
 const ANSWER_TIME = 0.5
+const FADE_TIME = 1.0
 
 func _ready() -> void:
 	current_question = questions.pick_random()
@@ -33,12 +34,41 @@ func _ready() -> void:
 		await get_tree().current_scene.fade_transition.faded_in
 	
 	var tween = create_tween()
-	#tween.tween_property(%Question, "modulate", Color.WHITE, QUESTION_TIME)
 	tween.tween_interval(QUESTION_INTERVAL)
+	tween.tween_callback(fade_in_answers)
+
+func fade_out() -> void:
+	var tween = create_tween()
+		
+	for answer in %Answers.get_children():
+		answer.set_mouse_filter(MOUSE_FILTER_IGNORE) # Ignore mouse click.
+	
+	tween.set_parallel(true)
+	tween.tween_property(%Question, "modulate", Color(1,1,1,0), FADE_TIME)
+	tween.tween_property(%Answers, "modulate", Color(1,1,1,0), FADE_TIME)
+	tween.set_parallel(false)
+	tween.tween_callback(func():
+		update_question()
+		fade_in()
+	)
+
+func fade_in() -> void:
+	for answer in %Answers.get_children():
+		answer.modulate = Color(1,1,1,0)
+	%Answers.modulate = Color.WHITE
+	
+	var tween = create_tween()
+	
+	tween.tween_property(%Question, "modulate", Color.WHITE, QUESTION_TIME)
+	tween.tween_interval(QUESTION_INTERVAL)
+	tween.tween_callback(fade_in_answers)
+
+func fade_in_answers() -> void:
+	var tween = create_tween()
+	
 	for answer in %Answers.get_children():
 		tween.tween_callback(func(): answer.set_mouse_filter(MOUSE_FILTER_STOP)) # Allow mouse click.
 		tween.tween_property(answer, "modulate", Color.WHITE, ANSWER_TIME)
-	
 
 func update_question() -> void:
 	%Question.text = current_question.text
@@ -80,7 +110,7 @@ func _on_question_answered(value: String) -> void:
 	
 	if len(questions) > 0:
 		current_question = questions.pick_random()
-		update_question()
+		fade_out()
 	else:
 		get_tree().call_group("answers", "freeze")
 		show_victory_panel()
