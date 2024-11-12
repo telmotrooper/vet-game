@@ -5,7 +5,7 @@
 [ext_resource type="Script" path="res://title_screen/level_button.gd" id="3_3mfj4"]
 [ext_resource type="PackedScene" uid="uid://davgsjgl4cyry" path="res://ui/level_star_counter.tscn" id="4_me8dp"]
 
-[node name="Levels" type="Control"]
+[node name="LevelSelection" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
