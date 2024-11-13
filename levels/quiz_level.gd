@@ -84,6 +84,7 @@ func update_question() -> void:
 	
 	for answer in answers:
 		var button = find_child("Answer%d" % answer_counter)
+		button.remove_theme_stylebox_override("normal")
 		button.text = "%d. %s" % [answer_counter, answer]
 		button.value = answer
 		answer_counter += 1
@@ -104,6 +105,7 @@ func show_victory_panel() -> void:
 	%VictoryPanel.show_panel()
 
 func _on_question_answered(button: Button, value: String) -> void:
+	# Paint correct and wrong answers.
 	if value == current_question.correct_answer:
 		button.add_theme_stylebox_override("normal", correct_answer)
 	else:
