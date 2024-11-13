@@ -6,6 +6,10 @@ var current_question: QuizQuestion
 var question_counter: int
 var score := 0
 
+@export_group("Styles")
+@export var correct_answer: StyleBox
+@export var wrong_answer: StyleBox
+
 const base_text := "[center][b]( Acertos:[/b] %d/%d )[/center]"
 
 const QUESTION_TIME = 0.75
@@ -99,7 +103,16 @@ func show_victory_panel() -> void:
 	
 	%VictoryPanel.show_panel()
 
-func _on_question_answered(value: String) -> void:
+func _on_question_answered(button: Button, value: String) -> void:
+	if value == current_question.correct_answer:
+		button.add_theme_stylebox_override("normal", correct_answer)
+	else:
+		button.add_theme_stylebox_override("normal", wrong_answer)
+		for answer in %Answers.get_children():
+			if answer.value == current_question.correct_answer:
+				answer.add_theme_stylebox_override("normal", correct_answer)
+				break
+	
 	if value == current_question.correct_answer:
 		score += 1
 	update_text()
