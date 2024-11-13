@@ -105,6 +105,9 @@ func show_victory_panel() -> void:
 	%VictoryPanel.show_panel()
 
 func _on_question_answered(button: Button, value: String) -> void:
+	# Disable mouse temporarily so we display the "normal" style instead of "hover".
+	button.set_mouse_filter(MOUSE_FILTER_IGNORE)
+	
 	# Paint correct and wrong answers.
 	if value == current_question.correct_answer:
 		button.add_theme_stylebox_override("normal", correct_answer)
@@ -121,6 +124,9 @@ func _on_question_answered(button: Button, value: String) -> void:
 	
 	var index = questions.find(current_question)
 	questions.pop_at(index)
+	
+	# Give some time for the user to check the correct answer.
+	await get_tree().create_timer(2.0).timeout
 	
 	if len(questions) > 0:
 		current_question = questions.pick_random()
