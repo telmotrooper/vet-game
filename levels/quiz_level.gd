@@ -6,6 +6,10 @@ var current_question: QuizQuestion
 var question_counter: int
 var score := 0
 
+@export_group("Styles")
+@export var correct_answer: StyleBox
+@export var wrong_answer: StyleBox
+
 const base_text := "[center][b]( Acertos:[/b] %d/%d )[/center]"
 
 const QUESTION_TIME = 0.75
@@ -80,6 +84,7 @@ func update_question() -> void:
 	
 	for answer in answers:
 		var button = find_child("Answer%d" % answer_counter)
+		button.remove_theme_stylebox_override("normal")
 		button.text = "%d. %s" % [answer_counter, answer]
 		button.value = answer
 		answer_counter += 1
@@ -99,13 +104,29 @@ func show_victory_panel() -> void:
 	
 	%VictoryPanel.show_panel()
 
-func _on_question_answered(value: String) -> void:
+func _on_question_answered(button: Button, value: String) -> void:
+	# Disable mouse temporarily so we display the "normal" style instead of "hover".
+	button.set_mouse_filter(MOUSE_FILTER_IGNORE)
+	
+	# Paint correct and wrong answers.
+	if value == current_question.correct_answer:
+		button.add_theme_stylebox_override("normal", correct_answer)
+	else:
+		button.add_theme_stylebox_override("normal", wrong_answer)
+		for answer in %Answers.get_children():
+			if answer.value == current_question.correct_answer:
+				answer.add_theme_stylebox_override("normal", correct_answer)
+				break
+	
 	if value == current_question.correct_answer:
 		score += 1
 	update_text()
 	
 	var index = questions.find(current_question)
 	questions.pop_at(index)
+	
+	# Give some time for the user to check the correct answer.
+	await get_tree().create_timer(2.0).timeout
 	
 	if len(questions) > 0:
 		current_question = questions.pick_random()

@@ -58,25 +58,48 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_lock_ = true
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
+[node name="StudentNames" type="RichTextLabel" parent="."]
 layout_mode = 1
-anchors_preset = 7
+anchors_preset = 8
 anchor_left = 0.5
-anchor_top = 1.0
+anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -472.5
-offset_top = -692.0
-offset_right = 472.5
-offset_bottom = -66.0
+anchor_bottom = 0.5
+offset_left = -565.5
+offset_top = -152.0
+offset_right = 565.5
+offset_bottom = 474.0
 grow_horizontal = 2
-grow_vertical = 0
+grow_vertical = 2
 theme_override_colors/default_color = Color(1, 0.972549, 0.929412, 1)
 bbcode_enabled = true
-text = "[center][b]•[/b] Ilda Luiza Vieira Salvador
-[b]•[/b] Lorem ipsum dolor sit amet
-[b]•[/b] Lorem ipsum dolor sit amet
-[b]•[/b] Lorem ipsum dolor sit amet
-[b]•[/b] Lorem ipsum dolor sit amet
-[b]•[/b] Lorem ipsum dolor sit amet
-[b]•[/b] Lorem ipsum dolor sit amet[/center]"
+text = "[b]•[/b] Ana Elise Luz de Carvalho
+[b]•[/b] Carolina Mottin Pereira de Paula
+[b]•[/b] Daniela Fonseca Accioly
+[b]•[/b] Gabrielle dos Santos
+[b]•[/b] Ilda Luiza Vieira Salvador
+[b]•[/b] Maria de Fátima Raitz
+[b]•[/b] Sofia Canto da Costa Pereira"
+
+[node name="StudentIds" type="RichTextLabel" parent="StudentNames"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -565.5
+offset_top = -313.0
+offset_right = 565.5
+offset_bottom = 313.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(1, 0.972549, 0.929412, 1)
+bbcode_enabled = true
+text = "[right](1624239298)
+(162410080)
+(162410556)
+(162412301)
+(162411744)
+(162410945)
+(162411093)"

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dqpdb4rlqskep"]
+[gd_scene load_steps=13 format=3 uid="uid://dqpdb4rlqskep"]
 
 [ext_resource type="Script" path="res://levels/quiz_level.gd" id="1_w7cp7"]
 [ext_resource type="Script" path="res://levels/lymphatic_system_level/question.gd" id="2_ulneb"]
@@ -8,7 +8,9 @@
 [ext_resource type="PackedScene" uid="uid://wnlhcjcm0qc" path="res://ui/victory_panel/victory_panel.tscn" id="4_0qajo"]
 [ext_resource type="Resource" uid="uid://cacanb31t3bwl" path="res://levels/lymphatic_system_level/questions/funcao_do_sistema_linfatico.tres" id="4_omnvc"]
 [ext_resource type="Resource" uid="uid://bhiuxc5uo3b7q" path="res://levels/lymphatic_system_level/questions/filtrar_o_sangue.tres" id="5_qp137"]
+[ext_resource type="StyleBox" uid="uid://dsatbvn64tsnd" path="res://ui/correct_answer_styles.tres" id="9_kqn61"]
 [ext_resource type="Script" path="res://levels/lymphatic_system_level/answer.gd" id="9_ywt1q"]
+[ext_resource type="StyleBox" uid="uid://bvjsvoeb6x5is" path="res://ui/wrong_answer_styles.tres" id="10_02l6n"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_hcqab"]
 font_size = 64
@@ -25,6 +27,8 @@ grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_w7cp7")
 questions = Array[ExtResource("2_ulneb")]([ExtResource("3_7mtci"), ExtResource("4_omnvc"), ExtResource("5_qp137")])
+correct_answer = ExtResource("9_kqn61")
+wrong_answer = ExtResource("10_02l6n")
 
 [node name="Background" type="CanvasLayer" parent="."]
 layer = -2
