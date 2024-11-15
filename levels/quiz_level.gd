@@ -94,6 +94,8 @@ func update_question() -> void:
 	var answer_counter = 1
 	
 	for answer in answers:
+		assert(answer_counter <= 4, "data error - more than 3 wrong answers")
+		
 		var button = find_child("Answer%d" % answer_counter)
 		button.remove_theme_stylebox_override("normal")
 		button.text = "%d. %s" % [answer_counter, answer]

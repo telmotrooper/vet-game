@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://hkdskojbwtiu"]
+[gd_scene load_steps=15 format=3 uid="uid://hkdskojbwtiu"]
 
 [ext_resource type="Script" path="res://levels/quiz_level.gd" id="1_p1fm2"]
 [ext_resource type="Script" path="res://levels/question.gd" id="2_2hriu"]
@@ -7,6 +7,7 @@
 [ext_resource type="Resource" uid="uid://dgxyn2e0ieao3" path="res://levels/circulatory_system_level/questions/valvulas.tres" id="5_a2k5n"]
 [ext_resource type="Resource" uid="uid://byiuvrfl7udce" path="res://levels/circulatory_system_level/questions/vasos_sanguineos.tres" id="6_jifr6"]
 [ext_resource type="StyleBox" uid="uid://dsatbvn64tsnd" path="res://ui/correct_answer_styles.tres" id="6_slums"]
+[ext_resource type="Resource" uid="uid://ddxepulcku8o6" path="res://levels/circulatory_system_level/questions/essencial_para_coagulacao.tres" id="7_ifols"]
 [ext_resource type="StyleBox" uid="uid://bvjsvoeb6x5is" path="res://ui/wrong_answer_styles.tres" id="7_tnfen"]
 [ext_resource type="PackedScene" uid="uid://cwsj1bfgbxsnk" path="res://pink_background.tscn" id="8_xunyf"]
 [ext_resource type="PackedScene" uid="uid://dwesfoxx58stl" path="res://ui/top_buttons.tscn" id="9_bsxu7"]
@@ -27,7 +28,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_p1fm2")
-questions = Array[ExtResource("2_2hriu")]([ExtResource("3_t6onf"), ExtResource("4_fxtyr"), ExtResource("5_a2k5n"), ExtResource("6_jifr6")])
+questions = Array[ExtResource("2_2hriu")]([ExtResource("3_t6onf"), ExtResource("4_fxtyr"), ExtResource("5_a2k5n"), ExtResource("6_jifr6"), ExtResource("7_ifols")])
 correct_answer = ExtResource("6_slums")
 wrong_answer = ExtResource("7_tnfen")
 
