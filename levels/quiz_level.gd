@@ -24,6 +24,9 @@ const COLOR_TRANSPARENT = Color(1,1,1,0)
 signal faded_out
 
 func _ready() -> void:
+	for question in questions:
+		assert(is_instance_valid(question), "invalid data")
+	
 	current_question = questions.pick_random()
 	update_question()
 	
