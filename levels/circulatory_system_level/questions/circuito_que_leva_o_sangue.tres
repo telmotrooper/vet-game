@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=2 format=3 uid="uid://ul5u25giw6yf"]
+
+[ext_resource type="Script" path="res://levels/question.gd" id="1_odxu6"]
+
+[resource]
+script = ExtResource("1_odxu6")
+text = "Qual é o nome do circuito que leva sangue do coração para os pulmões e de volta ao coração?"
+correct_answer = "Circulação pulmonar"
+wrong_answers = Array[String](["Circulação sistêmica", "Circulação renal", "Circulação pulmonar", "Circulação hepática"])

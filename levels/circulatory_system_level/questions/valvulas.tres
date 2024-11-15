@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=2 format=3 uid="uid://dgxyn2e0ieao3"]
+
+[ext_resource type="Script" path="res://levels/question.gd" id="1_422kk"]
+
+[resource]
+script = ExtResource("1_422kk")
+text = "Qual das seguintes válvulas está localizada entre o átrio esquerdo e o ventrículo esquerdo do coração dos mamíferos?"
+correct_answer = "Válvula mitral"
+wrong_answers = Array[String](["Válvula tricúspide", "Válvula pulmonar", "Válvula aórtica", "Válvula mitral"])

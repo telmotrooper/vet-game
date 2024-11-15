@@ -86,17 +86,18 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -153.0
+offset_left = -170.0
 offset_top = -49.0
-offset_right = 153.0
+offset_right = 170.0
 offset_bottom = 257.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "GATOS
-(FIGURA)"
+text = "SISTEMA
+CIRCULATÓRIO
+(QUIZ)"
 expand_icon = true
 script = ExtResource("3_3mfj4")
-target_scene = "res://levels/cat_level/cat_level.tscn"
+target_scene = "res://levels/circulatory_system_level/circulatory_system_level.tscn"
 
 [node name="LevelStarCounter" parent="CatButton" instance=ExtResource("4_me8dp")]
 layout_mode = 1

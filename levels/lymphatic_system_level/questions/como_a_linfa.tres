@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=2 format=3 uid="uid://bdxxo000odw66"]
+
+[ext_resource type="Script" path="res://levels/question.gd" id="1_k8ikh"]
+
+[resource]
+script = ExtResource("1_k8ikh")
+text = "Como a linfa se move através dos vasos linfáticos?"
+correct_answer = "Por contrações dos músculos esqueléticos"
+wrong_answers = Array[String](["Por ação da contração cardíaca", "Através da pressão arterial", "Por contrações dos músculos esqueléticos", "Por ação da respiração"])
