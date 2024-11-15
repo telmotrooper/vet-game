@@ -2,16 +2,18 @@ extends Control
 
 @export var questions: Array[QuizQuestion]
 
-var current_question: QuizQuestion
-var question_counter: int
-var score := 0
-
 @export_group("Styles")
 @export var correct_answer: StyleBox
 @export var wrong_answer: StyleBox
 
-const base_text := "[center][b]( Acertos:[/b] %d/%d )[/center]"
+var current_question: QuizQuestion
+var question_counter: int
+var score := 0
 
+var check_mark_texture := "res://assets/check_solid.svg"
+var x_mark_texture := "res://assets/xmark_solid.svg"
+
+const base_text := "[center][b]( Acertos:[/b] %d/%d )[/center]"
 const QUESTION_TIME = 0.75
 const QUESTION_INTERVAL = 1.25
 const ANSWER_TIME = 0.5
@@ -105,22 +107,24 @@ func show_victory_panel() -> void:
 	%VictoryPanel.show_panel()
 
 func _on_question_answered(button: Button, value: String) -> void:
+	var mouse_position := get_viewport().get_mouse_position()
 	# Disable mouse temporarily so we display the "normal" style instead of "hover".
 	button.set_mouse_filter(MOUSE_FILTER_IGNORE)
 	
 	# Paint correct and wrong answers.
 	if value == current_question.correct_answer:
 		button.add_theme_stylebox_override("normal", correct_answer)
+		
+		add_check_mark(button, func():
+			score += 1
+			update_text()
+		)
 	else:
 		button.add_theme_stylebox_override("normal", wrong_answer)
 		for answer in %Answers.get_children():
 			if answer.value == current_question.correct_answer:
 				answer.add_theme_stylebox_override("normal", correct_answer)
 				break
-	
-	if value == current_question.correct_answer:
-		score += 1
-	update_text()
 	
 	var index = questions.find(current_question)
 	questions.pop_at(index)
@@ -139,3 +143,31 @@ func _on_question_answered(button: Button, value: String) -> void:
 		await faded_out
 		get_tree().call_group("answers", "freeze")
 		show_victory_panel()
+
+func add_check_mark(button: Button, callback: Callable) -> void:
+	var mouse_position := get_viewport().get_mouse_position()
+	
+	var check_mark := TextureRect.new()
+	check_mark.texture = load(check_mark_texture)
+	add_child(check_mark) # Already add to the scene tree so we can get the "size".
+	
+	check_mark.scale = Vector2.ZERO
+	check_mark.pivot_offset = check_mark.size / 2
+	check_mark.z_index = button.z_index + 2
+	
+	# Centralize "check mark" on mouse position.
+	check_mark.position = mouse_position - (check_mark.size / 2)
+	
+	# Center of the score label.
+	var score_position = %Score.global_position + (%Score.size / 2)
+	
+	# Compensate size of "check mark" to centralize it on the score label.
+	var target_position = score_position - (check_mark.size / 2)
+	
+	var tween = create_tween()
+	tween.tween_property(check_mark, "scale", Vector2.ONE, 0.25)
+	tween.tween_interval(1.0)
+	tween.tween_property(check_mark, "global_position", target_position, 0.5)
+	tween.tween_property(check_mark, "scale", Vector2.ZERO, 0.5)
+	tween.tween_callback(check_mark.queue_free)
+	tween.tween_callback(callback)
