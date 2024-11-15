@@ -9,6 +9,7 @@ extends Control
 var current_question: QuizQuestion
 var question_counter: int
 var score := 0
+var question_answered := false
 
 var check_mark_texture := "res://assets/check_solid.svg"
 var x_mark_texture := "res://assets/xmark_solid.svg"
@@ -45,10 +46,15 @@ func _ready() -> void:
 	tween.tween_callback(fade_in_answers)
 
 func fade_in_answers() -> void:
+	question_answered = false
 	var tween = create_tween()
 	
 	for answer in %Answers.get_children():
-		tween.tween_callback(func(): answer.set_mouse_filter(MOUSE_FILTER_STOP)) # Allow mouse click.
+		tween.tween_callback(func():
+			# Only allow mouse click if current question hasn't been answered yet.
+			if not question_answered:
+				answer.set_mouse_filter(MOUSE_FILTER_STOP)
+		)
 		tween.tween_property(answer, "modulate", Color.WHITE, ANSWER_TIME)
 
 func fade_out() -> void:
@@ -107,8 +113,11 @@ func show_victory_panel() -> void:
 	%VictoryPanel.show_panel()
 
 func _on_question_answered(button: Button, value: String) -> void:
-	# Disable mouse temporarily so we display the "normal" style instead of "hover".
-	button.set_mouse_filter(MOUSE_FILTER_IGNORE)
+	question_answered = true
+	
+	# Disable mouse temporarily for all "answer" buttons.
+	for answer in %Answers.get_children():
+		answer.set_mouse_filter(MOUSE_FILTER_IGNORE)
 	
 	# Paint correct and wrong answers.
 	if value == current_question.correct_answer:
