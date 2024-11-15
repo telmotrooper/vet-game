@@ -6,4 +6,4 @@
 script = ExtResource("1_422kk")
 text = "Qual das seguintes válvulas está localizada entre o átrio esquerdo e o ventrículo esquerdo do coração dos mamíferos?"
 correct_answer = "Válvula mitral"
-wrong_answers = Array[String](["Válvula tricúspide", "Válvula pulmonar", "Válvula aórtica", "Válvula mitral"])
+wrong_answers = Array[String](["Válvula tricúspide", "Válvula pulmonar", "Válvula aórtica"])

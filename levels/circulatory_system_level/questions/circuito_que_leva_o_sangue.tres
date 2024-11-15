@@ -6,4 +6,4 @@
 script = ExtResource("1_odxu6")
 text = "Qual é o nome do circuito que leva sangue do coração para os pulmões e de volta ao coração?"
 correct_answer = "Circulação pulmonar"
-wrong_answers = Array[String](["Circulação sistêmica", "Circulação renal", "Circulação pulmonar", "Circulação hepática"])
+wrong_answers = Array[String](["Circulação sistêmica", "Circulação renal", "Circulação hepática"])

@@ -6,4 +6,4 @@
 script = ExtResource("1_23bky")
 text = "O timo, um órgão importante do sistema linfático, tem como principal função:"
 correct_answer = "Maturar linfócitos T"
-wrong_answers = Array[String](["Produzir células sanguíneas maduras", "Maturar linfócitos T", "Filtrar a linfa", "Produzir linfócitos B"])
+wrong_answers = Array[String](["Produzir células sanguíneas maduras", "Filtrar a linfa", "Produzir linfócitos B"])

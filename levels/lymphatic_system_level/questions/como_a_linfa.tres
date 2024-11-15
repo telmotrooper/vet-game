@@ -6,4 +6,4 @@
 script = ExtResource("1_k8ikh")
 text = "Como a linfa se move através dos vasos linfáticos?"
 correct_answer = "Por contrações dos músculos esqueléticos"
-wrong_answers = Array[String](["Por ação da contração cardíaca", "Através da pressão arterial", "Por contrações dos músculos esqueléticos", "Por ação da respiração"])
+wrong_answers = Array[String](["Por ação da contração cardíaca", "Através da pressão arterial", "Por ação da respiração"])

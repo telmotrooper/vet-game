@@ -4,6 +4,6 @@
 
 [resource]
 script = ExtResource("1_ehnk3")
-text = ""
-correct_answer = ""
-wrong_answers = Array[String]([])
+text = "Qual dos seguintes vasos sanguíneos transporta sangue rico em oxigênio do coração para o resto do corpo?"
+correct_answer = "Aorta"
+wrong_answers = Array[String](["Veia cava", "Artéria pulmonar", "Veia pulmonar"])
