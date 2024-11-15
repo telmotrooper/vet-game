@@ -24,6 +24,9 @@ const COLOR_TRANSPARENT = Color(1,1,1,0)
 signal faded_out
 
 func _ready() -> void:
+	for question in questions:
+		assert(is_instance_valid(question), "invalid data")
+	
 	current_question = questions.pick_random()
 	update_question()
 	
@@ -91,6 +94,8 @@ func update_question() -> void:
 	var answer_counter = 1
 	
 	for answer in answers:
+		assert(answer_counter <= 4, "data error - more than 3 wrong answers")
+		
 		var button = find_child("Answer%d" % answer_counter)
 		button.remove_theme_stylebox_override("normal")
 		button.text = "%d. %s" % [answer_counter, answer]

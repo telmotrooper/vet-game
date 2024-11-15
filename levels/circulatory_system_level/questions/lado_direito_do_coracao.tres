@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=2 format=3 uid="uid://b7kdxmmlv14mx"]
+
+[ext_resource type="Script" path="res://levels/question.gd" id="1_1ywe5"]
+
+[resource]
+script = ExtResource("1_1ywe5")
+text = "Em mamíferos, qual estrutura separa o lado esquerdo do lado direito do coração?"
+correct_answer = "Septo"
+wrong_answers = Array[String](["Válvula tricúspide", "Átrio", "Ventrículo"])

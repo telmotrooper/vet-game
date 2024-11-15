@@ -1,25 +1,25 @@
-[gd_scene load_steps=15 format=3 uid="uid://dqpdb4rlqskep"]
+[gd_scene load_steps=15 format=3 uid="uid://hkdskojbwtiu"]
 
-[ext_resource type="Script" path="res://levels/quiz_level.gd" id="1_w7cp7"]
-[ext_resource type="Script" path="res://levels/question.gd" id="2_ulneb"]
-[ext_resource type="PackedScene" uid="uid://cwsj1bfgbxsnk" path="res://pink_background.tscn" id="2_ys2ef"]
-[ext_resource type="Resource" uid="uid://34mxkcv1bvt7" path="res://levels/lymphatic_system_level/questions/resposta_imunologica.tres" id="3_7mtci"]
-[ext_resource type="PackedScene" uid="uid://dwesfoxx58stl" path="res://ui/top_buttons.tscn" id="3_exjlh"]
-[ext_resource type="PackedScene" uid="uid://wnlhcjcm0qc" path="res://ui/victory_panel/victory_panel.tscn" id="4_0qajo"]
-[ext_resource type="Resource" uid="uid://cacanb31t3bwl" path="res://levels/lymphatic_system_level/questions/funcao_do_sistema_linfatico.tres" id="4_omnvc"]
-[ext_resource type="Resource" uid="uid://bhiuxc5uo3b7q" path="res://levels/lymphatic_system_level/questions/filtrar_o_sangue.tres" id="5_qp137"]
-[ext_resource type="Resource" uid="uid://bdxxo000odw66" path="res://levels/lymphatic_system_level/questions/como_a_linfa.tres" id="6_7jvc0"]
-[ext_resource type="Resource" uid="uid://dvg5uhet3cpg2" path="res://levels/lymphatic_system_level/questions/o_timo.tres" id="7_4umrh"]
-[ext_resource type="StyleBox" uid="uid://dsatbvn64tsnd" path="res://ui/correct_answer_styles.tres" id="9_kqn61"]
-[ext_resource type="Script" path="res://levels/answer.gd" id="9_ywt1q"]
-[ext_resource type="StyleBox" uid="uid://bvjsvoeb6x5is" path="res://ui/wrong_answer_styles.tres" id="10_02l6n"]
+[ext_resource type="Script" path="res://levels/quiz_level.gd" id="1_p1fm2"]
+[ext_resource type="Script" path="res://levels/question.gd" id="2_2hriu"]
+[ext_resource type="Resource" uid="uid://ul5u25giw6yf" path="res://levels/circulatory_system_level/questions/circuito_que_leva_o_sangue.tres" id="3_t6onf"]
+[ext_resource type="Resource" uid="uid://b7kdxmmlv14mx" path="res://levels/circulatory_system_level/questions/lado_direito_do_coracao.tres" id="4_fxtyr"]
+[ext_resource type="Resource" uid="uid://dgxyn2e0ieao3" path="res://levels/circulatory_system_level/questions/valvulas.tres" id="5_a2k5n"]
+[ext_resource type="Resource" uid="uid://byiuvrfl7udce" path="res://levels/circulatory_system_level/questions/vasos_sanguineos.tres" id="6_jifr6"]
+[ext_resource type="StyleBox" uid="uid://dsatbvn64tsnd" path="res://ui/correct_answer_styles.tres" id="6_slums"]
+[ext_resource type="Resource" uid="uid://ddxepulcku8o6" path="res://levels/circulatory_system_level/questions/essencial_para_coagulacao.tres" id="7_ifols"]
+[ext_resource type="StyleBox" uid="uid://bvjsvoeb6x5is" path="res://ui/wrong_answer_styles.tres" id="7_tnfen"]
+[ext_resource type="PackedScene" uid="uid://cwsj1bfgbxsnk" path="res://pink_background.tscn" id="8_xunyf"]
+[ext_resource type="PackedScene" uid="uid://dwesfoxx58stl" path="res://ui/top_buttons.tscn" id="9_bsxu7"]
+[ext_resource type="PackedScene" uid="uid://wnlhcjcm0qc" path="res://ui/victory_panel/victory_panel.tscn" id="10_dy8v7"]
+[ext_resource type="Script" path="res://levels/answer.gd" id="11_j5k8y"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_hcqab"]
 font_size = 64
 font_color = Color(0.635294, 0.152941, 0.172549, 1)
 outline_color = Color(0, 0, 0, 1)
 
-[node name="LymphaticSystemLevel" type="Control"]
+[node name="CirculatorySystemLevel" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -27,17 +27,17 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-script = ExtResource("1_w7cp7")
-questions = Array[ExtResource("2_ulneb")]([ExtResource("3_7mtci"), ExtResource("4_omnvc"), ExtResource("5_qp137"), ExtResource("6_7jvc0"), ExtResource("7_4umrh")])
-correct_answer = ExtResource("9_kqn61")
-wrong_answer = ExtResource("10_02l6n")
+script = ExtResource("1_p1fm2")
+questions = Array[ExtResource("2_2hriu")]([ExtResource("3_t6onf"), ExtResource("4_fxtyr"), ExtResource("5_a2k5n"), ExtResource("6_jifr6"), ExtResource("7_ifols")])
+correct_answer = ExtResource("6_slums")
+wrong_answer = ExtResource("7_tnfen")
 
 [node name="Background" type="CanvasLayer" parent="."]
 layer = -2
 
-[node name="PinkBackground" parent="Background" instance=ExtResource("2_ys2ef")]
+[node name="PinkBackground" parent="Background" instance=ExtResource("8_xunyf")]
 
-[node name="TopButtons" parent="Background" instance=ExtResource("3_exjlh")]
+[node name="TopButtons" parent="Background" instance=ExtResource("9_bsxu7")]
 
 [node name="ScoreBackground" type="ColorRect" parent="Background"]
 anchors_preset = 5
@@ -82,12 +82,12 @@ offset_left = -289.5
 offset_right = 290.5
 offset_bottom = 79.0
 grow_horizontal = 2
-text = "Sistema Linfático"
+text = "Sistema Circulatório"
 label_settings = SubResource("LabelSettings_hcqab")
 horizontal_alignment = 1
 metadata/_edit_lock_ = true
 
-[node name="VictoryPanel" parent="." instance=ExtResource("4_0qajo")]
+[node name="VictoryPanel" parent="." instance=ExtResource("10_dy8v7")]
 unique_name_in_owner = true
 visible = false
 layout_mode = 1
@@ -153,25 +153,25 @@ alignment = 1
 layout_mode = 2
 text = "1. Transportar oxigênio para os tecidos do corpo."
 autowrap_mode = 2
-script = ExtResource("9_ywt1q")
+script = ExtResource("11_j5k8y")
 
 [node name="Answer2" type="Button" parent="Answers" groups=["answers"]]
 layout_mode = 2
 text = "2. Produzir hormônios para o crescimento e desenvolvimento."
 autowrap_mode = 2
-script = ExtResource("9_ywt1q")
+script = ExtResource("11_j5k8y")
 
 [node name="Answer3" type="Button" parent="Answers" groups=["answers"]]
 layout_mode = 2
 text = "3. Coletar e retornar fluidos e proteínas dos tecidos para o sangue, além de participar da defesa do organismo."
 autowrap_mode = 2
-script = ExtResource("9_ywt1q")
+script = ExtResource("11_j5k8y")
 
 [node name="Answer4" type="Button" parent="Answers" groups=["answers"]]
 layout_mode = 2
 text = "4. Regular a temperatura corporal dos animais."
 autowrap_mode = 2
-script = ExtResource("9_ywt1q")
+script = ExtResource("11_j5k8y")
 
 [connection signal="question_answered" from="Answers/Answer1" to="." method="_on_question_answered"]
 [connection signal="question_answered" from="Answers/Answer2" to="." method="_on_question_answered"]

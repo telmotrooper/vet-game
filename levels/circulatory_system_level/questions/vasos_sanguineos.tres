@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=2 format=3 uid="uid://byiuvrfl7udce"]
+
+[ext_resource type="Script" path="res://levels/question.gd" id="1_ehnk3"]
+
+[resource]
+script = ExtResource("1_ehnk3")
+text = "Qual dos seguintes vasos sanguíneos transporta sangue rico em oxigênio do coração para o resto do corpo?"
+correct_answer = "Aorta"
+wrong_answers = Array[String](["Veia cava", "Artéria pulmonar", "Veia pulmonar"])
