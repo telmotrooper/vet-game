@@ -107,7 +107,6 @@ func show_victory_panel() -> void:
 	%VictoryPanel.show_panel()
 
 func _on_question_answered(button: Button, value: String) -> void:
-	var mouse_position := get_viewport().get_mouse_position()
 	# Disable mouse temporarily so we display the "normal" style instead of "hover".
 	button.set_mouse_filter(MOUSE_FILTER_IGNORE)
 	
@@ -121,6 +120,7 @@ func _on_question_answered(button: Button, value: String) -> void:
 		)
 	else:
 		button.add_theme_stylebox_override("normal", wrong_answer)
+		add_x_mark(button)
 		for answer in %Answers.get_children():
 			if answer.value == current_question.correct_answer:
 				answer.add_theme_stylebox_override("normal", correct_answer)
@@ -171,3 +171,23 @@ func add_check_mark(button: Button, callback: Callable) -> void:
 	tween.tween_property(check_mark, "scale", Vector2.ZERO, 0.5)
 	tween.tween_callback(check_mark.queue_free)
 	tween.tween_callback(callback)
+
+func add_x_mark(button: Button) -> void:
+	var mouse_position := get_viewport().get_mouse_position()
+
+	var x_mark := TextureRect.new()
+	x_mark.texture = load(x_mark_texture)
+	add_child(x_mark) # Already add to the scene tree so we can get the "size".
+	
+	x_mark.scale = Vector2.ZERO
+	x_mark.pivot_offset = x_mark.size / 2
+	x_mark.z_index = button.z_index + 2
+	
+	# Centralize "x mark" on slot.
+	x_mark.position = mouse_position - (x_mark.size / 2)
+	
+	var tween = create_tween()
+	tween.tween_property(x_mark, "scale", Vector2.ONE, 0.25)
+	tween.tween_interval(1.0)
+	tween.tween_property(x_mark, "scale", Vector2.ZERO, 0.5)
+	tween.tween_callback(x_mark.queue_free)
