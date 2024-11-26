@@ -1,0 +1,415 @@
+[gd_scene load_steps=11 format=3 uid="uid://crkrq4agn8ghx"]
+
+[ext_resource type="Script" path="res://levels/figure_level.gd" id="1_f4y3c"]
+[ext_resource type="PackedScene" uid="uid://cwsj1bfgbxsnk" path="res://pink_background.tscn" id="2_ipyg5"]
+[ext_resource type="PackedScene" uid="uid://dwesfoxx58stl" path="res://ui/top_buttons.tscn" id="3_rhxj6"]
+[ext_resource type="Texture2D" uid="uid://btvovgytwfq74" path="res://levels/slot.svg" id="5_bh6vy"]
+[ext_resource type="Script" path="res://levels/slot.gd" id="6_tsikk"]
+[ext_resource type="Script" path="res://draggable_label.gd" id="7_gw06d"]
+[ext_resource type="PackedScene" uid="uid://wnlhcjcm0qc" path="res://ui/victory_panel/victory_panel.tscn" id="8_s6500"]
+[ext_resource type="Texture2D" uid="uid://1nfgvvaa1dix" path="res://levels/pig_level/pig.png" id="9_qd57g"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_hcqab"]
+font_size = 64
+font_color = Color(0.635294, 0.152941, 0.172549, 1)
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_k6rhw"]
+font_size = 50
+font_color = Color(0.635294, 0.152941, 0.172549, 1)
+outline_color = Color(0, 0, 0, 1)
+
+[node name="PigLevel" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_f4y3c")
+
+[node name="Background" type="CanvasLayer" parent="."]
+layer = -2
+
+[node name="PinkBackground" parent="Background" instance=ExtResource("2_ipyg5")]
+
+[node name="TopButtons" parent="Background" instance=ExtResource("3_rhxj6")]
+
+[node name="DogBackground" type="ColorRect" parent="Background"]
+self_modulate = Color(1, 1, 1, 0.509804)
+offset_left = 408.0
+offset_top = 217.0
+offset_right = 1905.0
+offset_bottom = 1067.0
+mouse_filter = 2
+color = Color(1, 0.972549, 0.929412, 1)
+
+[node name="PigFigure" type="Sprite2D" parent="Background"]
+position = Vector2(1137, 609)
+texture = ExtResource("9_qd57g")
+
+[node name="ScoreBackground" type="ColorRect" parent="Background"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -216.5
+offset_top = 100.0
+offset_right = 216.5
+offset_bottom = 181.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+color = Color(1, 0.972549, 0.929412, 1)
+
+[node name="TitleBackground" type="ColorRect" parent="Background"]
+offset_left = 537.0
+offset_top = 28.0
+offset_right = 1388.0
+offset_bottom = 109.0
+color = Color(1, 0.972549, 0.929412, 1)
+
+[node name="TitleLabel" type="Label" parent="Background/TitleBackground"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -401.0
+offset_top = -39.5
+offset_right = 401.0
+offset_bottom = 39.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Sistema Digestório Monogástrico"
+label_settings = SubResource("LabelSettings_hcqab")
+horizontal_alignment = 1
+
+[node name="Score" type="RichTextLabel" parent="Background"]
+unique_name_in_owner = true
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -222.5
+offset_top = 100.0
+offset_right = 222.5
+offset_bottom = 188.0
+grow_horizontal = 2
+mouse_filter = 2
+bbcode_enabled = true
+text = "[center][b]( Acertos:[/b] 0/1 )[/center]"
+
+[node name="Slots" type="Control" parent="."]
+unique_name_in_owner = true
+anchors_preset = 0
+
+[node name="SquareSlot" type="TextureRect" parent="Slots"]
+z_index = -1
+layout_mode = 0
+offset_left = 436.0
+offset_top = 445.0
+offset_right = 760.0
+offset_bottom = 505.0
+texture = ExtResource("5_bh6vy")
+expand_mode = 1
+script = ExtResource("6_tsikk")
+expected_value = "Glândula Salivar"
+
+[node name="SquareSlot2" type="TextureRect" parent="Slots"]
+z_index = -1
+layout_mode = 0
+offset_left = 468.0
+offset_top = 295.0
+offset_right = 798.0
+offset_bottom = 355.0
+texture = ExtResource("5_bh6vy")
+expand_mode = 1
+script = ExtResource("6_tsikk")
+expected_value = "Fígado"
+
+[node name="SquareSlot3" type="TextureRect" parent="Slots"]
+z_index = -1
+layout_mode = 0
+offset_left = 1202.0
+offset_top = 314.0
+offset_right = 1560.0
+offset_bottom = 374.0
+texture = ExtResource("5_bh6vy")
+expand_mode = 1
+script = ExtResource("6_tsikk")
+expected_value = "Intestino Grosso"
+
+[node name="SquareSlot4" type="TextureRect" parent="Slots"]
+z_index = -1
+layout_mode = 0
+offset_left = 587.0
+offset_top = 837.0
+offset_right = 852.0
+offset_bottom = 897.0
+texture = ExtResource("5_bh6vy")
+expand_mode = 1
+script = ExtResource("6_tsikk")
+expected_value = "Esôfago"
+
+[node name="SquareSlot5" type="TextureRect" parent="Slots"]
+z_index = -1
+layout_mode = 0
+offset_left = 1580.0
+offset_top = 526.0
+offset_right = 1760.0
+offset_bottom = 586.0
+texture = ExtResource("5_bh6vy")
+expand_mode = 1
+script = ExtResource("6_tsikk")
+expected_value = "Ceco"
+
+[node name="SquareSlot6" type="TextureRect" parent="Slots"]
+z_index = -1
+layout_mode = 0
+offset_left = 995.0
+offset_top = 876.0
+offset_right = 1250.0
+offset_bottom = 936.0
+texture = ExtResource("5_bh6vy")
+expand_mode = 1
+script = ExtResource("6_tsikk")
+expected_value = "Duodeno"
+
+[node name="SquareSlot7" type="TextureRect" parent="Slots"]
+z_index = -1
+layout_mode = 0
+offset_left = 1097.0
+offset_top = 773.0
+offset_right = 1312.0
+offset_bottom = 833.0
+texture = ExtResource("5_bh6vy")
+expand_mode = 1
+script = ExtResource("6_tsikk")
+expected_value = "Pâncreas"
+
+[node name="SquareSlot8" type="TextureRect" parent="Slots"]
+z_index = -1
+layout_mode = 0
+offset_left = 1540.0
+offset_top = 634.0
+offset_right = 1895.0
+offset_bottom = 694.0
+texture = ExtResource("5_bh6vy")
+expand_mode = 1
+script = ExtResource("6_tsikk")
+expected_value = "Intestino Delgado"
+
+[node name="SquareSlot9" type="TextureRect" parent="Slots"]
+z_index = -1
+layout_mode = 0
+offset_left = 1542.0
+offset_top = 384.0
+offset_right = 1715.0
+offset_bottom = 444.0
+texture = ExtResource("5_bh6vy")
+expand_mode = 1
+script = ExtResource("6_tsikk")
+expected_value = "Reto"
+
+[node name="SquareSlot10" type="TextureRect" parent="Slots"]
+z_index = -1
+layout_mode = 0
+offset_left = 1005.0
+offset_top = 238.0
+offset_right = 1257.0
+offset_bottom = 298.0
+texture = ExtResource("5_bh6vy")
+expand_mode = 1
+script = ExtResource("6_tsikk")
+expected_value = "Estômago"
+
+[node name="SquareSlot11" type="TextureRect" parent="Slots"]
+z_index = -1
+layout_mode = 0
+offset_left = 821.0
+offset_top = 355.0
+offset_right = 1110.0
+offset_bottom = 415.0
+texture = ExtResource("5_bh6vy")
+expand_mode = 1
+script = ExtResource("6_tsikk")
+expected_value = "Vesícula Biliar"
+
+[node name="Pieces" type="Node" parent="."]
+
+[node name="TitleBackground" type="ColorRect" parent="Pieces"]
+self_modulate = Color(1, 1, 1, 0.509804)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -942.0
+offset_top = 274.0
+offset_right = -639.0
+offset_bottom = 342.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+mouse_filter = 2
+color = Color(1, 0.972549, 0.929412, 1)
+
+[node name="TitleLabel" type="Label" parent="Pieces/TitleBackground"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 16.0
+offset_top = -30.0
+offset_right = 284.0
+offset_bottom = 30.0
+grow_vertical = 2
+text = "Componentes:"
+label_settings = SubResource("LabelSettings_k6rhw")
+horizontal_alignment = 1
+
+[node name="PiecesBackground" type="ColorRect" parent="Pieces"]
+self_modulate = Color(1, 1, 1, 0.509804)
+offset_left = 18.0
+offset_top = 342.0
+offset_right = 382.0
+offset_bottom = 929.0
+mouse_filter = 2
+color = Color(1, 0.972549, 0.929412, 1)
+
+[node name="VesiculaBiliar" type="Label" parent="Pieces"]
+offset_left = 34.0
+offset_top = 853.0
+offset_right = 295.0
+offset_bottom = 913.0
+mouse_filter = 1
+text = "Vesícula Biliar"
+horizontal_alignment = 1
+script = ExtResource("7_gw06d")
+
+[node name="Reto" type="Label" parent="Pieces"]
+offset_left = 34.0
+offset_top = 803.0
+offset_right = 123.0
+offset_bottom = 863.0
+mouse_filter = 1
+text = "Reto"
+horizontal_alignment = 1
+script = ExtResource("7_gw06d")
+
+[node name="Pâncreas" type="Label" parent="Pieces"]
+offset_left = 34.0
+offset_top = 747.0
+offset_right = 213.0
+offset_bottom = 807.0
+mouse_filter = 1
+text = "Pâncreas"
+horizontal_alignment = 1
+script = ExtResource("7_gw06d")
+
+[node name="Intestino Grosso" type="Label" parent="Pieces"]
+offset_left = 34.0
+offset_top = 692.0
+offset_right = 350.0
+offset_bottom = 752.0
+mouse_filter = 1
+text = "Intestino Grosso"
+horizontal_alignment = 1
+script = ExtResource("7_gw06d")
+
+[node name="IntestinoDelgado" type="Label" parent="Pieces"]
+offset_left = 34.0
+offset_top = 638.0
+offset_right = 367.0
+offset_bottom = 698.0
+mouse_filter = 1
+text = "Intestino Delgado"
+horizontal_alignment = 1
+script = ExtResource("7_gw06d")
+
+[node name="GlandulaSalivar" type="Label" parent="Pieces"]
+offset_left = 34.0
+offset_top = 589.0
+offset_right = 336.0
+offset_bottom = 649.0
+mouse_filter = 1
+text = "Glândula Salivar"
+horizontal_alignment = 1
+script = ExtResource("7_gw06d")
+
+[node name="Figado" type="Label" parent="Pieces"]
+offset_left = 34.0
+offset_top = 540.0
+offset_right = 162.0
+offset_bottom = 600.0
+mouse_filter = 1
+text = "Fígado"
+horizontal_alignment = 1
+script = ExtResource("7_gw06d")
+
+[node name="Esofago" type="Label" parent="Pieces"]
+offset_left = 34.0
+offset_top = 494.0
+offset_right = 191.0
+offset_bottom = 554.0
+mouse_filter = 1
+text = "Esôfago"
+horizontal_alignment = 1
+script = ExtResource("7_gw06d")
+
+[node name="Estomago" type="Label" parent="Pieces"]
+offset_left = 34.0
+offset_top = 444.0
+offset_right = 226.0
+offset_bottom = 504.0
+mouse_filter = 1
+text = "Estômago"
+horizontal_alignment = 1
+script = ExtResource("7_gw06d")
+
+[node name="Duodeno" type="Label" parent="Pieces"]
+offset_left = 34.0
+offset_top = 396.0
+offset_right = 193.0
+offset_bottom = 456.0
+mouse_filter = 1
+text = "Duodeno"
+horizontal_alignment = 1
+script = ExtResource("7_gw06d")
+
+[node name="Ceco" type="Label" parent="Pieces"]
+offset_left = 34.0
+offset_top = 352.0
+offset_right = 125.0
+offset_bottom = 412.0
+mouse_filter = 1
+text = "Ceco"
+horizontal_alignment = 1
+script = ExtResource("7_gw06d")
+
+[node name="VictoryPanel" parent="." instance=ExtResource("8_s6500")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+offset_top = -325.0
+offset_bottom = 325.0
+
+[connection signal="mistake_made" from="Slots/SquareSlot" to="." method="_on_mistake_made"]
+[connection signal="slot_filled" from="Slots/SquareSlot" to="." method="_on_slot_filled"]
+[connection signal="mistake_made" from="Slots/SquareSlot2" to="." method="_on_mistake_made"]
+[connection signal="slot_filled" from="Slots/SquareSlot2" to="." method="_on_slot_filled"]
+[connection signal="mistake_made" from="Slots/SquareSlot3" to="." method="_on_mistake_made"]
+[connection signal="slot_filled" from="Slots/SquareSlot3" to="." method="_on_slot_filled"]
+[connection signal="mistake_made" from="Slots/SquareSlot4" to="." method="_on_mistake_made"]
+[connection signal="slot_filled" from="Slots/SquareSlot4" to="." method="_on_slot_filled"]
+[connection signal="mistake_made" from="Slots/SquareSlot5" to="." method="_on_mistake_made"]
+[connection signal="slot_filled" from="Slots/SquareSlot5" to="." method="_on_slot_filled"]
+[connection signal="mistake_made" from="Slots/SquareSlot6" to="." method="_on_mistake_made"]
+[connection signal="slot_filled" from="Slots/SquareSlot6" to="." method="_on_slot_filled"]
+[connection signal="mistake_made" from="Slots/SquareSlot7" to="." method="_on_mistake_made"]
+[connection signal="slot_filled" from="Slots/SquareSlot7" to="." method="_on_slot_filled"]
+[connection signal="mistake_made" from="Slots/SquareSlot8" to="." method="_on_mistake_made"]
+[connection signal="slot_filled" from="Slots/SquareSlot8" to="." method="_on_slot_filled"]
+[connection signal="mistake_made" from="Slots/SquareSlot9" to="." method="_on_mistake_made"]
+[connection signal="slot_filled" from="Slots/SquareSlot9" to="." method="_on_slot_filled"]
+[connection signal="mistake_made" from="Slots/SquareSlot10" to="." method="_on_mistake_made"]
+[connection signal="slot_filled" from="Slots/SquareSlot10" to="." method="_on_slot_filled"]
+[connection signal="mistake_made" from="Slots/SquareSlot11" to="." method="_on_mistake_made"]
+[connection signal="slot_filled" from="Slots/SquareSlot11" to="." method="_on_slot_filled"]
