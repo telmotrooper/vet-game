@@ -61,13 +61,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -545.0
+offset_left = -573.0
 offset_top = -49.0
-offset_right = -239.0
+offset_right = -233.0
 offset_bottom = 257.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "CÃES
+text = "SISTEMA
+CIRCULATÓRIO
 (FIGURA)"
 expand_icon = true
 script = ExtResource("3_3mfj4")
