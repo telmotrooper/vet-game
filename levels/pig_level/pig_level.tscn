@@ -166,10 +166,10 @@ expected_value = "Ceco"
 [node name="SquareSlot6" type="TextureRect" parent="Slots"]
 z_index = -1
 layout_mode = 0
-offset_left = 1002.0
-offset_top = 864.0
-offset_right = 1257.0
-offset_bottom = 924.0
+offset_left = 995.0
+offset_top = 876.0
+offset_right = 1250.0
+offset_bottom = 936.0
 texture = ExtResource("5_bh6vy")
 expand_mode = 1
 script = ExtResource("6_tsikk")
