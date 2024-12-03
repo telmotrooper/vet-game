@@ -113,6 +113,7 @@ grow_vertical = 2
 text = "Qual das alternativas abaixo descreve corretamente a principal função do sistema linfático nos animais?"
 label_settings = SubResource("LabelSettings_hcqab")
 horizontal_alignment = 1
+vertical_alignment = 1
 autowrap_mode = 2
 
 [node name="Background" type="ColorRect" parent="Question"]
