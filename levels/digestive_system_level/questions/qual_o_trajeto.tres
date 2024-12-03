@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="QuizQuestion" load_steps=2 format=3 uid="uid://d2iinfu4cffl5"]
 
-[ext_resource type="Script" path="res://levels/question.gd" id="1_tfgc1"]
+[ext_resource type="Script" path="res://levels/question.gd" id="1_17pcn"]
 
 [resource]
-script = ExtResource("1_tfgc1")
+script = ExtResource("1_17pcn")
 text = "Qual o trajeto do alimento em ruminantes?"
-correct_answer = "Boca – esôfago – rúmem – retículo – omaso – abomaso"
+correct_answer = "Boca – esôfago – rúmen – retículo – omaso – abomaso"
 wrong_answers = Array[String](["Boca – esôfago – retículo – rúmen – abomaso – omaso", "Boca – esôfago – rúmen – retículo – abomaso – omaso", "Boca – esôfago – retículo – rúmen – omaso – abomaso"])
