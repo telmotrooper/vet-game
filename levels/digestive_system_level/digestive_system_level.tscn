@@ -1,18 +1,18 @@
 [gd_scene load_steps=15 format=3 uid="uid://cdrp2wq70xsfv"]
 
-[ext_resource type="Script" path="res://levels/quiz_level.gd" id="1_2g2uy"]
-[ext_resource type="Script" path="res://levels/question.gd" id="2_ao1uf"]
-[ext_resource type="Resource" uid="uid://bd645lvhh4502" path="res://levels/digestive_system/questions/e_uma_importante_area.tres" id="3_8n3fs"]
-[ext_resource type="Resource" uid="uid://dx1ufr2p8nx6w" path="res://levels/digestive_system/questions/quais_animais_abaixo.tres" id="4_a8pcn"]
-[ext_resource type="Resource" uid="uid://dp2orvsab1q5w" path="res://levels/digestive_system/questions/quais_sao_os_4.tres" id="5_b43f5"]
-[ext_resource type="Resource" uid="uid://elegheiebr0e" path="res://levels/digestive_system/questions/qual_a_formula.tres" id="6_dsn0t"]
-[ext_resource type="Resource" uid="uid://d2iinfu4cffl5" path="res://levels/digestive_system/questions/qual_o_trajeto.tres" id="7_g023d"]
-[ext_resource type="StyleBox" uid="uid://dsatbvn64tsnd" path="res://ui/correct_answer_styles.tres" id="8_yblsd"]
-[ext_resource type="StyleBox" uid="uid://bvjsvoeb6x5is" path="res://ui/wrong_answer_styles.tres" id="9_g8xjs"]
-[ext_resource type="PackedScene" uid="uid://cwsj1bfgbxsnk" path="res://pink_background.tscn" id="10_jtvkf"]
-[ext_resource type="PackedScene" uid="uid://dwesfoxx58stl" path="res://ui/top_buttons.tscn" id="11_2fr45"]
-[ext_resource type="PackedScene" uid="uid://wnlhcjcm0qc" path="res://ui/victory_panel/victory_panel.tscn" id="12_uop65"]
-[ext_resource type="Script" path="res://levels/answer.gd" id="13_vpfl8"]
+[ext_resource type="Script" path="res://levels/quiz_level.gd" id="1_w8ony"]
+[ext_resource type="Script" path="res://levels/question.gd" id="2_fhkqp"]
+[ext_resource type="Resource" uid="uid://bd645lvhh4502" path="res://levels/digestive_system_level/questions/e_uma_importante_area.tres" id="3_n7q0w"]
+[ext_resource type="Resource" uid="uid://dx1ufr2p8nx6w" path="res://levels/digestive_system_level/questions/quais_animais_abaixo.tres" id="4_ivnt7"]
+[ext_resource type="Resource" uid="uid://dp2orvsab1q5w" path="res://levels/digestive_system_level/questions/quais_sao_os_4.tres" id="5_pcu8x"]
+[ext_resource type="Resource" uid="uid://elegheiebr0e" path="res://levels/digestive_system_level/questions/qual_a_formula.tres" id="6_pohil"]
+[ext_resource type="Resource" uid="uid://d2iinfu4cffl5" path="res://levels/digestive_system_level/questions/qual_o_trajeto.tres" id="7_3pduq"]
+[ext_resource type="StyleBox" uid="uid://dsatbvn64tsnd" path="res://ui/correct_answer_styles.tres" id="8_2wtvi"]
+[ext_resource type="StyleBox" uid="uid://bvjsvoeb6x5is" path="res://ui/wrong_answer_styles.tres" id="9_3tw03"]
+[ext_resource type="PackedScene" uid="uid://cwsj1bfgbxsnk" path="res://pink_background.tscn" id="10_ao27d"]
+[ext_resource type="PackedScene" uid="uid://dwesfoxx58stl" path="res://ui/top_buttons.tscn" id="11_ecfxn"]
+[ext_resource type="PackedScene" uid="uid://wnlhcjcm0qc" path="res://ui/victory_panel/victory_panel.tscn" id="12_ulfyr"]
+[ext_resource type="Script" path="res://levels/answer.gd" id="13_c3tkw"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_hcqab"]
 font_size = 64
@@ -27,17 +27,17 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-script = ExtResource("1_2g2uy")
-questions = Array[ExtResource("2_ao1uf")]([ExtResource("3_8n3fs"), ExtResource("4_a8pcn"), ExtResource("5_b43f5"), ExtResource("6_dsn0t"), ExtResource("7_g023d")])
-correct_answer = ExtResource("8_yblsd")
-wrong_answer = ExtResource("9_g8xjs")
+script = ExtResource("1_w8ony")
+questions = Array[ExtResource("2_fhkqp")]([ExtResource("3_n7q0w"), ExtResource("4_ivnt7"), ExtResource("5_pcu8x"), ExtResource("6_pohil"), ExtResource("7_3pduq")])
+correct_answer = ExtResource("8_2wtvi")
+wrong_answer = ExtResource("9_3tw03")
 
 [node name="Background" type="CanvasLayer" parent="."]
 layer = -2
 
-[node name="PinkBackground" parent="Background" instance=ExtResource("10_jtvkf")]
+[node name="PinkBackground" parent="Background" instance=ExtResource("10_ao27d")]
 
-[node name="TopButtons" parent="Background" instance=ExtResource("11_2fr45")]
+[node name="TopButtons" parent="Background" instance=ExtResource("11_ecfxn")]
 
 [node name="ScoreBackground" type="ColorRect" parent="Background"]
 anchors_preset = 5
@@ -87,7 +87,7 @@ label_settings = SubResource("LabelSettings_hcqab")
 horizontal_alignment = 1
 metadata/_edit_lock_ = true
 
-[node name="VictoryPanel" parent="." instance=ExtResource("12_uop65")]
+[node name="VictoryPanel" parent="." instance=ExtResource("12_ulfyr")]
 unique_name_in_owner = true
 visible = false
 layout_mode = 1
@@ -154,25 +154,25 @@ alignment = 1
 layout_mode = 2
 text = "1. Transportar oxigênio para os tecidos do corpo."
 autowrap_mode = 2
-script = ExtResource("13_vpfl8")
+script = ExtResource("13_c3tkw")
 
 [node name="Answer2" type="Button" parent="Answers" groups=["answers"]]
 layout_mode = 2
 text = "2. Produzir hormônios para o crescimento e desenvolvimento."
 autowrap_mode = 2
-script = ExtResource("13_vpfl8")
+script = ExtResource("13_c3tkw")
 
 [node name="Answer3" type="Button" parent="Answers" groups=["answers"]]
 layout_mode = 2
 text = "3. Coletar e retornar fluidos e proteínas dos tecidos para o sangue, além de participar da defesa do organismo."
 autowrap_mode = 2
-script = ExtResource("13_vpfl8")
+script = ExtResource("13_c3tkw")
 
 [node name="Answer4" type="Button" parent="Answers" groups=["answers"]]
 layout_mode = 2
 text = "4. Regular a temperatura corporal dos animais."
 autowrap_mode = 2
-script = ExtResource("13_vpfl8")
+script = ExtResource("13_c3tkw")
 
 [connection signal="question_answered" from="Answers/Answer1" to="." method="_on_question_answered"]
 [connection signal="question_answered" from="Answers/Answer2" to="." method="_on_question_answered"]
