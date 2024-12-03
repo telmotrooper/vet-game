@@ -159,3 +159,29 @@ layout_mode = 1
 offset_left = -116.5
 offset_right = 116.5
 metadata/_edit_lock_ = true
+
+[node name="MonogastricDigestiveSystemFigureButton3" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -170.0
+offset_top = 88.0
+offset_right = 170.0
+offset_bottom = 394.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "SISTEMA
+DIGESTÓRIO
+(QUIZ)"
+expand_icon = true
+script = ExtResource("3_3mfj4")
+target_scene = "res://levels/digestive_system_level/digestive_system_level.tscn"
+
+[node name="LevelStarCounter" parent="MonogastricDigestiveSystemFigureButton3" instance=ExtResource("4_me8dp")]
+layout_mode = 1
+offset_left = -116.5
+offset_right = 116.5
+metadata/_edit_lock_ = true

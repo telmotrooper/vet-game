@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=2 format=3 uid="uid://34mxkcv1bvt7"]
+
+[ext_resource type="Script" path="res://levels/question.gd" id="1_or0jt"]
+
+[resource]
+script = ExtResource("1_or0jt")
+text = "Quais são os 3 principais linfonodos que devem ser palpados no exame físico de um cão?"
+correct_answer = "Mandibulares, cervicais superficiais e poplíteos"
+wrong_answers = Array[String](["Mandibulares, parotídeos e poplíteos", "Mandibulares, parotídeos e mesentéricos", "Mandibulares, cervicais superficiais e mesentéricos"])

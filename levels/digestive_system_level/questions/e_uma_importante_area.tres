@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=2 format=3 uid="uid://bd645lvhh4502"]
+
+[ext_resource type="Script" path="res://levels/question.gd" id="1_w08ct"]
+
+[resource]
+script = ExtResource("1_w08ct")
+text = "Qual o orgão fundamental pra absorção de nutrientes, tanto nos não ruminantes, quanto nos ruminantes?"
+correct_answer = "Intestino delgado"
+wrong_answers = Array[String](["Estômago", "Intestino grosso", "Rúmen"])
