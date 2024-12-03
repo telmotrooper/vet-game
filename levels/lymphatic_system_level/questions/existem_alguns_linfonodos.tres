@@ -4,6 +4,6 @@
 
 [resource]
 script = ExtResource("1_or0jt")
-text = "Existem alguns linfonodos que são naturalmente palpáveis no organismo do animal, sendo mais facilmente examinados quando aumentados de volume. O aumento de volume de um linfonodo pode indicar a existência de infecções, trauma, neoplasia ou doença autoimune. Sendo assim, quais são os 3 principais linfonodos que devem ser palpados no exame físico de um cão?"
+text = "Quais são os 3 principais linfonodos que devem ser palpados no exame físico de um cão?"
 correct_answer = "Mandibulares, cervicais superficiais e poplíteos"
 wrong_answers = Array[String](["Mandibulares, parotídeos e poplíteos", "Mandibulares, parotídeos e mesentéricos", "Mandibulares, cervicais superficiais e mesentéricos"])
