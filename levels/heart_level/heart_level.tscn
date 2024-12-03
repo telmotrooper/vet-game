@@ -1,0 +1,436 @@
+[gd_scene load_steps=11 format=3 uid="uid://cbxiqupb51hmr"]
+
+[ext_resource type="Script" path="res://levels/figure_level.gd" id="1_p5m82"]
+[ext_resource type="PackedScene" uid="uid://cwsj1bfgbxsnk" path="res://pink_background.tscn" id="2_86w1s"]
+[ext_resource type="PackedScene" uid="uid://dwesfoxx58stl" path="res://ui/top_buttons.tscn" id="3_ng854"]
+[ext_resource type="Texture2D" uid="uid://bxrlpv42ntyr1" path="res://levels/dog_level/dog.png" id="4_tyla0"]
+[ext_resource type="Texture2D" uid="uid://btvovgytwfq74" path="res://levels/slot.svg" id="5_uluk4"]
+[ext_resource type="Script" path="res://levels/slot.gd" id="6_px48q"]
+[ext_resource type="Script" path="res://draggable_label.gd" id="7_hiy3o"]
+[ext_resource type="PackedScene" uid="uid://wnlhcjcm0qc" path="res://ui/victory_panel/victory_panel.tscn" id="8_l02om"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_hcqab"]
+font_size = 64
+font_color = Color(0.635294, 0.152941, 0.172549, 1)
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_k6rhw"]
+font_size = 50
+font_color = Color(0.635294, 0.152941, 0.172549, 1)
+outline_color = Color(0, 0, 0, 1)
+
+[node name="DogLevel" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_p5m82")
+
+[node name="Background" type="CanvasLayer" parent="."]
+layer = -2
+
+[node name="PinkBackground" parent="Background" instance=ExtResource("2_86w1s")]
+
+[node name="TopButtons" parent="Background" instance=ExtResource("3_ng854")]
+
+[node name="DogBackground" type="ColorRect" parent="Background"]
+self_modulate = Color(1, 1, 1, 0.509804)
+offset_left = 408.0
+offset_top = 217.0
+offset_right = 1905.0
+offset_bottom = 1067.0
+mouse_filter = 2
+color = Color(1, 0.972549, 0.929412, 1)
+
+[node name="DogFigure" type="Sprite2D" parent="Background"]
+position = Vector2(1161.62, 655.5)
+scale = Vector2(0.611908, 0.611908)
+texture = ExtResource("4_tyla0")
+
+[node name="ScoreBackground" type="ColorRect" parent="Background"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -216.5
+offset_top = 100.0
+offset_right = 216.5
+offset_bottom = 181.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+color = Color(1, 0.972549, 0.929412, 1)
+
+[node name="TitleBackground" type="ColorRect" parent="Background"]
+offset_left = 694.0
+offset_top = 28.0
+offset_right = 1225.0
+offset_bottom = 109.0
+color = Color(1, 0.972549, 0.929412, 1)
+
+[node name="TitleLabel" type="Label" parent="Background"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -290.0
+offset_top = 28.0
+offset_right = 290.0
+offset_bottom = 107.0
+grow_horizontal = 2
+text = "Coração"
+label_settings = SubResource("LabelSettings_hcqab")
+horizontal_alignment = 1
+
+[node name="Score" type="RichTextLabel" parent="Background"]
+unique_name_in_owner = true
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -222.5
+offset_top = 100.0
+offset_right = 222.5
+offset_bottom = 188.0
+grow_horizontal = 2
+mouse_filter = 2
+bbcode_enabled = true
+text = "[center][b]( Acertos:[/b] 0/1 )[/center]"
+
+[node name="Slots" type="Control" parent="."]
+unique_name_in_owner = true
+anchors_preset = 0
+
+[node name="SquareSlot" type="TextureRect" parent="Slots"]
+z_index = -1
+layout_mode = 0
+offset_left = 428.4
+offset_top = 431.2
+offset_right = 678.4
+offset_bottom = 491.2
+texture = ExtResource("5_uluk4")
+expand_mode = 1
+script = ExtResource("6_px48q")
+expected_value = "Veia Jugular"
+
+[node name="SquareSlot2" type="TextureRect" parent="Slots"]
+z_index = -1
+layout_mode = 0
+offset_left = 427.4
+offset_top = 513.2
+offset_right = 757.4
+offset_bottom = 573.2
+texture = ExtResource("5_uluk4")
+expand_mode = 1
+script = ExtResource("6_px48q")
+expected_value = "Artéria Carótida"
+
+[node name="SquareSlot3" type="TextureRect" parent="Slots"]
+z_index = -1
+layout_mode = 0
+offset_left = 443.4
+offset_top = 631.2
+offset_right = 768.4
+offset_bottom = 691.2
+texture = ExtResource("5_uluk4")
+expand_mode = 1
+script = ExtResource("6_px48q")
+expected_value = "Artéria Braquial"
+
+[node name="SquareSlot4" type="TextureRect" parent="Slots"]
+z_index = -1
+layout_mode = 0
+offset_left = 438.4
+offset_top = 720.2
+offset_right = 703.4
+offset_bottom = 780.2
+texture = ExtResource("5_uluk4")
+expand_mode = 1
+script = ExtResource("6_px48q")
+expected_value = "Veia Cefálica"
+
+[node name="SquareSlot5" type="TextureRect" parent="Slots"]
+z_index = -1
+layout_mode = 0
+offset_left = 1011.0
+offset_top = 888.0
+offset_right = 1191.0
+offset_bottom = 948.0
+texture = ExtResource("5_uluk4")
+expand_mode = 1
+script = ExtResource("6_px48q")
+expected_value = "Coração"
+
+[node name="SquareSlot6" type="TextureRect" parent="Slots"]
+z_index = -1
+layout_mode = 0
+offset_left = 1171.4
+offset_top = 809.2
+offset_right = 1426.4
+offset_bottom = 869.2
+texture = ExtResource("5_uluk4")
+expand_mode = 1
+script = ExtResource("6_px48q")
+expected_value = "Veias Portas"
+
+[node name="SquareSlot7" type="TextureRect" parent="Slots"]
+z_index = -1
+layout_mode = 0
+offset_left = 1278.0
+offset_top = 728.0
+offset_right = 1388.0
+offset_bottom = 788.0
+texture = ExtResource("5_uluk4")
+expand_mode = 1
+script = ExtResource("6_px48q")
+expected_value = "Baço"
+
+[node name="SquareSlot8" type="TextureRect" parent="Slots"]
+z_index = -1
+layout_mode = 0
+offset_left = 1608.4
+offset_top = 760.2
+offset_right = 1848.4
+offset_bottom = 820.2
+texture = ExtResource("5_uluk4")
+expand_mode = 1
+script = ExtResource("6_px48q")
+expected_value = "Veia Safena"
+
+[node name="SquareSlot9" type="TextureRect" parent="Slots"]
+z_index = -1
+layout_mode = 0
+offset_left = 1592.4
+offset_top = 524.2
+offset_right = 1902.4
+offset_bottom = 584.2
+texture = ExtResource("5_uluk4")
+expand_mode = 1
+script = ExtResource("6_px48q")
+expected_value = "Artéria Femoral"
+
+[node name="SquareSlot10" type="TextureRect" parent="Slots"]
+z_index = -1
+layout_mode = 0
+offset_left = 1310.4
+offset_top = 287.2
+offset_right = 1645.4
+offset_bottom = 347.2
+texture = ExtResource("5_uluk4")
+expand_mode = 1
+script = ExtResource("6_px48q")
+expected_value = "Veia Cava Caudal"
+
+[node name="SquareSlot11" type="TextureRect" parent="Slots"]
+z_index = -1
+layout_mode = 0
+offset_left = 1148.4
+offset_top = 370.2
+offset_right = 1273.4
+offset_bottom = 430.2
+texture = ExtResource("5_uluk4")
+expand_mode = 1
+script = ExtResource("6_px48q")
+expected_value = "Aorta"
+
+[node name="SquareSlot12" type="TextureRect" parent="Slots"]
+z_index = -1
+layout_mode = 0
+offset_left = 959.4
+offset_top = 287.2
+offset_right = 1294.4
+offset_bottom = 347.2
+texture = ExtResource("5_uluk4")
+expand_mode = 1
+script = ExtResource("6_px48q")
+expected_value = "Veia Cava Cranial"
+
+[node name="Pieces" type="Node" parent="."]
+
+[node name="TitleBackground" type="ColorRect" parent="Pieces"]
+self_modulate = Color(1, 1, 1, 0.509804)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -942.0
+offset_top = 274.0
+offset_right = -639.0
+offset_bottom = 342.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+mouse_filter = 2
+color = Color(1, 0.972549, 0.929412, 1)
+
+[node name="TitleLabel" type="Label" parent="Pieces/TitleBackground"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 16.0
+offset_top = -30.0
+offset_right = 284.0
+offset_bottom = 30.0
+grow_vertical = 2
+text = "Componentes:"
+label_settings = SubResource("LabelSettings_k6rhw")
+horizontal_alignment = 1
+
+[node name="PiecesBackground" type="ColorRect" parent="Pieces"]
+self_modulate = Color(1, 1, 1, 0.509804)
+offset_left = 18.0
+offset_top = 342.0
+offset_right = 382.0
+offset_bottom = 981.0
+mouse_filter = 2
+color = Color(1, 0.972549, 0.929412, 1)
+
+[node name="VeiaJugular" type="Label" parent="Pieces"]
+offset_left = 34.0
+offset_top = 803.0
+offset_right = 264.0
+offset_bottom = 863.0
+mouse_filter = 1
+text = "Veia Jugular"
+horizontal_alignment = 1
+script = ExtResource("7_hiy3o")
+
+[node name="ArteriaFemoral" type="Label" parent="Pieces"]
+offset_left = 34.0
+offset_top = 494.0
+offset_right = 330.0
+offset_bottom = 554.0
+mouse_filter = 1
+text = "Artéria Femoral"
+horizontal_alignment = 1
+script = ExtResource("7_hiy3o")
+
+[node name="ArteriaCarotida" type="Label" parent="Pieces"]
+offset_left = 34.0
+offset_top = 444.0
+offset_right = 344.0
+offset_bottom = 504.0
+mouse_filter = 1
+text = "Artéria Carótida"
+horizontal_alignment = 1
+script = ExtResource("7_hiy3o")
+
+[node name="ArteriaBraquial" type="Label" parent="Pieces"]
+offset_left = 34.0
+offset_top = 396.0
+offset_right = 334.0
+offset_bottom = 456.0
+mouse_filter = 1
+text = "Artéria Braquial"
+horizontal_alignment = 1
+script = ExtResource("7_hiy3o")
+
+[node name="VeiaCefalica" type="Label" parent="Pieces"]
+offset_left = 34.0
+offset_top = 747.0
+offset_right = 276.0
+offset_bottom = 807.0
+mouse_filter = 1
+text = "Veia Cefálica"
+horizontal_alignment = 1
+script = ExtResource("7_hiy3o")
+
+[node name="Coracao" type="Label" parent="Pieces"]
+offset_left = 34.0
+offset_top = 589.0
+offset_right = 191.0
+offset_bottom = 649.0
+mouse_filter = 1
+text = "Coração"
+horizontal_alignment = 1
+script = ExtResource("7_hiy3o")
+
+[node name="VeiasPortas" type="Label" parent="Pieces"]
+offset_left = 34.0
+offset_top = 853.0
+offset_right = 274.0
+offset_bottom = 913.0
+mouse_filter = 1
+text = "Veias Portas"
+horizontal_alignment = 1
+script = ExtResource("7_hiy3o")
+
+[node name="Baco" type="Label" parent="Pieces"]
+offset_left = 34.0
+offset_top = 540.0
+offset_right = 126.0
+offset_bottom = 600.0
+mouse_filter = 1
+text = "Baço"
+horizontal_alignment = 1
+script = ExtResource("7_hiy3o")
+
+[node name="VeiaSafena" type="Label" parent="Pieces"]
+offset_left = 34.0
+offset_top = 907.0
+offset_right = 256.0
+offset_bottom = 967.0
+mouse_filter = 1
+text = "Veia Safena"
+horizontal_alignment = 1
+script = ExtResource("7_hiy3o")
+
+[node name="VeiaCavaCaudal" type="Label" parent="Pieces"]
+offset_left = 34.0
+offset_top = 638.0
+offset_right = 351.0
+offset_bottom = 698.0
+mouse_filter = 1
+text = "Veia Cava Caudal"
+horizontal_alignment = 1
+script = ExtResource("7_hiy3o")
+
+[node name="Aorta" type="Label" parent="Pieces"]
+offset_left = 34.0
+offset_top = 352.0
+offset_right = 139.0
+offset_bottom = 412.0
+mouse_filter = 1
+text = "Aorta"
+horizontal_alignment = 1
+script = ExtResource("7_hiy3o")
+
+[node name="VeiaCavaCranial" type="Label" parent="Pieces"]
+offset_left = 34.0
+offset_top = 692.0
+offset_right = 357.0
+offset_bottom = 752.0
+mouse_filter = 1
+text = "Veia Cava Cranial"
+horizontal_alignment = 1
+script = ExtResource("7_hiy3o")
+
+[node name="VictoryPanel" parent="." instance=ExtResource("8_l02om")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+offset_top = -325.0
+offset_bottom = 325.0
+
+[connection signal="mistake_made" from="Slots/SquareSlot" to="." method="_on_mistake_made"]
+[connection signal="slot_filled" from="Slots/SquareSlot" to="." method="_on_slot_filled"]
+[connection signal="mistake_made" from="Slots/SquareSlot2" to="." method="_on_mistake_made"]
+[connection signal="slot_filled" from="Slots/SquareSlot2" to="." method="_on_slot_filled"]
+[connection signal="mistake_made" from="Slots/SquareSlot3" to="." method="_on_mistake_made"]
+[connection signal="slot_filled" from="Slots/SquareSlot3" to="." method="_on_slot_filled"]
+[connection signal="mistake_made" from="Slots/SquareSlot4" to="." method="_on_mistake_made"]
+[connection signal="slot_filled" from="Slots/SquareSlot4" to="." method="_on_slot_filled"]
+[connection signal="mistake_made" from="Slots/SquareSlot5" to="." method="_on_mistake_made"]
+[connection signal="slot_filled" from="Slots/SquareSlot5" to="." method="_on_slot_filled"]
+[connection signal="mistake_made" from="Slots/SquareSlot6" to="." method="_on_mistake_made"]
+[connection signal="slot_filled" from="Slots/SquareSlot6" to="." method="_on_slot_filled"]
+[connection signal="mistake_made" from="Slots/SquareSlot7" to="." method="_on_mistake_made"]
+[connection signal="slot_filled" from="Slots/SquareSlot7" to="." method="_on_slot_filled"]
+[connection signal="mistake_made" from="Slots/SquareSlot8" to="." method="_on_mistake_made"]
+[connection signal="slot_filled" from="Slots/SquareSlot8" to="." method="_on_slot_filled"]
+[connection signal="mistake_made" from="Slots/SquareSlot9" to="." method="_on_mistake_made"]
+[connection signal="slot_filled" from="Slots/SquareSlot9" to="." method="_on_slot_filled"]
+[connection signal="mistake_made" from="Slots/SquareSlot10" to="." method="_on_mistake_made"]
+[connection signal="slot_filled" from="Slots/SquareSlot10" to="." method="_on_slot_filled"]
+[connection signal="mistake_made" from="Slots/SquareSlot11" to="." method="_on_mistake_made"]
+[connection signal="slot_filled" from="Slots/SquareSlot11" to="." method="_on_slot_filled"]
+[connection signal="mistake_made" from="Slots/SquareSlot12" to="." method="_on_mistake_made"]
+[connection signal="slot_filled" from="Slots/SquareSlot12" to="." method="_on_slot_filled"]
