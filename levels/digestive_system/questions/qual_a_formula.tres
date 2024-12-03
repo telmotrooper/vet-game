@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=2 format=3 uid="uid://elegheiebr0e"]
+
+[ext_resource type="Script" path="res://levels/question.gd" id="1_isrkl"]
+
+[resource]
+script = ExtResource("1_isrkl")
+text = "Qual a fórmula dentária do cão adulto?"
+correct_answer = "2 (I 3/3; C 1/1; PM 4/4; M 2/3)"
+wrong_answers = Array[String](["2 (I 3/2; C 1/1; PM 3/4; M 2/3) ", "2 (3/3; C 1/1; PM 4/3; M 3/2)", "2 (I 2/3; C 1/1; PM 4/4; M 3/2)"])

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=2 format=3 uid="uid://bd645lvhh4502"]
+
+[ext_resource type="Script" path="res://levels/question.gd" id="1_d72cc"]
+
+[resource]
+script = ExtResource("1_d72cc")
+text = "É uma importante área de digestão e absorção de nutrientes, tanto nos não ruminantes, quanto nos ruminantes. É neste órgão que ocorre a ação do suco pancreático e da bile."
+correct_answer = "Intestino delgado"
+wrong_answers = Array[String](["Estômago", "Intestino grosso", "Rúmen"])

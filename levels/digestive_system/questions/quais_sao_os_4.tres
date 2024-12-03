@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=2 format=3 uid="uid://dp2orvsab1q5w"]
+
+[ext_resource type="Script" path="res://levels/question.gd" id="1_n2js3"]
+
+[resource]
+script = ExtResource("1_n2js3")
+text = "Quais são os 4 principais músculos envolvidos na mastigação?"
+correct_answer = "Temporal, masseter, pterigoides, digástrico"
+wrong_answers = Array[String](["Temporal, masseter, pterigoides, zigomático", "Temporal, masseter, romboide, digástrico", "Temporal, masseter, romboide, bucinador"])
