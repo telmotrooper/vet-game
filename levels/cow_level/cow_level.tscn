@@ -1,0 +1,387 @@
+[gd_scene load_steps=11 format=3 uid="uid://drp1yfvqgxp3v"]
+
+[ext_resource type="Script" path="res://levels/figure_level.gd" id="1_7410w"]
+[ext_resource type="PackedScene" uid="uid://cwsj1bfgbxsnk" path="res://pink_background.tscn" id="2_120nb"]
+[ext_resource type="PackedScene" uid="uid://dwesfoxx58stl" path="res://ui/top_buttons.tscn" id="3_lke4f"]
+[ext_resource type="Texture2D" uid="uid://d2xlat3vtkbo5" path="res://levels/cow_level/cow_digestive_system_body_full-04.svg" id="4_6kgx0"]
+[ext_resource type="Texture2D" uid="uid://btvovgytwfq74" path="res://levels/slot.svg" id="5_asbrk"]
+[ext_resource type="Script" path="res://levels/slot.gd" id="6_r45km"]
+[ext_resource type="Script" path="res://draggable_label.gd" id="7_5whx1"]
+[ext_resource type="PackedScene" uid="uid://wnlhcjcm0qc" path="res://ui/victory_panel/victory_panel.tscn" id="8_jvfcq"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_hcqab"]
+font_size = 64
+font_color = Color(0.635294, 0.152941, 0.172549, 1)
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_k6rhw"]
+font_size = 50
+font_color = Color(0.635294, 0.152941, 0.172549, 1)
+outline_color = Color(0, 0, 0, 1)
+
+[node name="CowLevel" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_7410w")
+
+[node name="Background" type="CanvasLayer" parent="."]
+layer = -2
+
+[node name="PinkBackground" parent="Background" instance=ExtResource("2_120nb")]
+
+[node name="TopButtons" parent="Background" instance=ExtResource("3_lke4f")]
+
+[node name="DogBackground" type="ColorRect" parent="Background"]
+self_modulate = Color(1, 1, 1, 0.509804)
+offset_left = 408.0
+offset_top = 217.0
+offset_right = 1905.0
+offset_bottom = 1067.0
+mouse_filter = 2
+color = Color(1, 0.972549, 0.929412, 1)
+
+[node name="CowDigestiveSystemBodyFull-04" type="Sprite2D" parent="Background"]
+position = Vector2(1178, 673)
+texture = ExtResource("4_6kgx0")
+
+[node name="ScoreBackground" type="ColorRect" parent="Background"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -216.5
+offset_top = 100.0
+offset_right = 216.5
+offset_bottom = 181.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+color = Color(1, 0.972549, 0.929412, 1)
+
+[node name="TitleBackground" type="ColorRect" parent="Background"]
+offset_left = 694.0
+offset_top = 28.0
+offset_right = 1225.0
+offset_bottom = 109.0
+color = Color(1, 0.972549, 0.929412, 1)
+
+[node name="TitleLabel" type="Label" parent="Background"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -290.0
+offset_top = 28.0
+offset_right = 290.0
+offset_bottom = 107.0
+grow_horizontal = 2
+text = "Sistema Circulatório"
+label_settings = SubResource("LabelSettings_hcqab")
+horizontal_alignment = 1
+
+[node name="Score" type="RichTextLabel" parent="Background"]
+unique_name_in_owner = true
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -222.5
+offset_top = 100.0
+offset_right = 222.5
+offset_bottom = 188.0
+grow_horizontal = 2
+mouse_filter = 2
+bbcode_enabled = true
+text = "[center][b]( Acertos:[/b] 0/1 )[/center]"
+
+[node name="Slots" type="Control" parent="."]
+unique_name_in_owner = true
+anchors_preset = 0
+
+[node name="SquareSlot" type="TextureRect" parent="Slots"]
+z_index = -1
+layout_mode = 0
+offset_left = 436.0
+offset_top = 387.0
+offset_right = 686.0
+offset_bottom = 447.0
+texture = ExtResource("5_asbrk")
+expand_mode = 1
+script = ExtResource("6_r45km")
+expected_value = "Ânus"
+
+[node name="SquareSlot2" type="TextureRect" parent="Slots"]
+z_index = -1
+layout_mode = 0
+offset_left = 1493.0
+offset_top = 777.0
+offset_right = 1823.0
+offset_bottom = 837.0
+texture = ExtResource("5_asbrk")
+expand_mode = 1
+script = ExtResource("6_r45km")
+expected_value = "Retículo"
+
+[node name="SquareSlot3" type="TextureRect" parent="Slots"]
+z_index = -1
+layout_mode = 0
+offset_left = 880.0
+offset_top = 897.0
+offset_right = 1205.0
+offset_bottom = 957.0
+texture = ExtResource("5_asbrk")
+expand_mode = 1
+script = ExtResource("6_r45km")
+expected_value = "Abomaso"
+
+[node name="SquareSlot4" type="TextureRect" parent="Slots"]
+z_index = -1
+layout_mode = 0
+offset_left = 1533.0
+offset_top = 660.0
+offset_right = 1798.0
+offset_bottom = 720.0
+texture = ExtResource("5_asbrk")
+expand_mode = 1
+script = ExtResource("6_r45km")
+expected_value = "Esôfago"
+
+[node name="SquareSlot5" type="TextureRect" parent="Slots"]
+z_index = -1
+layout_mode = 0
+offset_left = 1652.0
+offset_top = 543.0
+offset_right = 1832.0
+offset_bottom = 603.0
+texture = ExtResource("5_asbrk")
+expand_mode = 1
+script = ExtResource("6_r45km")
+expected_value = "Boca"
+
+[node name="SquareSlot6" type="TextureRect" parent="Slots"]
+z_index = -1
+layout_mode = 0
+offset_left = 1195.0
+offset_top = 277.0
+offset_right = 1450.0
+offset_bottom = 337.0
+texture = ExtResource("5_asbrk")
+expand_mode = 1
+script = ExtResource("6_r45km")
+expected_value = "Rúmen"
+
+[node name="SquareSlot8" type="TextureRect" parent="Slots"]
+z_index = -1
+layout_mode = 0
+offset_left = 1485.0
+offset_top = 918.0
+offset_right = 1725.0
+offset_bottom = 978.0
+texture = ExtResource("5_asbrk")
+expand_mode = 1
+script = ExtResource("6_r45km")
+expected_value = "Omaso"
+
+[node name="SquareSlot9" type="TextureRect" parent="Slots"]
+z_index = -1
+layout_mode = 0
+offset_left = 829.0
+offset_top = 273.0
+offset_right = 1139.0
+offset_bottom = 333.0
+texture = ExtResource("5_asbrk")
+expand_mode = 1
+script = ExtResource("6_r45km")
+expected_value = "Intestino Delgado"
+
+[node name="SquareSlot10" type="TextureRect" parent="Slots"]
+z_index = -1
+layout_mode = 0
+offset_left = 459.0
+offset_top = 254.0
+offset_right = 794.0
+offset_bottom = 314.0
+texture = ExtResource("5_asbrk")
+expand_mode = 1
+script = ExtResource("6_r45km")
+expected_value = "Intestino Grosso"
+
+[node name="SquareSlot12" type="TextureRect" parent="Slots"]
+z_index = -1
+layout_mode = 0
+offset_left = 416.0
+offset_top = 558.0
+offset_right = 693.0
+offset_bottom = 618.0
+texture = ExtResource("5_asbrk")
+expand_mode = 1
+script = ExtResource("6_r45km")
+expected_value = "Reto"
+
+[node name="Pieces" type="Node" parent="."]
+
+[node name="TitleBackground" type="ColorRect" parent="Pieces"]
+self_modulate = Color(1, 1, 1, 0.509804)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -942.0
+offset_top = 274.0
+offset_right = -639.0
+offset_bottom = 342.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+mouse_filter = 2
+color = Color(1, 0.972549, 0.929412, 1)
+
+[node name="TitleLabel" type="Label" parent="Pieces/TitleBackground"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 16.0
+offset_top = -30.0
+offset_right = 284.0
+offset_bottom = 30.0
+grow_vertical = 2
+text = "Componentes:"
+label_settings = SubResource("LabelSettings_k6rhw")
+horizontal_alignment = 1
+
+[node name="PiecesBackground" type="ColorRect" parent="Pieces"]
+self_modulate = Color(1, 1, 1, 0.509804)
+offset_left = 18.0
+offset_top = 342.0
+offset_right = 382.0
+offset_bottom = 886.0
+mouse_filter = 2
+color = Color(1, 0.972549, 0.929412, 1)
+
+[node name="Piece2" type="Label" parent="Pieces"]
+offset_left = 34.0
+offset_top = 807.0
+offset_right = 161.0
+offset_bottom = 867.0
+mouse_filter = 1
+text = "Rúmen"
+horizontal_alignment = 1
+script = ExtResource("7_5whx1")
+
+[node name="Piece3" type="Label" parent="Pieces"]
+offset_left = 34.0
+offset_top = 757.0
+offset_right = 188.0
+offset_bottom = 817.0
+mouse_filter = 1
+text = "Retículo"
+horizontal_alignment = 1
+script = ExtResource("7_5whx1")
+
+[node name="Piece4" type="Label" parent="Pieces"]
+offset_left = 34.0
+offset_top = 701.0
+offset_right = 123.0
+offset_bottom = 761.0
+mouse_filter = 1
+text = "Reto"
+horizontal_alignment = 1
+script = ExtResource("7_5whx1")
+
+[node name="Piece5" type="Label" parent="Pieces"]
+offset_left = 34.0
+offset_top = 646.0
+offset_right = 161.0
+offset_bottom = 706.0
+mouse_filter = 1
+text = "Omaso"
+horizontal_alignment = 1
+script = ExtResource("7_5whx1")
+
+[node name="Piece6" type="Label" parent="Pieces"]
+offset_left = 34.0
+offset_top = 592.0
+offset_right = 350.0
+offset_bottom = 652.0
+mouse_filter = 1
+text = "Intestino Grosso"
+horizontal_alignment = 1
+script = ExtResource("7_5whx1")
+
+[node name="Piece7" type="Label" parent="Pieces"]
+offset_left = 34.0
+offset_top = 543.0
+offset_right = 367.0
+offset_bottom = 603.0
+mouse_filter = 1
+text = "Intestino Delgado"
+horizontal_alignment = 1
+script = ExtResource("7_5whx1")
+
+[node name="Piece8" type="Label" parent="Pieces"]
+offset_left = 34.0
+offset_top = 494.0
+offset_right = 191.0
+offset_bottom = 554.0
+mouse_filter = 1
+text = "Esôfago"
+horizontal_alignment = 1
+script = ExtResource("7_5whx1")
+
+[node name="Piece9" type="Label" parent="Pieces"]
+offset_left = 34.0
+offset_top = 444.0
+offset_right = 126.0
+offset_bottom = 504.0
+mouse_filter = 1
+text = "Boca"
+horizontal_alignment = 1
+script = ExtResource("7_5whx1")
+
+[node name="Piece10" type="Label" parent="Pieces"]
+offset_left = 34.0
+offset_top = 396.0
+offset_right = 123.0
+offset_bottom = 456.0
+mouse_filter = 1
+text = "Ânus"
+horizontal_alignment = 1
+script = ExtResource("7_5whx1")
+
+[node name="Piece11" type="Label" parent="Pieces"]
+offset_left = 34.0
+offset_top = 352.0
+offset_right = 204.0
+offset_bottom = 412.0
+mouse_filter = 1
+text = "Abomaso"
+horizontal_alignment = 1
+script = ExtResource("7_5whx1")
+
+[node name="VictoryPanel" parent="." instance=ExtResource("8_jvfcq")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+offset_top = -325.0
+offset_bottom = 325.0
+
+[connection signal="mistake_made" from="Slots/SquareSlot" to="." method="_on_mistake_made"]
+[connection signal="slot_filled" from="Slots/SquareSlot" to="." method="_on_slot_filled"]
+[connection signal="mistake_made" from="Slots/SquareSlot2" to="." method="_on_mistake_made"]
+[connection signal="slot_filled" from="Slots/SquareSlot2" to="." method="_on_slot_filled"]
+[connection signal="mistake_made" from="Slots/SquareSlot3" to="." method="_on_mistake_made"]
+[connection signal="slot_filled" from="Slots/SquareSlot3" to="." method="_on_slot_filled"]
+[connection signal="mistake_made" from="Slots/SquareSlot4" to="." method="_on_mistake_made"]
+[connection signal="slot_filled" from="Slots/SquareSlot4" to="." method="_on_slot_filled"]
+[connection signal="mistake_made" from="Slots/SquareSlot5" to="." method="_on_mistake_made"]
+[connection signal="slot_filled" from="Slots/SquareSlot5" to="." method="_on_slot_filled"]
+[connection signal="mistake_made" from="Slots/SquareSlot6" to="." method="_on_mistake_made"]
+[connection signal="slot_filled" from="Slots/SquareSlot6" to="." method="_on_slot_filled"]
+[connection signal="mistake_made" from="Slots/SquareSlot8" to="." method="_on_mistake_made"]
+[connection signal="slot_filled" from="Slots/SquareSlot8" to="." method="_on_slot_filled"]
+[connection signal="mistake_made" from="Slots/SquareSlot9" to="." method="_on_mistake_made"]
+[connection signal="slot_filled" from="Slots/SquareSlot9" to="." method="_on_slot_filled"]
+[connection signal="mistake_made" from="Slots/SquareSlot10" to="." method="_on_mistake_made"]
+[connection signal="slot_filled" from="Slots/SquareSlot10" to="." method="_on_slot_filled"]
+[connection signal="mistake_made" from="Slots/SquareSlot12" to="." method="_on_mistake_made"]
+[connection signal="slot_filled" from="Slots/SquareSlot12" to="." method="_on_slot_filled"]
