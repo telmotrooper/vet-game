@@ -63,10 +63,14 @@ size_flags_horizontal = 4
 color = Color(1, 0.972549, 0.929412, 1)
 
 [node name="TitleBackground" type="ColorRect" parent="Background"]
-offset_left = 694.0
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -413.5
 offset_top = 28.0
-offset_right = 1225.0
+offset_right = 413.5
 offset_bottom = 109.0
+grow_horizontal = 2
 color = Color(1, 0.972549, 0.929412, 1)
 
 [node name="TitleLabel" type="Label" parent="Background"]
@@ -78,7 +82,7 @@ offset_top = 28.0
 offset_right = 290.0
 offset_bottom = 107.0
 grow_horizontal = 2
-text = "Sistema Circulatório"
+text = "Sistema Digestório Poligástrico"
 label_settings = SubResource("LabelSettings_hcqab")
 horizontal_alignment = 1
 
@@ -98,7 +102,97 @@ text = "[center][b]( Acertos:[/b] 0/1 )[/center]"
 
 [node name="Line2D" type="Line2D" parent="Background"]
 points = PackedVector2Array(673, 407, 745, 461)
-width = 6.0
+width = 7.0
+default_color = Color(0, 0, 0, 1)
+texture = ExtResource("5_da2n7")
+texture_mode = 1
+antialiased = true
+
+[node name="Line2D2" type="Line2D" parent="Background"]
+position = Vector2(18, 10)
+points = PackedVector2Array(663, 588, 747, 454)
+width = 7.0
+default_color = Color(0, 0, 0, 1)
+texture = ExtResource("5_da2n7")
+texture_mode = 1
+antialiased = true
+
+[node name="Line2D3" type="Line2D" parent="Background"]
+position = Vector2(18, 10)
+points = PackedVector2Array(613, 279, 808, 448)
+width = 7.0
+default_color = Color(0, 0, 0, 1)
+texture = ExtResource("5_da2n7")
+texture_mode = 1
+antialiased = true
+
+[node name="Line2D4" type="Line2D" parent="Background"]
+position = Vector2(18, 10)
+points = PackedVector2Array(971, 304, 911, 490)
+width = 7.0
+default_color = Color(0, 0, 0, 1)
+texture = ExtResource("5_da2n7")
+texture_mode = 1
+antialiased = true
+
+[node name="Line2D5" type="Line2D" parent="Background"]
+position = Vector2(18, 10)
+points = PackedVector2Array(1308, 315, 1067, 496)
+width = 7.0
+default_color = Color(0, 0, 0, 1)
+texture = ExtResource("5_da2n7")
+texture_mode = 1
+antialiased = true
+
+[node name="Line2D6" type="Line2D" parent="Background"]
+position = Vector2(18, 10)
+points = PackedVector2Array(1651, 564, 1545, 569)
+width = 7.0
+default_color = Color(0, 0, 0, 1)
+texture = ExtResource("5_da2n7")
+texture_mode = 1
+antialiased = true
+
+[node name="Line2D7" type="Line2D" parent="Background"]
+position = Vector2(18, 10)
+points = PackedVector2Array(1539, 683, 1351, 539)
+width = 7.0
+default_color = Color(0, 0, 0, 1)
+texture = ExtResource("5_da2n7")
+texture_mode = 1
+antialiased = true
+
+[node name="Line2D8" type="Line2D" parent="Background"]
+position = Vector2(18, 10)
+points = PackedVector2Array(1488, 807, 1224, 615)
+width = 7.0
+default_color = Color(0, 0, 0, 1)
+texture = ExtResource("5_da2n7")
+texture_mode = 1
+antialiased = true
+
+[node name="Line2D9" type="Line2D" parent="Background"]
+position = Vector2(18, 10)
+points = PackedVector2Array(1480, 942, 1124, 588)
+width = 7.0
+default_color = Color(0, 0, 0, 1)
+texture = ExtResource("5_da2n7")
+texture_mode = 1
+antialiased = true
+
+[node name="Line2D10" type="Line2D" parent="Background"]
+position = Vector2(18, 10)
+points = PackedVector2Array(1023, 914, 1070, 682)
+width = 7.0
+default_color = Color(0, 0, 0, 1)
+texture = ExtResource("5_da2n7")
+texture_mode = 1
+antialiased = true
+
+[node name="Line2D11" type="Line2D" parent="Background"]
+position = Vector2(18, 10)
+points = PackedVector2Array(1023, 914, 1070, 682)
+width = 7.0
 default_color = Color(0, 0, 0, 1)
 texture = ExtResource("5_da2n7")
 texture_mode = 1
@@ -195,9 +289,9 @@ expected_value = "Omaso"
 [node name="SquareSlot9" type="TextureRect" parent="Slots"]
 z_index = -1
 layout_mode = 0
-offset_left = 829.0
+offset_left = 820.0
 offset_top = 273.0
-offset_right = 1139.0
+offset_right = 1162.0
 offset_bottom = 333.0
 texture = ExtResource("5_asbrk")
 expand_mode = 1
@@ -207,7 +301,7 @@ expected_value = "Intestino Delgado"
 [node name="SquareSlot10" type="TextureRect" parent="Slots"]
 z_index = -1
 layout_mode = 0
-offset_left = 459.0
+offset_left = 448.0
 offset_top = 254.0
 offset_right = 794.0
 offset_bottom = 314.0
