@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://drp1yfvqgxp3v"]
+[gd_scene load_steps=12 format=3 uid="uid://drp1yfvqgxp3v"]
 
 [ext_resource type="Script" path="res://levels/figure_level.gd" id="1_7410w"]
 [ext_resource type="PackedScene" uid="uid://cwsj1bfgbxsnk" path="res://pink_background.tscn" id="2_120nb"]
 [ext_resource type="PackedScene" uid="uid://dwesfoxx58stl" path="res://ui/top_buttons.tscn" id="3_lke4f"]
 [ext_resource type="Texture2D" uid="uid://d2xlat3vtkbo5" path="res://levels/cow_level/cow_digestive_system_body_full-04.svg" id="4_6kgx0"]
 [ext_resource type="Texture2D" uid="uid://btvovgytwfq74" path="res://levels/slot.svg" id="5_asbrk"]
+[ext_resource type="Texture2D" uid="uid://c6h5rg4lwwm2j" path="res://assets/line_2d_texture.png" id="5_da2n7"]
 [ext_resource type="Script" path="res://levels/slot.gd" id="6_r45km"]
 [ext_resource type="Script" path="res://draggable_label.gd" id="7_5whx1"]
 [ext_resource type="PackedScene" uid="uid://wnlhcjcm0qc" path="res://ui/victory_panel/victory_panel.tscn" id="8_jvfcq"]
@@ -94,6 +95,14 @@ grow_horizontal = 2
 mouse_filter = 2
 bbcode_enabled = true
 text = "[center][b]( Acertos:[/b] 0/1 )[/center]"
+
+[node name="Line2D" type="Line2D" parent="Background"]
+points = PackedVector2Array(673, 407, 745, 461)
+width = 6.0
+default_color = Color(0, 0, 0, 1)
+texture = ExtResource("5_da2n7")
+texture_mode = 1
+antialiased = true
 
 [node name="Slots" type="Control" parent="."]
 unique_name_in_owner = true
