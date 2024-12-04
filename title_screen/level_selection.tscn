@@ -54,19 +54,24 @@ fit_content = true
 autowrap_mode = 0
 metadata/_edit_lock_ = true
 
-[node name="CirculatorySystemFigureButton" type="Button" parent="."]
+[node name="GridContainer" type="GridContainer" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -573.0
-offset_top = -276.0
-offset_right = -233.0
-offset_bottom = 30.0
+offset_left = -720.0
+offset_top = -260.0
+offset_right = 720.0
+offset_bottom = 420.0
 grow_horizontal = 2
 grow_vertical = 2
+columns = 4
+
+[node name="CirculatorySystemFigureButton" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(320, 320)
+layout_mode = 2
 text = "SISTEMA
 CIRCULATÓRIO
 (FIGURA)"
@@ -74,25 +79,15 @@ expand_icon = true
 script = ExtResource("3_3mfj4")
 target_scene = "res://levels/dog_level/dog_level.tscn"
 
-[node name="LevelStarCounter" parent="CirculatorySystemFigureButton" instance=ExtResource("4_me8dp")]
+[node name="LevelStarCounter" parent="GridContainer/CirculatorySystemFigureButton" instance=ExtResource("4_me8dp")]
 layout_mode = 1
 offset_left = -116.5
 offset_right = 116.5
 metadata/_edit_lock_ = true
 
-[node name="CirculatorySystemQuizButton" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -170.0
-offset_top = -276.0
-offset_right = 170.0
-offset_bottom = 30.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="CirculatorySystemQuizButton" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(320, 320)
+layout_mode = 2
 text = "SISTEMA
 CIRCULATÓRIO
 (QUIZ)"
@@ -100,77 +95,16 @@ expand_icon = true
 script = ExtResource("3_3mfj4")
 target_scene = "res://levels/circulatory_system_level/circulatory_system_level.tscn"
 
-[node name="LevelStarCounter" parent="CirculatorySystemQuizButton" instance=ExtResource("4_me8dp")]
+[node name="LevelStarCounter" parent="GridContainer/CirculatorySystemQuizButton" instance=ExtResource("4_me8dp")]
 layout_mode = 1
 offset_left = -116.5
 offset_right = 116.5
 metadata/_edit_lock_ = true
 
-[node name="LympathicSystemQuizButton" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 231.5
-offset_top = -276.0
-offset_right = 552.5
-offset_bottom = 30.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "SISTEMA
-LINFÁTICO
-(QUIZ)"
-expand_icon = true
-script = ExtResource("3_3mfj4")
-target_scene = "res://levels/lymphatic_system_level/lymphatic_system_level.tscn"
-
-[node name="LevelStarCounter" parent="LympathicSystemQuizButton" instance=ExtResource("4_me8dp")]
-layout_mode = 1
-offset_left = -116.5
-offset_right = 116.5
-metadata/_edit_lock_ = true
-
-[node name="HeartFigureButton" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 231.5
-offset_top = 88.0
-offset_right = 552.5
-offset_bottom = 394.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "CORAÇÃO
-(FIGURA)"
-expand_icon = true
-script = ExtResource("3_3mfj4")
-target_scene = "res://levels/heart_level/heart_level.tscn"
-
-[node name="LevelStarCounter" parent="HeartFigureButton" instance=ExtResource("4_me8dp")]
-layout_mode = 1
-offset_left = -116.5
-offset_right = 116.5
-metadata/_edit_lock_ = true
-
-[node name="MonogastricDigestiveSystemFigureButton2" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -573.0
-offset_top = 88.0
-offset_right = -233.0
-offset_bottom = 394.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 38
+[node name="MonogastricDigestiveSystemFigureButton2" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(320, 320)
+layout_mode = 2
+theme_override_font_sizes/font_size = 42
 text = "SISTEMA
 DIGESTÓRIO
 MONOGÁSTRICO
@@ -179,25 +113,15 @@ expand_icon = true
 script = ExtResource("3_3mfj4")
 target_scene = "res://levels/pig_level/pig_level.tscn"
 
-[node name="LevelStarCounter" parent="MonogastricDigestiveSystemFigureButton2" instance=ExtResource("4_me8dp")]
+[node name="LevelStarCounter" parent="GridContainer/MonogastricDigestiveSystemFigureButton2" instance=ExtResource("4_me8dp")]
 layout_mode = 1
 offset_left = -116.5
 offset_right = 116.5
 metadata/_edit_lock_ = true
 
-[node name="DigestiveSystemQuizButton3" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -170.0
-offset_top = 88.0
-offset_right = 170.0
-offset_bottom = 394.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="DigestiveSystemQuizButton3" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(320, 320)
+layout_mode = 2
 text = "SISTEMA
 DIGESTÓRIO
 (QUIZ)"
@@ -205,7 +129,56 @@ expand_icon = true
 script = ExtResource("3_3mfj4")
 target_scene = "res://levels/digestive_system_level/digestive_system_level.tscn"
 
-[node name="LevelStarCounter" parent="DigestiveSystemQuizButton3" instance=ExtResource("4_me8dp")]
+[node name="LevelStarCounter" parent="GridContainer/DigestiveSystemQuizButton3" instance=ExtResource("4_me8dp")]
+layout_mode = 1
+offset_left = -116.5
+offset_right = 116.5
+metadata/_edit_lock_ = true
+
+[node name="PoligastricDigestiveSystemFigureButton3" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(320, 320)
+layout_mode = 2
+theme_override_font_sizes/font_size = 42
+text = "SISTEMA
+DIGESTÓRIO
+POLIGÁSTRICO
+(FIGURA)"
+expand_icon = true
+script = ExtResource("3_3mfj4")
+target_scene = "res://levels/cow_level/cow_level.tscn"
+
+[node name="LevelStarCounter" parent="GridContainer/PoligastricDigestiveSystemFigureButton3" instance=ExtResource("4_me8dp")]
+layout_mode = 1
+offset_left = -116.5
+offset_right = 116.5
+metadata/_edit_lock_ = true
+
+[node name="LympathicSystemQuizButton" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(320, 320)
+layout_mode = 2
+text = "SISTEMA
+LINFÁTICO
+(QUIZ)"
+expand_icon = true
+script = ExtResource("3_3mfj4")
+target_scene = "res://levels/lymphatic_system_level/lymphatic_system_level.tscn"
+
+[node name="LevelStarCounter" parent="GridContainer/LympathicSystemQuizButton" instance=ExtResource("4_me8dp")]
+layout_mode = 1
+offset_left = -116.5
+offset_right = 116.5
+metadata/_edit_lock_ = true
+
+[node name="HeartFigureButton" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(320, 320)
+layout_mode = 2
+text = "CORAÇÃO
+(FIGURA)"
+expand_icon = true
+script = ExtResource("3_3mfj4")
+target_scene = "res://levels/heart_level/heart_level.tscn"
+
+[node name="LevelStarCounter" parent="GridContainer/HeartFigureButton" instance=ExtResource("4_me8dp")]
 layout_mode = 1
 offset_left = -116.5
 offset_right = 116.5
