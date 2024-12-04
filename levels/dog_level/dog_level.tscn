@@ -172,18 +172,6 @@ expand_mode = 1
 script = ExtResource("11_suqmt")
 expected_value = "Veias Portas"
 
-[node name="SquareSlot7" type="TextureRect" parent="Slots"]
-z_index = -1
-layout_mode = 0
-offset_left = 1278.0
-offset_top = 728.0
-offset_right = 1388.0
-offset_bottom = 788.0
-texture = ExtResource("10_10lmo")
-expand_mode = 1
-script = ExtResource("11_suqmt")
-expected_value = "Baço"
-
 [node name="SquareSlot8" type="TextureRect" parent="Slots"]
 z_index = -1
 layout_mode = 0
@@ -279,15 +267,15 @@ self_modulate = Color(1, 1, 1, 0.509804)
 offset_left = 18.0
 offset_top = 342.0
 offset_right = 382.0
-offset_bottom = 981.0
+offset_bottom = 940.0
 mouse_filter = 2
 color = Color(1, 0.972549, 0.929412, 1)
 
 [node name="VeiaJugular" type="Label" parent="Pieces"]
 offset_left = 34.0
-offset_top = 803.0
+offset_top = 757.0
 offset_right = 264.0
-offset_bottom = 863.0
+offset_bottom = 817.0
 mouse_filter = 1
 text = "Veia Jugular"
 horizontal_alignment = 1
@@ -325,9 +313,9 @@ script = ExtResource("14_ni0bv")
 
 [node name="VeiaCefalica" type="Label" parent="Pieces"]
 offset_left = 34.0
-offset_top = 747.0
+offset_top = 701.0
 offset_right = 276.0
-offset_bottom = 807.0
+offset_bottom = 761.0
 mouse_filter = 1
 text = "Veia Cefálica"
 horizontal_alignment = 1
@@ -335,9 +323,9 @@ script = ExtResource("14_ni0bv")
 
 [node name="Coracao" type="Label" parent="Pieces"]
 offset_left = 34.0
-offset_top = 589.0
+offset_top = 543.0
 offset_right = 191.0
-offset_bottom = 649.0
+offset_bottom = 603.0
 mouse_filter = 1
 text = "Coração"
 horizontal_alignment = 1
@@ -345,29 +333,19 @@ script = ExtResource("14_ni0bv")
 
 [node name="VeiasPortas" type="Label" parent="Pieces"]
 offset_left = 34.0
-offset_top = 853.0
+offset_top = 807.0
 offset_right = 274.0
-offset_bottom = 913.0
+offset_bottom = 867.0
 mouse_filter = 1
 text = "Veias Portas"
 horizontal_alignment = 1
 script = ExtResource("14_ni0bv")
 
-[node name="Baco" type="Label" parent="Pieces"]
-offset_left = 34.0
-offset_top = 540.0
-offset_right = 126.0
-offset_bottom = 600.0
-mouse_filter = 1
-text = "Baço"
-horizontal_alignment = 1
-script = ExtResource("14_ni0bv")
-
 [node name="VeiaSafena" type="Label" parent="Pieces"]
 offset_left = 34.0
-offset_top = 907.0
+offset_top = 861.0
 offset_right = 256.0
-offset_bottom = 967.0
+offset_bottom = 921.0
 mouse_filter = 1
 text = "Veia Safena"
 horizontal_alignment = 1
@@ -375,9 +353,9 @@ script = ExtResource("14_ni0bv")
 
 [node name="VeiaCavaCaudal" type="Label" parent="Pieces"]
 offset_left = 34.0
-offset_top = 638.0
+offset_top = 592.0
 offset_right = 351.0
-offset_bottom = 698.0
+offset_bottom = 652.0
 mouse_filter = 1
 text = "Veia Cava Caudal"
 horizontal_alignment = 1
@@ -395,9 +373,9 @@ script = ExtResource("14_ni0bv")
 
 [node name="VeiaCavaCranial" type="Label" parent="Pieces"]
 offset_left = 34.0
-offset_top = 692.0
+offset_top = 646.0
 offset_right = 357.0
-offset_bottom = 752.0
+offset_bottom = 706.0
 mouse_filter = 1
 text = "Veia Cava Cranial"
 horizontal_alignment = 1
@@ -422,8 +400,6 @@ offset_bottom = 325.0
 [connection signal="slot_filled" from="Slots/SquareSlot5" to="." method="_on_slot_filled"]
 [connection signal="mistake_made" from="Slots/SquareSlot6" to="." method="_on_mistake_made"]
 [connection signal="slot_filled" from="Slots/SquareSlot6" to="." method="_on_slot_filled"]
-[connection signal="mistake_made" from="Slots/SquareSlot7" to="." method="_on_mistake_made"]
-[connection signal="slot_filled" from="Slots/SquareSlot7" to="." method="_on_slot_filled"]
 [connection signal="mistake_made" from="Slots/SquareSlot8" to="." method="_on_mistake_made"]
 [connection signal="slot_filled" from="Slots/SquareSlot8" to="." method="_on_slot_filled"]
 [connection signal="mistake_made" from="Slots/SquareSlot9" to="." method="_on_mistake_made"]
